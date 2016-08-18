@@ -1,0 +1,33 @@
+{
+  "name": "lrdcom-email-builder",
+  "version": "1.0.0",
+  "description": "A build system for building and testing robust customized email components",
+  "main": "index.html",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-file": "^0.3.0",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-wrap": "^0.13.0",
+    "gulp-wrapper": "^1.0.0",
+    "run-sequence": "^1.2.2",
+    "yargs": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp-wrap": "^0.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phillipchan2/lrdcom-email-builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phillipchan2/lrdcom-email-builder/issues"
+  },
+  "homepage": "https://github.com/phillipchan2/lrdcom-email-builder#readme"
+}
