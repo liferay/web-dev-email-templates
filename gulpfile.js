@@ -18,7 +18,7 @@ const wrap = require('gulp-wrap');
 
 // wrap components in base styles
 gulp.task('component-update', function() {
-	return gulp.src('src/**/src.html', { base: "./" })
+	return gulp.src('src/components/**/src.html', { base: "./" })
 	.pipe(wrap({ src: 'src/base/base.html'}))
 	.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
 	.pipe(rename({basename: 'test'}))
@@ -54,8 +54,8 @@ gulp.task('base-finalize', function() {
 })
 
 gulp.task('base', function() {
-	runSequence('base-styles', 'base-inline',' base-finalize');
-})
+	runSequence('base-styles', 'base-inline', 'base-finalize');
+});
 
 /*
 	Component Tasks
@@ -104,7 +104,7 @@ gulp.task('openLitmus', function() {
 gulp.task('watch', function() {
 	gulp.watch('src/**/src.html', function(callback) {
 		runSequence(
-			'base-styles',
+			'base',
 			'component-update'
 		)
 	} ['component-update']);
@@ -115,7 +115,6 @@ gulp.task('default', function(callback) {
 	runSequence(
 		'base',
 		'component-update',
-		'openLitmus',
 		'watch'
 	)
 });
