@@ -11,6 +11,7 @@ const litmus = require('gulp-litmus');
 const livereload = require('gulp-livereload');
 const open = require('gulp-open');
 const rename = require('gulp-rename');
+const replace = require('gulp-replace');
 const runSequence = require('run-sequence');
 const template = require('gulp-template');
 const wrap = require('gulp-wrap');
@@ -46,8 +47,14 @@ gulp.task('base-inline', function() {
 		.pipe(gulp.dest('.'))
 })
 
+gulp.task('base-finalize', function() {
+	return gulp.src('src/base/base.html', {base: "./"})
+		.pipe(replace('<component-include>', '<%= contents %>'))
+		.pipe(gulp.dest('.'))
+})
+
 gulp.task('base', function() {
-	runSequence('base-styles', 'base-inline');
+	runSequence('base-styles', 'base-inline',' base-finalize');
 })
 
 /*

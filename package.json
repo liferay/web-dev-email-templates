@@ -18,6 +18,7 @@
     "yargs": "^5.0.0"
   },
   "devDependencies": {
+    "gulp-replace": "^0.5.4",
     "gulp-template": "^4.0.0",
     "gulp-wrap": "^0.13.0"
   },
