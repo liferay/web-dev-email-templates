@@ -20,6 +20,7 @@ const wrap = require('gulp-wrap');
 gulp.task('component-update', function() {
 	return gulp.src('src/components/**/src.html', { base: "./" })
 	.pipe(wrap({ src: 'src/base/base.html'}))
+	.pipe(inlineCss())
 	.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
 	.pipe(rename({basename: 'test'}))
 	.pipe(gulp.dest('.'))
@@ -114,7 +115,7 @@ gulp.task('watch', function() {
 gulp.task('default', function(callback) {
 	runSequence(
 		'base',
-		'component-update',
-		'watch'
+		'component-update'
+		// 'watch'
 	)
 });
