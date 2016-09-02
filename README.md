@@ -1,7 +1,13 @@
 # lrdcom-email-builder
 A build system for building and testing robust customized email components
 
-### Starting for the first time
+## Table of Contents
+1. [Getting Started](#getting-started)
+2. [How the System Works](#how-it-works)
+
+### Getting Started
+
+First time?
 
 Install all [npm](https://www.npmjs.com/) dependencies:
 ```
@@ -34,6 +40,23 @@ In turn, gulp will:
 - Compile SASS
 - Include components into a test page
 - Build component test page
-- Listen for any changes
+- Listen for any changes and update components accordingly.
 
+### The Base
+
+`/src/base/`
+The base is used to create a code environment as close to Hubspot as possible so that when component are being built, it should reflect what you see on Hubspot.com. what base archictecture for emails. This should include all code that Hubspot uses. 
+
+### Global Styles
+`/src/styles`
+This will contain global styles that will apply to each component. `main.css` is the final file that will be included in every component.
+
+### Components
+`/src/base/components`
+Components are the things being imported to Hubspot. For the developer, all we have to do is 1) write the markup 2) write the styles. Gulp will in turn, 1) inline styles 2) put it in the Hubspot base styles 3) apply themes to it 4) produce a version of it `test.html` to be able to seen in the browser for initial testing and then imported into Litmus for testing.
+
+#### Feature List
+- Need to have global theming at component level
+- Need to accomodate for HS variables and structure
+- Build command (with yeoman?) to create new components.
 
