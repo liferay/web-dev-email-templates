@@ -4,8 +4,10 @@ A build system for building and testing robust customized email components
 ## Table of Contents
 1. [Getting Started](#getting-started)
 2. [How the System Works](#how-it-works)
+    - [Overview](#overview)
+    - 
 
-### Getting Started
+## Getting Started
 
 First time?
 
@@ -25,7 +27,9 @@ to start the build system.
 
 *Optional: Install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) Chrome extension*
 
-### How the System Works
+## How the System Works
+
+#### Overview
 
 ![Email Builder Architecutre](https://github.com/phillipchan2/lrdcom-email-builder/blob/master/assets/Email%20Builder%20Architecture.png?raw=true"Logo Title Text 1")
 
@@ -42,20 +46,20 @@ In turn, gulp will:
 - Build component test page
 - Listen for any changes and update components accordingly.
 
-### The Base
+#### The Base
 
 `/src/base/`
 The base is used to create a code environment as close to Hubspot as possible so that when component are being built, it should reflect what you see on Hubspot.com. what base archictecture for emails. This should include all code that Hubspot uses. 
 
-### Global Styles
+#### Global Styles
 `/src/styles`
 This will contain global styles that will apply to each component. `main.css` is the final file that will be included in every component.
 
-### Components
+#### Components
 `/src/base/components`
 Components are the things being imported to Hubspot. For the developer, all we have to do is 1) write the markup 2) write the styles. Gulp will in turn, 1) inline styles 2) put it in the Hubspot base styles 3) apply themes to it 4) produce a version of it `test.html` to be able to seen in the browser for initial testing and then imported into Litmus for testing.
 
-#### Feature List
+## Feature List
 - Need to have global theming at component level
 - Need to accomodate for HS variables and structure
 - Build command (with yeoman?) to create new components.
