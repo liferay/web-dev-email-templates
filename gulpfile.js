@@ -8,13 +8,17 @@ const gulp = require('gulp');
 const htmlPrettify = require('gulp-html-prettify');
 const inlineCss = require('gulp-inline-css');
 const litmus = require('gulp-litmus');
-const livereload = require('gulp-livereload');
 const open = require('gulp-open');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const runSequence = require('run-sequence');
 const template = require('gulp-template');
 const wrap = require('gulp-wrap');
+
+
+//testing
+const email = require('gulp-email');
+
 
 // wrap components in base styles
 gulp.task('component-update', function() {
@@ -24,9 +28,6 @@ gulp.task('component-update', function() {
 	.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
 	.pipe(rename({basename: 'test'}))
 	.pipe(gulp.dest('.'))
-	.pipe(livereload({
-		reloadPage: './test.html'
-	}));
 });
 
 /*
@@ -78,22 +79,23 @@ gulp.task('inline', function() {
 
 // litmus testing
 var litmusConfig = {
-    username: 'phillip.chan1@gmail.com',
+    username: 'phillipchan1@gmail.com',
     password: 'thebible',
-    url: 'https://phillipchan11.litmus.com',
+    url: 'https://phillipchan1.litmus.com',
     applications: [
-        'applemail6',
+        'chromeaolonline',
+        'appmail8',
         'gmailnew',
         'ffgmailnew',
         'chromegmailnew',
         'iphone4s',
+        'iphone5'
     ]
 }
 
 gulp.task('litmus', function () {
-    return gulp.src('components/button/test.html')
+    return gulp.src('src/components/button/test.html')
         .pipe(litmus(litmusConfig))
-        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('openLitmus', function() {
@@ -107,9 +109,42 @@ gulp.task('watch', function() {
 		runSequence(
 			'base',
 			'component-update'
-		)
+		);
 	} ['component-update']);
+
+	gulp.watch(
+		[
+			'config.js',
+			'src/base/src.css'
+		], function(callback) {
+			runSequence(
+				'base'
+			);
+	})
+
+	gulp.watch(
+		[
+			'src/components/**/*.css'
+		], function(callback) {
+			runSequence(
+				'component-update'
+			);
+	})
 });
+
+// send email test
+gulp.task('email', function () {
+        return gulp.src(['something.html'])
+            .pipe(email({
+            	user: 'api:key-62dec20c13e1bf28895149f176da2008',
+		        url: 'https://api.mailgun.net/v3/app33cb5bbe4d1748cab70db2fdca20d8be.mailgun.org',
+		        form: {
+		            from: 'John Doe <John.Doe@gmail.com>',
+		            to: 'phillipchan1.runme@previews.emailonacid.com',
+		            subject: 'Email Test'
+		        }
+            }));
+    });
 
 // our default task
 gulp.task('default', function(callback) {
