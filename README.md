@@ -25,7 +25,20 @@ gulp
 
 to start the build system.
 
-*Optional: Install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) Chrome extension*
+### Create a new Component
+
+```
+gulp new --name [component]
+```
+
+This will create a new component in `src/components` folder for you to start working with it.
+
+### Send a Component to Test
+
+To send a [component] to test,
+```
+gulp test --name [component]
+```
 
 ## How the System Works
 

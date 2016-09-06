@@ -2,8 +2,6 @@
 
 const argv = require('yargs').argv;
 const config = require('./config');
-const dust = require('gulp-dust');
-const file = require('gulp-file');
 const gulp = require('gulp');
 const htmlPrettify = require('gulp-html-prettify');
 const inlineCss = require('gulp-inline-css');
@@ -14,21 +12,6 @@ const replace = require('gulp-replace');
 const runSequence = require('run-sequence');
 const template = require('gulp-template');
 const wrap = require('gulp-wrap');
-
-
-//testing
-const email = require('gulp-email');
-
-
-// wrap components in base styles
-gulp.task('component-update', function() {
-	return gulp.src('src/components/**/src.html', { base: "./" })
-	.pipe(wrap({ src: 'src/base/base.html'}))
-	.pipe(inlineCss())
-	.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
-	.pipe(rename({basename: 'test'}))
-	.pipe(gulp.dest('.'))
-});
 
 /*
 	Base Tasks
@@ -42,6 +25,7 @@ gulp.task('base-styles', function() {
         .pipe(gulp.dest('.'))
 })
 
+// inline css styles in base
 gulp.task('base-inline', function() {
 	return gulp.src('src/base/src.html', { base: "./" })
 		.pipe(inlineCss())
@@ -49,12 +33,14 @@ gulp.task('base-inline', function() {
 		.pipe(gulp.dest('.'))
 })
 
+// add custom includes for wrapping
 gulp.task('base-finalize', function() {
 	return gulp.src('src/base/base.html', {base: "./"})
 		.pipe(replace('<component-include>', '<%= contents %>'))
 		.pipe(gulp.dest('.'))
 })
 
+// group base tasks
 gulp.task('base', function() {
 	runSequence('base-styles', 'base-inline', 'base-finalize');
 });
@@ -63,19 +49,48 @@ gulp.task('base', function() {
 	Component Tasks
 */
 
-// creating new components - NOT DONE
-gulp.task('new-component', function() {
-	console.log(argv.name);
-	return gulp.src('')
-		.pipe(file(`${argv.name}.html`))
-		.pipe(gulp.dest(`src/components/${argv.name}/`));
+// Update and process components
+gulp.task('component-update', function() {
+	return gulp.src('src/components/**/src.html', { base: './' })
+
+	// wrap in base styles and markup
+	.pipe(wrap({ src: 'src/base/base.html'}))
+
+	// inline CSS
+	.pipe(inlineCss())
+
+	// prettify HTML
+	.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
+
+	// rename file to test
+	.pipe(rename({basename: 'test'}))
+
+	// move file to same location
+	.pipe(gulp.dest('.'))
 });
 
-gulp.task('inline', function() {
-	return gulp.src('src/components/button/src.html')
-		.pipe(inlineCss())
-		.pipe(gulp.dest('.'))
+// Create new component by passing flag in
+gulp.task('new', function() {
+	// check if component name is valid
+	if (!argv.name) {
+		console.error('Need proper name. Try again using: gulp new --name [component-name]')
+	}
+
+	// create the component
+	else if (argv.name) {
+		console.log(`Creating new component: ${argv.name}`);
+		gulp.src('src/components/component-template.html')
+			.pipe(rename({basename: 'src'}))
+			.pipe(gulp.dest(`src/components/${argv.name}`));
+		gulp.src('src/components/styles-template.css')
+			.pipe(rename({basename: 'styles'}))
+			.pipe(gulp.dest(`src/components/${argv.name}`));
+	}
 });
+
+/*
+	Testing Post Processing
+*/
 
 // litmus testing
 var litmusConfig = {
@@ -93,17 +108,32 @@ var litmusConfig = {
     ]
 }
 
-gulp.task('litmus', function () {
-    return gulp.src('src/components/button/test.html')
+gulp.task('test', function () {
+
+	console.log(argv.name);
+	// check if component name is valid
+	if (!argv.name) {
+		console.error('Need proper name. Try again using: gulp new --name [component-name]')
+	}
+
+	else {
+		console.log(`Testing src/components/${argv.name}/test.html`)
+		gulp.src(`src/components/${argv.name}/test.html`)
         .pipe(litmus(litmusConfig))
+	}
+
+	runSequence('openLitmus');
+    
 });
 
 gulp.task('openLitmus', function() {
 	gulp.src('index.html')
-  	.pipe(open({uri: 'https://litmus.com/builder'}));
+  	.pipe(open({uri: 'https://litmus.com/checklist'}));
 });
 
-// watching for file changes
+/*
+	File Watcher
+*/
 gulp.task('watch', function() {
 	gulp.watch('src/**/src.html', function(callback) {
 		runSequence(
@@ -132,21 +162,11 @@ gulp.task('watch', function() {
 	})
 });
 
-// send email test
-gulp.task('email', function () {
-        return gulp.src(['something.html'])
-            .pipe(email({
-            	user: 'api:key-62dec20c13e1bf28895149f176da2008',
-		        url: 'https://api.mailgun.net/v3/app33cb5bbe4d1748cab70db2fdca20d8be.mailgun.org',
-		        form: {
-		            from: 'John Doe <John.Doe@gmail.com>',
-		            to: 'phillipchan1.runme@previews.emailonacid.com',
-		            subject: 'Email Test'
-		        }
-            }));
-    });
 
-// our default task
+/*
+	Default Task
+*/ 
+
 gulp.task('default', function(callback) {
 	runSequence(
 		'base',
