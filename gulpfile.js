@@ -4,12 +4,15 @@ const argv = require('yargs').argv;
 const config = require('./config');
 const gulp = require('gulp');
 const htmlPrettify = require('gulp-html-prettify');
+const inky = require('inky');
 const inlineCss = require('gulp-inline-css');
 const litmus = require('gulp-litmus');
+const livereload = require('gulp-livereload');
 const open = require('gulp-open');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 const runSequence = require('run-sequence');
+const sass = require('gulp-sass');
 const template = require('gulp-template');
 const wrap = require('gulp-wrap');
 
@@ -46,28 +49,63 @@ gulp.task('base', function() {
 });
 
 /*
+	Global Styles
+*/
+gulp.task('global-styles', function() {
+	return gulp.src('src/styles/*.scss')
+		.pipe(sass().on('error', sass.logError))
+    	.pipe(gulp.dest('./src/styles'));
+})
+
+
+/*
 	Component Tasks
 */
 
-// Update and process components
-gulp.task('component-update', function() {
-	return gulp.src('src/components/**/src.html', { base: './' })
+// Update and process components 
+gulp.task('components', function() {
 
-	// wrap in base styles and markup
-	.pipe(wrap({ src: 'src/base/base.html'}))
+	runSequence('component-styling', function() {
+		// creating a test version to be wrapped in base styles
+		gulp.src('src/components/**/src.html', { base: './' })
+			// wrap in base styles and markup
+			.pipe(wrap({ src: 'src/base/base.html'}))
+			// turn inky into regular html
+			.pipe(inky())
+			// inline CSS
+			.pipe(inlineCss())
+			// prettify HTML
+			.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
+			// rename file to test
+			.pipe(rename({basename: 'test'}))
+			// move file to same location
+			.pipe(gulp.dest('.'))
+			.pipe(livereload({start: true}))
 
-	// inline CSS
-	.pipe(inlineCss())
-
-	// prettify HTML
-	.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
-
-	// rename file to test
-	.pipe(rename({basename: 'test'}))
-
-	// move file to same location
-	.pipe(gulp.dest('.'))
+		// create one for distribution
+		gulp.src('src/components/**/src.html', { base: './' })
+			// turn inky into regular html
+			.pipe(inky())
+			// inline CSS
+			.pipe(inlineCss())
+			// prettify HTML
+			.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
+			// rename file to test
+			.pipe(rename({basename: 'dist'}))
+			// move file to same location
+			.pipe(gulp.dest('.'))
+	})
+	
 });
+
+// Component CSS Styling
+gulp.task('component-styling', function() {
+	gulp.src(['src/components/**/*.scss', '!src/components/styles-template.scss'], {base: './'})
+		.pipe(sass().on('error', sass.logError))
+    	.pipe(gulp.dest('.'));
+})
+
+// gulp.task('components', runSequence('components', 'component-styling'));
 
 // Create new component by passing flag in
 gulp.task('new', function() {
@@ -82,11 +120,18 @@ gulp.task('new', function() {
 		gulp.src('src/components/component-template.html')
 			.pipe(rename({basename: 'src'}))
 			.pipe(gulp.dest(`src/components/${argv.name}`));
-		gulp.src('src/components/styles-template.css')
-			.pipe(rename({basename: 'styles'}))
+		gulp.src('src/components/styles-template.scss')
+			.pipe(rename({basename: 'main'}))
 			.pipe(gulp.dest(`src/components/${argv.name}`));
+		gulp.src(`src/components/${argv.name}/test.html`)
+			.pipe(livereload({start: true}))
+			.pipe(open());
 	}
+
+	runSequence('components', 'watch');
 });
+
+
 
 /*
 	Testing Post Processing
@@ -108,7 +153,7 @@ var litmusConfig = {
     ]
 }
 
-gulp.task('test', function () {
+gulp.task('litmus', function () {
 
 	console.log(argv.name);
 	// check if component name is valid
@@ -135,12 +180,14 @@ gulp.task('openLitmus', function() {
 	File Watcher
 */
 gulp.task('watch', function() {
+	livereload.listen();
+
 	gulp.watch('src/**/src.html', function(callback) {
 		runSequence(
 			'base',
-			'component-update'
+			'components'
 		);
-	} ['component-update']);
+	});
 
 	gulp.watch(
 		[
@@ -154,12 +201,20 @@ gulp.task('watch', function() {
 
 	gulp.watch(
 		[
-			'src/components/**/*.css'
+			'src/components/**/*.css',
+			'src/styles/*.scss'
 		], function(callback) {
 			runSequence(
-				'component-update'
+				'components'
 			);
 	})
+
+	gulp.watch('src/**/*.scss', function(cb) {
+		runSequence(
+			'global-styles',
+			'components'
+		);
+	}) 
 });
 
 
@@ -170,7 +225,7 @@ gulp.task('watch', function() {
 gulp.task('default', function(callback) {
 	runSequence(
 		'base',
-		'component-update'
-		// 'watch'
+		'components',
+		'watch'
 	)
 });
