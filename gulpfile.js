@@ -68,7 +68,7 @@ gulp.task('global-styles', function() {
 // Update and process components 
 gulp.task('components-processing', function() {
 
-		// creating a test version to be wrapped in base styles
+		// creating a version to be wrapped in base styles
 		gulp.src('src/components/**/src.html', { base: './' })
 			// wrap in base styles and markup
 			.pipe(wrap({ src: 'src/base/base.html'}))
@@ -182,40 +182,55 @@ gulp.task('new', function() {
 	Testing Post Processing
 */
 
-// litmus testing
-var litmusConfig = {
-    username: 'phillipchan1@gmail.com',
-    password: 'thebible',
-    url: 'https://phillipchan1.litmus.com',
-    applications: [
-        'chromeaolonline',
-        'appmail8',
-        'gmailnew',
-        'ffgmailnew',
-        'chromegmailnew',
-        'iphone4s',
-        'iphone5'
-    ]
-}
 
-gulp.task('litmus', function () {
-	// check if component name is valid
-	if (!argv.name) {
-		console.log(chalk.white.bgRed('Need proper name. Try again using: gulp new --name [component-name]'));
+// send to litmust for testing
+gulp.task('test', function () {
+
+	var litmusConfig = {
+	    username: 'phillipchan1@gmail.com',
+	    password: 'thebible',
+	    url: 'https://phillipchan1.litmus.com',
+	    applications: [
+	        'chromeaolonline',
+	        'appmail8',
+	        'gmailnew',
+	        'ffgmailnew',
+	        'chromegmailnew',
+	        'iphone4s',
+	        'iphone5'
+	    ]
+	}
+
+	if (argv.component || argv.email) {
+
+		if (argv.component) {
+			console.log(chalk.bgBlue(`Testing src/components/${argv.name}/test.html`));
+
+			gulp.src(`src/components/${argv.component}/test.html`)
+	        	.pipe(litmus(litmusConfig))
+
+	        gulp.src('index.html')
+	  			.pipe(open({uri: 'https://litmus.com/checklist'}));
+		}
+
+		else if (argv.email) {
+			console.log(chalk.bgBlue(`Testing src/emails/${argv.name}/dist.html`));
+
+			gulp.src(`src/emails/${argv.email}/dist.html`)
+	        	.pipe(litmus(litmusConfig))
+
+	        gulp.src('index.html')
+	  			.pipe(open({uri: 'https://litmus.com/checklist'}));
+		}
 	}
 
 	else {
-		console.log(chalk.bgBlue(`Testing src/components/${argv.name}/test.html`));
-		gulp.src(`src/components/${argv.name}/test.html`)
-        	.pipe(litmus(litmusConfig))
-
-        gulp.src('index.html')
-  			.pipe(open({uri: 'https://litmus.com/checklist'}));
+		console.log(chalk.white.bgRed('Error: Nothing sent to test. Try again with gulp test --component [component-name] or gulp test --email [email-name]'));
 	}    
 });
 
 /*
-	Hubspot Integration
+	Open Hubspot
 */
 
 gulp.task('hubspot', function() {
