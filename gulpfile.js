@@ -54,7 +54,9 @@ gulp.task('base', function() {
 gulp.task('global-styles', function() {
 	return gulp.src('src/styles/*.scss')
 		.pipe(sass().on('error', sass.logError))
-    	.pipe(gulp.dest('./src/styles'));
+    	.pipe(gulp.dest('./src/styles'))
+    	.pipe(livereload({start: true}))
+
 })
 
 
@@ -63,9 +65,8 @@ gulp.task('global-styles', function() {
 */
 
 // Update and process components 
-gulp.task('components', function() {
+gulp.task('components-processing', function() {
 
-	runSequence('component-styling', function() {
 		// creating a test version to be wrapped in base styles
 		gulp.src('src/components/**/src.html', { base: './' })
 			// wrap in base styles and markup
@@ -94,21 +95,18 @@ gulp.task('components', function() {
 			.pipe(rename({basename: 'dist'}))
 			// move file to same location
 			.pipe(gulp.dest('.'))
-	})
-	
 });
 
 // Component CSS Styling
-gulp.task('component-styling', function() {
-	gulp.src(['src/components/**/*.scss', '!src/components/styles-template.scss'], {base: './'})
-		.pipe(sass().on('error', sass.logError))
-    	.pipe(gulp.dest('.'));
-})
+// gulp.task('component-sass', function() {
+// 	return gulp.src(['src/**/*.scss', '!src/components/styles-template.scss'], {base: './'})
+// 		.pipe(sass().on('error', sass.logError))
+//     	.pipe(gulp.dest('.'));
+// })
 
-// gulp.task('components', runSequence('components', 'component-styling'));
 
 // Create new component by passing flag in
-gulp.task('new', function() {
+gulp.task('new-component', function() {
 	// check if component name is valid
 	if (!argv.name) {
 		console.error('Need proper name. Try again using: gulp new --name [component-name]')
@@ -120,18 +118,19 @@ gulp.task('new', function() {
 		gulp.src('src/components/component-template.html')
 			.pipe(rename({basename: 'src'}))
 			.pipe(gulp.dest(`src/components/${argv.name}`));
-		gulp.src('src/components/styles-template.scss')
+		gulp.src('src/components/styles-template.css')
 			.pipe(rename({basename: 'main'}))
-			.pipe(gulp.dest(`src/components/${argv.name}`));
+			.pipe(gulp.dest(`src/components/${argv.name}`))
+
 		gulp.src(`src/components/${argv.name}/test.html`)
 			.pipe(livereload({start: true}))
-			.pipe(open());
+			.pipe(open())
 	}
-
-	runSequence('components', 'watch');
 });
 
-
+gulp.task('new', function() {
+	runSequence('new-component', 'base', 'global-styles', 'components-processing', 'watch' );
+});
 
 /*
 	Testing Post Processing
@@ -154,8 +153,6 @@ var litmusConfig = {
 }
 
 gulp.task('litmus', function () {
-
-	console.log(argv.name);
 	// check if component name is valid
 	if (!argv.name) {
 		console.error('Need proper name. Try again using: gulp new --name [component-name]')
@@ -185,7 +182,7 @@ gulp.task('watch', function() {
 	gulp.watch('src/**/src.html', function(callback) {
 		runSequence(
 			'base',
-			'components'
+			'components-processing'
 		);
 	});
 
@@ -201,20 +198,14 @@ gulp.task('watch', function() {
 
 	gulp.watch(
 		[
-			'src/components/**/*.css',
-			'src/styles/*.scss'
+			'src/**/*.scss',
+			'src/**/*.css'
 		], function(callback) {
 			runSequence(
-				'components'
+				'global-styles',
+				'components-processing'
 			);
 	})
-
-	gulp.watch('src/**/*.scss', function(cb) {
-		runSequence(
-			'global-styles',
-			'components'
-		);
-	}) 
 });
 
 
@@ -225,7 +216,8 @@ gulp.task('watch', function() {
 gulp.task('default', function(callback) {
 	runSequence(
 		'base',
-		'components',
+		'global-styles',
+		'components-processing',
 		'watch'
 	)
 });
