@@ -33,7 +33,7 @@ To create, update, test, and transfer custom and bullet-proof email components t
 When you need to make a new email component:
 
 ```
-gulp new --name [component]
+gulp new --component [component]
 ```
 
 This will create a new component in `src/components`. In it are:

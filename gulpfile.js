@@ -109,21 +109,21 @@ gulp.task('components-processing', function() {
 // Create new component by passing flag in
 gulp.task('new-component', function() {
 	// check if component name is valid
-	if (!argv.name) {
-		console.error('Need proper name. Try again using: gulp new --name [component-name]')
+	if (!argv.component) {
+		console.error('Need proper component. Try again using: gulp new --component [component-component]')
 	}
 
 	// create the component
-	else if (argv.name) {
-		console.log(`Creating new component: ${argv.name}`);
+	else if (argv.component) {
+		console.log(`Creating new component: ${argv.component}`);
 		gulp.src('src/components/component-template.html')
 			.pipe(rename({basename: 'src'}))
-			.pipe(gulp.dest(`src/components/${argv.name}`));
+			.pipe(gulp.dest(`src/components/${argv.component}`));
 		gulp.src('src/components/styles-template.css')
 			.pipe(rename({basename: 'main'}))
-			.pipe(gulp.dest(`src/components/${argv.name}`))
+			.pipe(gulp.dest(`src/components/${argv.component}`))
 
-		gulp.src(`src/components/${argv.name}/test.html`)
+		gulp.src(`src/components/${argv.component}/test.html`)
 			.pipe(livereload({start: true}))
 			.pipe(open())
 	}
