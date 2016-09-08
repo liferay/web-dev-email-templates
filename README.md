@@ -7,9 +7,10 @@ The purpose of the system is to 1) emulate hubspot's styling and grid system for
 1. [Getting Started](#getting-started)
 2. [Commands You Need to Know](#commands-you-need-to-know)
     - [1) Creating a New Component](#creating-a-new-component)
-    - [2) Watching for Changes](#watching-for-changes)
-    - [3) Send a Component to Test](#send-a-component-to-test)
-    - [4) Transferring to Hubspot](#transferring-to-hubspot)
+    - [2) Creating a New HTML Email](#creating-a-new-html-email)
+    - [3) Making Changes to Components Or Emails](#watching-for-changes)
+    - [4) Sending to Test](#send-a-component-to-test)
+    - [5) Transferring to Hubspot](#transferring-to-hubspot)
 2. [How the System Works](#how-it-works)
     - [Overview](#overview)
     - [Email Global Styles](#email-global-styles)
@@ -33,7 +34,7 @@ To create, update, test, and transfer custom and bullet-proof email components t
 When you need to make a new email component:
 
 ```
-gulp new --component [component]
+gulp new --component [component-name]
 ```
 
 This will create a new component in `src/components`. In it are:
@@ -41,48 +42,47 @@ This will create a new component in `src/components`. In it are:
 ```
 /components
     /[component-name]
-        src.html
-        styles.css
-        test.html
-        dist.html
+        src.html    // HTML for your component
+        styles.css  // CSS for your component
+        test.html   // (Don't edit) Preview your component with all Hubspot/Global Styles
+        dist.html   // (Don't edit) What you copy and paste into Hubspot
 ```
 
-What these do:
+### 2) Creating a New HTML Email
+```
+gulp new --email [email-name]
+```
 
-Stuff you edit:
+This will create a new email in `src/emails`. In it are:
 
-- `src.html` is where the HTML for component
-- `styles.css` are styles specific for that component
+```
+/emails
+    /[email-name]
+        src.html    // HTML for your email
+        styles.css  // CSS for your email
+        dist.html   // (Don't edit) Your fully baked HTML email
+```
 
-Stuff that's outputted (aka: don't edit these):
-
-- `test.html` is your component with hubspot styles and grid system. **View this in browser to test to see how your component looks in multiple widths.**
-- `dist.html` is the final product of your component
-
-Oh and congrats, *Gulp is now watching for changes*. Any change you make to `src.html` and `styles.css` will reflect in `test.html` and `dist.html`.
-
-### 2) Watch for Changes
-Want to make changes to any component? Run this command and the application will watch for all changes to any file and process produce `test.html` and `dist.html`
+### 3) Making Changes to Components or Emails
+Want to make changes to any component or email? Run this command and the application will watch for all changes to any file and process produce `test.html` and `dist.html`
 
 ```
 gulp
 ```
 
-Omg, magic.
-
-### 3) Send a Component to Test
+### 4) Sending to Test 
 Want to see your component tested in Litmus?
 
 ```
-gulp test --name [component]
+gulp test --component [component-name]
+
+// or 
+
+gulp test --email [email-name]
 ```
 
-Omg, magic.
-
-### 4) Transferring to Hubspot
+### 5) Transferring to Hubspot
 Unfortunately, there's no way to automatically create components in Hubspot. So what you'll basically do is copy the contents of `dist.html` to your Custom Module. This is similar to relationship between the lrdcom repo and templates in Liferay.com
-
-Not magic...
 
 ## How the System Works
 Here's some details to understand how the system works and features you may want to leverage.
