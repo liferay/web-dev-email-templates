@@ -74,7 +74,7 @@
         line-height:120%;
         text-align:right;
         border-collapse: separate !important;
-        padding-right: 15px
+        padding-right: 30px
     }
     
     #headerTable a:link,
@@ -91,14 +91,14 @@
     /* ==== Template Wrapper Styles ==== */
     
     #contentCell {
-        padding: 10px 20px;
+        /*padding: 10px 20px;*/
         background-color: #f2f2f2
     }
     
     #contentTableOuter {
         border-collapse: separate !important;
         background-color: #fff;
-        padding: 15px;
+        padding: 30px;
     }
     
     #contentTableInner {
@@ -269,10 +269,10 @@
             padding: 10px 10px !important;
         }
         #headerTable {
-            padding-right: 15px !important;
+            padding-right: 30px !important;
         }
         #contentTableOuter {
-            padding: 15px !important;
+            padding: 30px !important;
         }
     }
     
@@ -391,10 +391,10 @@
             padding: 10px 0px !important;
         }
         #headerTable {
-            padding-right: 15px !important;
+            padding-right: 30px !important;
         }
         #contentTableOuter {
-            padding: 15px !important;
+            padding: 30px !important;
         }
     }
     /*]]>*/

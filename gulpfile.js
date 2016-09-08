@@ -35,6 +35,9 @@ gulp.task('base-styles', function() {
 // inline css styles in base
 gulp.task('base-inline', function() {
 	return gulp.src('src/base/src.html', { base: "./" })
+		.pipe(replace('{{', '<%= '))
+		.pipe(replace('}}', ' %>'))
+		.pipe(template(config))
 		.pipe(inlineCss())
 		.pipe(rename({basename: 'base'}))
 		.pipe(gulp.dest('.'))
@@ -43,7 +46,7 @@ gulp.task('base-inline', function() {
 // add custom includes for wrapping
 gulp.task('base-finalize', function() {
 	return gulp.src('src/base/base.html', {base: "./"})
-		.pipe(replace('<component-include>', '<%= contents %>'))
+		.pipe(replace('<component-include></component-include>', '<%= contents %>'))
 		.pipe(gulp.dest('.'))
 })
 
@@ -166,7 +169,7 @@ gulp.task('new-email', function() {
 		.pipe(open())
 });
 
-gulp.task('new', function() {
+gulp.task('create', function() {
 
 	// acceptable flags to pass in this command
 	if (argv.component || argv.email) {

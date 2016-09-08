@@ -1,13 +1,13 @@
  body,
     #backgroundTable {
-        background-color: <%= backgroundColor %>;
+        background-color: <%= background_color %>;
         /* Use body to determine background color */
-        font-family: <%= primaryFont %>;
+        font-family: <%= primary_font %>;
     }
     
     #templateTable {
-        width: <%= emailBodyWidth %>;
-        background-color: <%= bodyColor %>;
+        width: <%= email_body_width %>;
+        background-color: <%= body_color %>;
         -webkit-font-smoothing: antialiased;
     }
     
@@ -23,9 +23,9 @@
     .h5,
     h6,
     .h6 {
-        color: <%= primaryFontColor %>;
+        color: <%= primary_font_color %>;
         display:block;
-        font-family: <%= primaryFont %>;
+        font-family: <%= primary_font %>;
         font-weight:bold;
         line-height:100%;
         margin-top:0;
@@ -67,14 +67,14 @@
     /* ==== Header Styles ==== */
     
     #headerTable {
-        background-color: <%= backgroundColor %>
-        color: <%= primaryFontColor %>;
-        font-family: <%= primaryFont %>;
+        background-color: <%= background_color %>
+        color: <%= primary_font_color %>;
+        font-family: <%= primary_font %>;
         font-size:10px;
         line-height:120%;
         text-align:right;
         border-collapse: separate !important;
-        padding-right: <%= emailBodyPadding %>
+        padding-right: <%= email_body_padding %>
     }
     
     #headerTable a:link,
@@ -91,25 +91,25 @@
     /* ==== Template Wrapper Styles ==== */
     
     #contentCell {
-        padding: 10px 20px;
-        background-color: <%= backgroundColor %>
+        /*padding: 10px 20px;*/
+        background-color: <%= background_color %>
     }
     
     #contentTableOuter {
         border-collapse: separate !important;
-        background-color: <%= bodyColor %>;
-        padding: <%= emailBodyPadding %>;
+        background-color: <%= body_color %>;
+        padding: <%= email_body_padding %>;
     }
     
     #contentTableInner {
-        width: <%= emailBodyWidth %>;
+        width: <%= email_body_width %>;
     }
     /* ==== Body Styles ==== */
     
     .bodyContent {
-        color: <%= primaryFontColor %>;
-        font-family: <%= primaryFont %> ;
-        font-size: <%= primaryFontSize %>;
+        color: <%= primary_font_color %>;
+        font-family: <%= primary_font %> ;
+        font-size: <%= primary_font_size %>;
         line-height:150%;
         text-align:left;
     }
@@ -118,14 +118,14 @@
     table.columnContentTable {
         border-collapse: separate !important;
         border-spacing: 0;
-        background-color:<%= bodyColor %>; 
+        background-color:<%= body_color %>; 
     }
     
     td[class~="columnContent"] {
-        color: <%= primaryFontColor %>;
-        font-family: <%= primaryFont %> 
+        color: <%= primary_font_color %>;
+        font-family: <%= primary_font %> 
         ;
-        font-size: <%= primaryFontSize %>;
+        font-size: <%= primary_font_size %>;
         line-height:120%;
         padding-top:20px;
         padding-right:20px;
@@ -135,16 +135,16 @@
     /* ==== Footer Styles ==== */
     
     #footerTable {
-        background-color: <%= backgroundColor %>
+        background-color: <%= background_color %>
     }
     
     #footerTable a {
-        color: <%= secondaryFontColor %>;
+        color: <%= secondary_font_color %>;
     }
     
     #footerTable {
-        color: <%= secondaryFontColor %>;
-        font-family: <%= primaryFont %> 
+        color: <%= secondary_font_color %>;
+        font-family: <%= primary_font %> 
         ;
         font-size:12px;
         line-height:120%;
@@ -240,7 +240,7 @@
     /* Style the footer with the same color as the footer text */
     
     #footer a {
-        color: <%= secondaryFontColor %>
+        color: <%= secondary_font_color %>
         ;
         -webkit-text-size-adjust: none;
         text-decoration: underline;
@@ -253,11 +253,11 @@
             width: 95% !important;
         }
         table[id="templateTable"] {
-            max-width: <%= emailBodyWidth %> !important;
+            max-width: <%= email_body_width %> !important;
             width:100% !important;
         }
         table[id="contentTableInner"] {
-            max-width: <%= emailBodyWidth %> !important;
+            max-width: <%= email_body_width %> !important;
             width:100% !important;
         }
         /* Makes image expand to take 100% of width*/
@@ -269,10 +269,10 @@
             padding: 10px 10px !important;
         }
         #headerTable {
-            padding-right: <%= emailBodyPadding %> !important;
+            padding-right: <%= email_body_padding %> !important;
         }
         #contentTableOuter {
-            padding: <%= emailBodyPadding %> !important;
+            padding: <%= email_body_padding %> !important;
         }
     }
     
@@ -299,11 +299,11 @@
         }
         /* ==== Mobile Template Styles ==== */
         table[id="templateTable"] {
-            max-width: <%= emailBodyWidth %> !important;
+            max-width: <%= email_body_width %> !important;
             width:100% !important;
         }
         table[id="contentTableInner"] {
-            max-width: <%= emailBodyWidth %> !important;
+            max-width: <%= email_body_width %> !important;
             width:100% !important;
         }
         /* ==== Image Alignment Styles ==== */
@@ -391,10 +391,10 @@
             padding: 10px 0px !important;
         }
         #headerTable {
-            padding-right: <%= emailBodyPadding %> !important;
+            padding-right: <%= email_body_padding %> !important;
         }
         #contentTableOuter {
-            padding: <%= emailBodyPadding %> !important;
+            padding: <%= email_body_padding %> !important;
         }
     }
     /*]]>*/

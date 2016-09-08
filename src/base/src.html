@@ -5,27 +5,27 @@
     <title>Component Test Email</title>
     <meta property="og:title" content="Test Email">
     <meta name="twitter:title" content="Test Email">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Test Email" />
-    <link rel="stylesheet" href="base.css"  type="text/css">
+    <link rel="stylesheet" href="base.css" type="text/css">
 </head>
 
 <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
     <!-- Preview text (text which appears right after subject) -->
-    <div id="preview_text" style="display:none;font-size:1px;color:#fff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
-        <span class=help-text>Preview Text</span>
+    <div id="preview_text" style="display:none;font-size:1px;color:{{background_color}};line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+        {% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}
     </div>
     <!--  The  backgroundTable table manages the color of the background and then the templateTable maintains the body of 
         the email template, including preheader & footer. This is the only table you set the width of to, everything else is set to 
         100% and in the CSS above. Having the width here within the table is just a small win for Lotus Notes. -->
     <!-- Begin backgroundTable -->
-    <table align="center" bgcolor="#FFF" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
+    <table align="center" bgcolor="{{ background_color }}" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
         <tr>
             <td align="center" valign="top" id="bodyCell">
                 <!-- When nesting tables within a TD, align center keeps it well, centered. -->
                 <!-- Begin Template Container -->
                 <!-- This holds everything together in a nice container -->
-                <table border="0" cellpadding="0" cellspacing="0" id="templateTable">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" id="templateTable">
                     <tr>
                         <td align="center" valign="top">
                             <!-- Begin Template Preheader -->
@@ -35,12 +35,9 @@
                                         <td align="center" valign="top" class="bodyContent" width="100%" colspan="12">
                                             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper">
                                                 <tr>
-                                                    <td valign="top" colspan=12 width="100.0%" class=" column" style="width:100.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
+                                                    <td valign="top" colspan=12 width="100.0%" class=" column" style="width:100.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
                                                         <div class="widget-span widget-type-email_view_as_web_page " style="" data-widget-type="email_view_as_web_page">
-                                                            <div style="padding-top: 15px; font-family: Geneva, Verdana, Arial, Helvetica, sans-serif; text-align: right; font-size: 9px; line-height: 1.34em; color: #cecece">
-                                                                Not rendering correctly? View this email as a web page <a class="hubspot-mergetag" style="color: #cecece; text-decoration: underline; white-space: nowrap" data-viewaswebpage="true" href="http://www.google.com">here</a>.
-                                                            </div>
-                                                            
+                                                            View in browser text
                                                         </div>
                                                         <!--end widget-span -->
                                                     </td>
@@ -60,7 +57,7 @@
                             <!-- This separates the preheader which usually contains the "open in browser, etc" content
                                 from the actual body of the email. Can alternatively contain the footer too, but I choose not
                                 to so that it stays outside of the border. -->
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="contentTableOuter">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="contentTableOuter" style="{{email_body_border_css}}">
                                 <tr>
                                     <td align="center" valign="top">
                                         <table border="0" cellpadding="0" cellspacing="0" id="contentTableInner">
@@ -69,10 +66,10 @@
                                                     <td align="center" valign="top" class="bodyContent" width="100%" colspan="12">
                                                         <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper">
                                                             <tr>
-                                                                <td valign="top" colspan=12 width="100.0%" class=" column" style="width:100.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
+                                                                <td valign="top" colspan=12 width="100.0%" class=" column" style="width:100.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
                                                                     <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
                                                                         <div class="layout-widget-wrapper">
-                                                                            <component-include>
+                                                                            <component-include></component-include>
                                                                         </div>
                                                                         <!--end layout-widget-wrapper -->
                                                                     </div>
@@ -86,7 +83,7 @@
                                                     <td align="center" valign="top" class="bodyContent" width="100%" colspan="12">
                                                         <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper">
                                                             <tr>
-                                                                <td valign="top" colspan=3 width="25.0%" class=" column" style="width:25.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
+                                                                <td valign="top" colspan=3 width="25.0%" class=" column" style="width:25.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
                                                                     <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
                                                                         <div class="layout-widget-wrapper">
                                                                             &nbsp;
@@ -95,10 +92,10 @@
                                                                     </div>
                                                                     <!--end widget-span -->
                                                                 </td>
-                                                                <td valign="top" colspan=9 width="75.0%" class=" column" style="width:75.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
-                                                                    <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
+                                                                <td valign="top" colspan=9 width="75.0%" class=" column" style="width:75.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
+                                                                    <div class="widget-span widget-type-rich_text " style="" data-widget-type="rich_text">
                                                                         <div class="layout-widget-wrapper">
-                                                                            <component-include>
+                                                                            <component-include></component-include>
                                                                         </div>
                                                                         <!--end layout-widget-wrapper -->
                                                                     </div>
@@ -112,7 +109,7 @@
                                                     <td align="center" valign="top" class="bodyContent" width="100%" colspan="12">
                                                         <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper">
                                                             <tr>
-                                                                <td valign="top" colspan=6 width="50.0%" class=" column" style="width:50.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
+                                                                <td valign="top" colspan=6 width="50.0%" class=" column" style="width:50.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
                                                                     <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
                                                                         <div class="layout-widget-wrapper">
                                                                             &nbsp;
@@ -121,10 +118,10 @@
                                                                     </div>
                                                                     <!--end widget-span -->
                                                                 </td>
-                                                                <td valign="top" colspan=6 width="50.0%" class=" column" style="width:50.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
-                                                                    <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
+                                                                <td valign="top" colspan=6 width="50.0%" class=" column" style="width:50.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
+                                                                    <div class="widget-span widget-type-rich_text " style="" data-widget-type="rich_text">
                                                                         <div class="layout-widget-wrapper">
-                                                                            <component-include>
+                                                                            <component-include></component-include>
                                                                         </div>
                                                                         <!--end layout-widget-wrapper -->
                                                                     </div>
@@ -138,7 +135,7 @@
                                                     <td align="center" valign="top" class="bodyContent" width="100%" colspan="12">
                                                         <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper">
                                                             <tr>
-                                                                <td valign="top" colspan=9 width="75.0%" class=" column" style="width:75.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
+                                                                <td valign="top" colspan=8 width="66.66666666666666%" class=" column" style="width:66.66666666666666%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
                                                                     <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
                                                                         <div class="layout-widget-wrapper">
                                                                             &nbsp;
@@ -147,10 +144,10 @@
                                                                     </div>
                                                                     <!--end widget-span -->
                                                                 </td>
-                                                                <td valign="top" colspan=3 width="25.0%" class=" column" style="width:25.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
-                                                                    <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
+                                                                <td valign="top" colspan=4 width="33.33333333333333%" class=" column" style="width:33.33333333333333%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
+                                                                    <div class="widget-span widget-type-rich_text " style="" data-widget-type="rich_text">
                                                                         <div class="layout-widget-wrapper">
-                                                                           <component-include>
+                                                                            <component-include></component-include>
                                                                         </div>
                                                                         <!--end layout-widget-wrapper -->
                                                                     </div>
@@ -178,17 +175,18 @@
                                         <td align="center" valign="top" class="bodyContent" width="100%" colspan="12">
                                             <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper">
                                                 <tr>
-                                                    <td valign="top" colspan=12 width="100.0%" class=" column" style="width:100.0%; text-align: left; padding: 0; font-family: Helvetica; font-size: 14px; line-height: 1.5em; color: #333; ">
+                                                    <td valign="top" colspan=12 width="100.0%" class=" column" style="width:100.0%; text-align: left; padding: 0; font-family: {{ primary_font }}; font-size: {{ primary_font_size }}; line-height: 1.5em; color: {{ primary_font_color }}; ">
                                                         <div class="widget-span widget-type-email_can_spam " style="" data-widget-type="email_can_spam">
-                                                            <p id="footer" style="font-family: Geneva, Verdana, Arial, Helvetica, sans-serif; text-align: center; font-size: 12px; line-height: 1.34em; color: #cecece; display: block">
-                                                                1400 Montefino Ave Diamondbar, CA 91765
+                                                            <p id="footer" style="font-family: Geneva, Verdana, Arial, Helvetica, sans-serif; text-align: center; font-size: 12px; line-height: 1.34em; color: {{ secondary_font_color }}; display: block">
+                                                                Liferay 1400 Montefino Ave
                                                                 <br/>
                                                                 <br/> You received this email because you are subscribed to
+                                                        
                                                                 <br/>
-                                                                <br/> Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="#" style="text-decoration: underline; whitespace: nowrap; color: #cecece;">email preferences</a> to choose the types of emails you receive.
+                                                                <br/> Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="text-decoration: underline; whitespace: nowrap; color: {{ secondary_font_color }};">email preferences</a> to choose the types of emails you receive.
                                                                 <br/>
                                                                 <br/> &nbsp;
-                                                                <a class="hubspot-mergetag" data-unsubscribe="true" href="http://www.google.com" style="text-decoration: underline; whitespace: nowrap; color: #cecece;">Unsubscribe from all future emails</a>&nbsp;
+                                                                <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link_all }}" style="text-decoration: underline; whitespace: nowrap; color: {{ secondary_font_color }};">Unsubscribe from all future emails</a>&nbsp;
                                                             </p>
                                                         </div>
                                                         <!--end widget-span -->
@@ -200,7 +198,7 @@
                                 </div>
                                 <!--end footer wrapper -->
                                 <tr>
-                                   
+                                    
                                 </tr>
                             </table>
                             <!-- End Template Footer -->
@@ -212,3 +210,5 @@
         </tr>
     </table>
 </body>
+
+</html>
