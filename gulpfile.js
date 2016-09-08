@@ -172,6 +172,16 @@ gulp.task('openLitmus', function() {
 });
 
 /*
+	Hubspot Integration
+*/
+
+gulp.task('hubspot', function() {
+	gulp.src('index.html')
+  	.pipe(open({uri: 'https://app.hubspot.com/content/299703/template-builder'}));
+});
+
+
+/*
 	File Watcher
 */
 gulp.task('watch', function() {
