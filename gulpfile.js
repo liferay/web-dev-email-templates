@@ -1,6 +1,7 @@
 'use strict';
 
 const argv = require('yargs').argv;
+const chalk = require('chalk');
 const config = require('./config');
 const gulp = require('gulp');
 const htmlPrettify = require('gulp-html-prettify');
@@ -124,8 +125,8 @@ gulp.task('emails-processing', function() {
 
 // Create new components and emails
 gulp.task('new-component', function() {
+	console.log(chalk.bgBlue(`Creating new component: ${argv.component}`));
 
-	console.log(`Creating new component: ${argv.component}`);
 	gulp.src('src/components/component-template.html')
 		.pipe(rename({basename: 'src'}))
 		.pipe(gulp.dest(`src/components/${argv.component}`));
@@ -139,7 +140,8 @@ gulp.task('new-component', function() {
 });
 
 gulp.task('new-email', function() {
-	console.log(`Creating new email: ${argv.email}`);
+	console.log(chalk.bgBlue(`Creating new email: ${argv.email}`));
+
 	gulp.src('src/emails/email-template.html')
 		.pipe(rename({basename: 'src'}))
 		.pipe(gulp.dest(`src/emails/${argv.email}`));
@@ -162,9 +164,9 @@ gulp.task('new', function() {
 		if (argv.email) {
 			runSequence('new-email', 'base', 'global-styles', 'emails-processing', 'watch' );	
 		}
-		
+
 	} else {
-		console.error(`Need to know what you're making. Try using gulp new --email [email name] or gulp new --component [component name]`)
+		console.error(chalk.white.bgRed(`Need to know what you're making. Try using gulp new --email [email name] or gulp new --component [component name]`));
 	}
 	
 });
@@ -192,19 +194,17 @@ var litmusConfig = {
 gulp.task('litmus', function () {
 	// check if component name is valid
 	if (!argv.name) {
-		console.error('Need proper name. Try again using: gulp new --name [component-name]')
+		console.log(chalk.white.bgRed('Need proper name. Try again using: gulp new --name [component-name]'));
 	}
 
 	else {
-		console.log(`Testing src/components/${argv.name}/test.html`)
+		console.log(chalk.bgBlue(`Testing src/components/${argv.name}/test.html`));
 		gulp.src(`src/components/${argv.name}/test.html`)
-        .pipe(litmus(litmusConfig))
-	}
+        	.pipe(litmus(litmusConfig))
 
-	gulp.src('index.html')
-  		.pipe(open({uri: 'https://litmus.com/checklist'}));
-
-    
+        gulp.src('index.html')
+  			.pipe(open({uri: 'https://litmus.com/checklist'}));
+	}    
 });
 
 /*
