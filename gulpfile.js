@@ -98,6 +98,23 @@ gulp.task('components-processing', function() {
 			.pipe(gulp.dest('.'))
 });
 
+gulp.task('emails-processing', function() {
+	// create one for distribution
+	return gulp.src('src/emails/**/src.html', { base: './' })
+		// turn inky into regular html
+		.pipe(inky())
+		// remove HTML comments
+		.pipe(removeHtmlComments())
+		// inline CSS
+		.pipe(inlineCss())
+		// prettify HTML
+		.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
+		// rename file to test
+		.pipe(rename({basename: 'dist'}))
+		// move file to same location
+		.pipe(gulp.dest('.'))
+})
+
 // Component CSS Styling
 // gulp.task('component-sass', function() {
 // 	return gulp.src(['src/**/*.scss', '!src/components/styles-template.scss'], {base: './'})
@@ -105,32 +122,51 @@ gulp.task('components-processing', function() {
 //     	.pipe(gulp.dest('.'));
 // })
 
-
-// Create new component by passing flag in
+// Create new components and emails
 gulp.task('new-component', function() {
-	// check if component name is valid
-	if (!argv.component) {
-		console.error('Need proper component. Try again using: gulp new --component [component-component]')
-	}
 
-	// create the component
-	else if (argv.component) {
-		console.log(`Creating new component: ${argv.component}`);
-		gulp.src('src/components/component-template.html')
-			.pipe(rename({basename: 'src'}))
-			.pipe(gulp.dest(`src/components/${argv.component}`));
-		gulp.src('src/components/styles-template.css')
-			.pipe(rename({basename: 'main'}))
-			.pipe(gulp.dest(`src/components/${argv.component}`))
+	console.log(`Creating new component: ${argv.component}`);
+	gulp.src('src/components/component-template.html')
+		.pipe(rename({basename: 'src'}))
+		.pipe(gulp.dest(`src/components/${argv.component}`));
+	gulp.src('src/components/styles-template.css')
+		.pipe(rename({basename: 'main'}))
+		.pipe(gulp.dest(`src/components/${argv.component}`))
+	gulp.src(`src/components/${argv.component}/test.html`)
+		.pipe(livereload({start: true}))
+		.pipe(open())
 
-		gulp.src(`src/components/${argv.component}/test.html`)
-			.pipe(livereload({start: true}))
-			.pipe(open())
-	}
+});
+
+gulp.task('new-email', function() {
+	console.log(`Creating new email: ${argv.email}`);
+	gulp.src('src/emails/email-template.html')
+		.pipe(rename({basename: 'src'}))
+		.pipe(gulp.dest(`src/emails/${argv.email}`));
+	gulp.src('src/emails/styles-template.css')
+		.pipe(rename({basename: 'main'}))
+		.pipe(gulp.dest(`src/emails/${argv.email}`))
+	gulp.src(`src/emails/${argv.email}/dist.html`)
+		// .pipe(livereload({start: true}))
+		.pipe(open())
 });
 
 gulp.task('new', function() {
-	runSequence('new-component', 'base', 'global-styles', 'components-processing', 'watch' );
+
+	// acceptable flags to pass in this command
+	if (argv.component || argv.email) {
+		if (argv.component) {
+			runSequence('new-component', 'base', 'global-styles', 'components-processing', 'watch' );	
+		}
+
+		if (argv.email) {
+			runSequence('new-email', 'base', 'global-styles', 'emails-processing', 'watch' );	
+		}
+		
+	} else {
+		console.error(`Need to know what you're making. Try using gulp new --email [email name] or gulp new --component [component name]`)
+	}
+	
 });
 
 /*
@@ -165,13 +201,10 @@ gulp.task('litmus', function () {
         .pipe(litmus(litmusConfig))
 	}
 
-	runSequence('openLitmus');
-    
-});
-
-gulp.task('openLitmus', function() {
 	gulp.src('index.html')
-  	.pipe(open({uri: 'https://litmus.com/checklist'}));
+  		.pipe(open({uri: 'https://litmus.com/checklist'}));
+
+    
 });
 
 /*
@@ -193,7 +226,8 @@ gulp.task('watch', function() {
 	gulp.watch('src/**/src.html', function(callback) {
 		runSequence(
 			'base',
-			'components-processing'
+			'components-processing',
+			'emails-processing'
 		);
 	});
 
@@ -214,7 +248,8 @@ gulp.task('watch', function() {
 		], function(callback) {
 			runSequence(
 				'global-styles',
-				'components-processing'
+				'components-processing',
+				'emails-processing'
 			);
 	})
 });

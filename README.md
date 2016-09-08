@@ -37,6 +37,7 @@ gulp new --component [component]
 ```
 
 This will create a new component in `src/components`. In it are:
+
 ```
 /components
     /[component-name]
@@ -128,6 +129,7 @@ For any components, you can leverage any of the Inky syntax and it will spit out
 - Need to accomodate for HS variables and structure.
 - Remove extraneous dependencies
 - Test A-Z
+- color comments for new creation
 - Get Litmus account
 - <del>Get feedback about builder</del>
 - <del>Set up Zurb scaffolding</del>
