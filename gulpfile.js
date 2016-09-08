@@ -56,9 +56,7 @@ gulp.task('global-styles', function() {
 		.pipe(sass().on('error', sass.logError))
     	.pipe(gulp.dest('./src/styles'))
     	.pipe(livereload({start: true}))
-
 })
-
 
 /*
 	Component Tasks
