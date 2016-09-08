@@ -11,6 +11,7 @@ const livereload = require('gulp-livereload');
 const open = require('gulp-open');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
+const removeHtmlComments = require('gulp-remove-html-comments');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const template = require('gulp-template');
@@ -85,6 +86,8 @@ gulp.task('components-processing', function() {
 		gulp.src('src/components/**/src.html', { base: './' })
 			// turn inky into regular html
 			.pipe(inky())
+			// remove HTML comments
+			.pipe(removeHtmlComments())
 			// inline CSS
 			.pipe(inlineCss())
 			// prettify HTML
