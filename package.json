@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "chalk": "^1.1.3",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-email": "0.0.7",
     "gulp-livereload": "^3.8.1",

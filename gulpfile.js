@@ -3,6 +3,7 @@
 const argv = require('yargs').argv;
 const chalk = require('chalk');
 const config = require('./config');
+const del = require('del');
 const gulp = require('gulp');
 const htmlPrettify = require('gulp-html-prettify');
 const inky = require('inky');
@@ -97,6 +98,8 @@ gulp.task('components-processing', function() {
 			.pipe(rename({basename: 'dist'}))
 			// move file to same location
 			.pipe(gulp.dest('.'))
+
+		return;
 });
 
 gulp.task('emails-processing', function() {
@@ -114,6 +117,8 @@ gulp.task('emails-processing', function() {
 		.pipe(rename({basename: 'dist'}))
 		// move file to same location
 		.pipe(gulp.dest('.'))
+
+		return;
 })
 
 // Component CSS Styling
@@ -254,6 +259,17 @@ gulp.task('watch', function() {
 	})
 });
 
+
+gulp.task('clear-all', function () {
+  return del([
+    'src/components/**/*',
+    '!src/components/*.html',
+    '!src/components/*.css',
+    'src/emails/**/*',
+    '!src/emails/*.html',
+    '!src/emails/*.css'
+  ]);
+});
 
 /*
 	Default Task
