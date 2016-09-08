@@ -117,6 +117,8 @@ gulp.task('emails-processing', function() {
 		.pipe(rename({basename: 'dist'}))
 		// move file to same location
 		.pipe(gulp.dest('.'))
+		// live reload
+		.pipe(livereload({start: true}))
 
 		return;
 })
@@ -154,7 +156,7 @@ gulp.task('new-email', function() {
 		.pipe(rename({basename: 'main'}))
 		.pipe(gulp.dest(`src/emails/${argv.email}`))
 	gulp.src(`src/emails/${argv.email}/dist.html`)
-		// .pipe(livereload({start: true}))
+		.pipe(livereload({start: true}))
 		.pipe(open())
 });
 
@@ -280,6 +282,7 @@ gulp.task('default', function(callback) {
 		'base',
 		'global-styles',
 		'components-processing',
+		'emails-processing',
 		'watch'
 	)
 });
