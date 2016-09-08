@@ -70,7 +70,7 @@ gulp
 Omg, magic.
 
 ### 3) Send a Component to Test
-Want to see your component in Litmus?
+Want to see your component tested in Litmus?
 
 ```
 gulp test --name [component]
