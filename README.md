@@ -1,28 +1,35 @@
-# lrdcom-email-builder
-#### A build system for building and testing robust customized email components in Hubspot
+# Liferay.com Email Component Builder
+A build system for building and testing robust customized email components in Hubspot.
+
+The purpose of the system is to 1) emulate hubspot's styling and grid system for design replication 2) make creating components easy and testable. 
 
 ## Table of Contents
 1. [Getting Started](#getting-started)
-    - [First Time](#first-time)
+2. [Commands You Need to Know](#commands-you-need-to-know)
     - [Creating a New Component](#creating-a-new-component)
     - [Watching for Changes](#watching-for-changes)
     - [Send a Component to Test](#send-a-component-to-test)
     - [Transferring to Hubspot](#transferring-to-hubspot)
 2. [How the System Works](#how-it-works)
     - [Overview](#overview)
+    - [Email Global Styles](#email-global-styles)
     - [Inky](#inky)
     - [Hubspot Email Settings](#hubspot-email-settings)
     - [Live Reload](#live-reload)
-  
-3. 
 
 ## Getting Started
 
-### First Time
+The gateway to do everything: 
+1. Clone repo
+2. Install all [npm](https://www.npmjs.com/) dependencies with `npm install` from your terminal in the root directory.
 
-Install all [npm](https://www.npmjs.com/) dependencies: `npm install`
+You're ready to go!
+
+## Commands You Need to Know
+To create, update, test, and transfer custom and bullet-proof email components to Hubspot, these are the commands that you'll need to know.
 
 ### Create a New Component
+When you need to make a new email component:
 
 ```
 gulp new --name [component]
@@ -34,41 +41,44 @@ This will create a new component in `src/components`. In it are:
     /[component-name]
         src.html
         styles.css
+        test.html
+        dist.html
 ```
 
+What these do:
 
+Stuff you edit:
 `src.html` is where the HTML for component
 `styles.css` are styles specific for that component
-`test.html` is your component with hubspot styles and grid
+
+Stuff that's outputted (aka: don't edit these):
+`test.html` is your component with hubspot styles and grid system. View in browser to test.
 `dist.html` is the final product of your component
 
 Oh and congrats, Gulp is now watching for changes. Any change you make to `src.html` and `styles.css` will reflect in `test.html` and `dist.html`.
 
 ### Watch for Changes
+Want to make changes to any component? Run this command and the application will watch for all changes to any file and process produce `test.html` and `dist.html`
 
 ```
 gulp
 ```
 
-This will watch for all changes to any file and execute the proper workflow. 
-
 ### Send a Component to Test
-Want to see your component in Litmus? 
+Want to see your component in Litmus?
 
 ```
 gulp test --name [component]
 ```
 
 ### Transferring to Hubspot
-Unfortunately, there's no way to automatically create components in Hubspot. So what you'll basically do is copy the contents of `dist.html` to your Custom Module. 
+Unfortunately, there's no way to automatically create components in Hubspot. So what you'll basically do is copy the contents of `dist.html` to your Custom Module. This is similar to relationship between the lrdcom repo and templates in Liferay.com
 
 ## How the System Works
 
 ### Overview
 
-The purpose of the system is to 1) emulate hubspot's styling and grid system for design replication 2) make creating components easy and testable. 
-
-With those two goals, this is how the build system works:
+This is how the build system works:
 
 ![Email Builder Architecture](https://github.com/phillipchan2/lrdcom-email-builder/blob/master/assets/Email%20Builder%20Architecture.png?raw=true"Logo Title Text 1")
 
@@ -77,6 +87,9 @@ What's what:
 The base is used to create a code environment as close to Hubspot as possible so that when component are being built, it should reflect what you see on Hubspot.com. what base archictecture for emails. This should include all code that Hubspot uses. 
 - **Global Email Styles** (`/src/styles`) - This will contain global styles that will apply to every component. `main.css` is the final file that will be included in every component.
 - **Custom Components** (`/src/base/components`) - Where our collection of components go.
+
+### Email Global Styles
+In `/src/styles` you'll find global styles. This allows global theming and styling as it will write css for every component. Supports SASS. If you have `gulp` running, it will automagically process and update all components on save. 
 
 ### Inky
 [Inky](#https://foundation.zurb.com/emails/docs/inky.html) is a responsive framework for Emails from Zurb that is well-documented, supported, and robust. In any components, you can leverage any of the Inky syntax and it will spit out correct styling and HTML. Note: Don't rely so much on the Inky grid system as we are locked into Hubspot's grid system.
@@ -102,5 +115,5 @@ The base is used to create a code environment as close to Hubspot as possible so
 - <del>Set up Zurb scaffolding</del>
 - <del>Output a `dist.html`</del>
 - <del>Livereload certain components</del>
-- <del>Get SASS for component level</del>
+- Get SASS for component level
 - Create video showing how it's done.
