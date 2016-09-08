@@ -131,6 +131,7 @@ For any components, you can leverage any of the Inky syntax and it will spit out
 - Test A-Z
 - <del>Color comments for new creation</del>
 - Get Litmus account` 
+- <del>Component includes for html emails</del>
 - <del>Get feedback about builder</del>
 - <del>Set up Zurb scaffolding</del>
 - <del>Output a `dist.html`</del>
