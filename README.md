@@ -10,7 +10,7 @@ The purpose of the system is to 1) emulate hubspot's styling and grid system for
     - [2) Creating a New HTML Email](#creating-a-new-html-email)
     - [3) Making Changes to Components Or Emails](#watching-for-changes)
     - [4) Sending to Test](#send-a-component-to-test)
-    - [5) Transferring to Hubspot](#transferring-to-hubspot)
+    - [5) Transferring Components to Hubspot](#transferring-to-hubspot)
 2. [How the System Works](#how-it-works)
     - [Overview](#overview)
     - [Email Global Styles](#email-global-styles)
@@ -81,7 +81,7 @@ gulp test --component [component-name]
 gulp test --email [email-name]
 ```
 
-### 5) Transferring to Hubspot
+### 5) Transferring Components to Hubspot
 Unfortunately, there's no way to automatically create components in Hubspot. So what you'll basically do is copy the contents of `dist.html` to your Custom Module. This is similar to relationship between the lrdcom repo and templates in Liferay.com
 
 ## How the System Works
@@ -126,11 +126,11 @@ For any components, you can leverage any of the Inky syntax and it will spit out
 - <del>Build base with configs</del>
 - <del>Auto test</del>
 - <del>Need to have global theming at component level with SASS</del>
-- Need to accomodate for HS variables and structure.
+- <del>Need to accomodate for HS variables and structure.</del>
 - Remove extraneous dependencies
 - Test A-Z
-- color comments for new creation
-- Get Litmus account
+- <del>Color comments for new creation</del>
+- Get Litmus account` 
 - <del>Get feedback about builder</del>
 - <del>Set up Zurb scaffolding</del>
 - <del>Output a `dist.html`</del>

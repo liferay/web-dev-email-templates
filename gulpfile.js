@@ -4,6 +4,7 @@ const argv = require('yargs').argv;
 const chalk = require('chalk');
 const config = require('./config');
 const del = require('del');
+const fileinclude = require('gulp-file-include');
 const gulp = require('gulp');
 const htmlPrettify = require('gulp-html-prettify');
 const inky = require('inky');
@@ -109,6 +110,11 @@ gulp.task('emails-processing', function() {
 		.pipe(inky())
 		// remove HTML comments
 		.pipe(removeHtmlComments())
+		// include pre-processing
+		.pipe(replace(`{{components.`, `@@include('../../components/`))
+		.pipe(replace(`}}`, `/dist.html')`))
+		// include components
+		.pipe(fileinclude({prefix: '@@'}))
 		// inline CSS
 		.pipe(inlineCss())
 		// prettify HTML

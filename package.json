@@ -23,6 +23,7 @@
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-email": "0.0.7",
+    "gulp-file-include": "^0.14.0",
     "gulp-livereload": "^3.8.1",
     "gulp-remove-html-comments": "^1.0.1",
     "gulp-replace": "^0.5.4",
