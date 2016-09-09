@@ -1,16 +1,19 @@
-# Liferay.com Email Component Builder
-A build system for building and testing robust customized email components in Hubspot.
-
-The purpose of the system is to 1) emulate hubspot's styling and grid system for design replication 2) make creating components easy and testable. 
+# Liferay.com Email Builder
+The automagic builder that can 1) build tested components for Hubspot and 2) build fully-responsive HTML emails as painless as email building can be.
 
 ## Table of Contents
 1. [Getting Started](#getting-started)
-2. [Commands You Need to Know](#commands-you-need-to-know)
+2. [Creating Hubspot Email Components](#creating-hubspot-email-components)
     - [1) Creating a New Component](#creating-a-new-component)
-    - [2) Creating a New HTML Email](#creating-a-new-html-email)
-    - [3) Making Changes to Components Or Emails](#watching-for-changes)
+    - [2) Making Changes](#making-changes)
+    - [3) Hubspot Variables](#hubspot-variables)
     - [4) Sending to Test](#send-a-component-to-test)
     - [5) Transferring Components to Hubspot](#transferring-to-hubspot)
+3. [Creating HTML Emails](#creating-html-emails) 
+    - [1) Creating a New HTML Email](#creating-a-new-html-email)
+    - [2) Making Changes](#making-changes-to-emails)
+    - [3) Component Includes](#component-includes)
+    - [4) Sending to Test](#send-a-component-to-test)
 2. [How the System Works](#how-it-works)
     - [Overview](#overview)
     - [Email Global Styles](#email-global-styles)
@@ -25,13 +28,10 @@ The gateway to do everything:
 1. Clone repo
 2. Install all [npm](https://www.npmjs.com/) dependencies with `npm install` from your terminal in the root directory.
 
-You're ready to go!
+## Creating Hubspot Email Components
+To create, update, test, and transfer custom and bullet-proof email components to Hubspot.
 
-## Commands You Need to Know
-To create, update, test, and transfer custom and bullet-proof email components to Hubspot, these are the commands that you'll need to know.
-
-### 1) Create a New Component
-When you need to make a new email component:
+##### 1) Create a New Component:
 
 ```
 gulp create --component [component-name]
@@ -48,7 +48,42 @@ This will create a new component in `src/components`. In it are:
         dist.html   // (Don't edit) What you copy and paste into Hubspot
 ```
 
-### 2) Creating a New HTML Email
+##### 2) Making Changes to Components
+
+```
+gulp
+```
+
+*Hooray*, we're watching for all changes now and 1) inline styling 2) applying global styling 3) wrapping it Hubspot base 4) spitting out all the html in `dist.html` and `test.html`
+
+##### 3) Hubspot Variables
+To make component content able to be driven by content authors and not coders, Hubspot allows for data structures as variables for their components.
+
+In Hubspot, when you create components, they will ask you to create the data structure for your component:
+
+![Hubspot Component Variables](assets/Hubspot-structures.png)
+
+Then, in your code, just include the variable in:
+
+Example:
+```
+{{widget.hero_text}}
+```
+
+##### 4) Sending to Test 
+See your component tested in Litmus:
+
+```
+gulp test --component [component-name]
+```
+
+##### 5) Transferring Components to Hubspot
+Unfortunately, there's no way to automatically create components in Hubspot. So what you'll basically do is copy the contents of `dist.html` to your Custom Module. This is similar to relationship between the lrdcom repo and templates in Liferay.com
+
+## Creating HTML Emails
+We often have to send full HTML emails. 
+
+##### 1) Creating a New HTML Email
 ```
 gulp create --email [email-name]
 ```
@@ -63,35 +98,38 @@ This will create a new email in `src/emails`. In it are:
         dist.html   // (Don't edit) Your fully baked HTML email
 ```
 
-### 3) Making Changes to Components or Emails
-Want to make changes to any component or email? Run this command and the application will watch for all changes to any file and process produce `test.html` and `dist.html`
+##### 2) Making Changes to Emails
 
 ```
 gulp
 ```
 
-### 4) Sending to Test 
-Want to see your component tested in Litmus?
+*Hooray*, we're watching for all changes now.
+
+##### 4) Component Includes
+You can include components that you've built for hubspot. Anywhere in your HTML email:
 
 ```
-gulp test --component [component-name]
+{{components.[component-name]}}
+```
 
-// or 
+This will only work for components with hard-coded content and not with hubspot variables.
 
+##### 3) Sending to Test 
+See your email tested in Litmus:
+
+```
 gulp test --email [email-name]
 ```
-
-### 5) Transferring Components to Hubspot
-Unfortunately, there's no way to automatically create components in Hubspot. So what you'll basically do is copy the contents of `dist.html` to your Custom Module. This is similar to relationship between the lrdcom repo and templates in Liferay.com
 
 ## How the System Works
 Here's some details to understand how the system works and features you may want to leverage.
 
-### Overview
+##### Overview
 
 This is how the build system works:
 
-![Email Builder Architecture](https://github.com/phillipchan2/lrdcom-email-builder/blob/master/assets/Email%20Builder%20Architecture.png?raw=true"Logo Title Text 1")
+<div style="text-align:center"><img style="text-align:center" src ="assets/Email Builder Architecture.png" /></div>
 
 What's what:
 - **Hubspot Styles and Infrastructure** (`/src/base/`)
@@ -99,21 +137,21 @@ The base is used to create a code environment as close to Hubspot as possible so
 - **Global Email Styles** (`/src/styles`) - This will contain global styles that will apply to every component. `main.css` is the final file that will be included in every component.
 - **Custom Components** (`/src/base/components`) - Where our collection of components go.
 
-### Email Global Styles
+##### Email Global Styles
 In `/src/styles` you'll find global styles for all components.
 
 - This allows global theming and styling as it will write css for every component. 
 - Supports SASS. 
 - If you have `gulp` running, it will automagically process and update all components on save. 
 
-### Inky
-[Inky](https://foundation.zurb.com/emails/) is a responsive framework for Emails from Zurb that is well-documented, supported, and robust. Inky is fully integrated in this build system. 
+##### Inky
+This email builder has [Inky](https://foundation.zurb.com/emails/) fully integrated.
 
-For any components, you can leverage any of the Inky syntax and it will spit out correct styling and HTML. Note: Don't rely so much on the Inky grid system as we are locked into Hubspot's grid system.
+For any components, you can leverage any of the Inky syntax and it will spit out correct styling and HTML. Note: For components, don't rely so much on the Inky grid system as we are locked into Hubspot's grid system.
 
 [Read Inky Docs](https://foundation.zurb.com/emails/docs/inky.html)
 
-### Live Reload
+##### Live Reload
 [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) is a Chrome plugin that allows for auto reload when changes to a page are made. To leverage this during development...
 
 1. Install the plugin
@@ -127,14 +165,13 @@ For any components, you can leverage any of the Inky syntax and it will spit out
 - <del>Auto test</del>
 - <del>Need to have global theming at component level with SASS</del>
 - <del>Need to accomodate for HS variables and structure.</del>
-- Remove extraneous dependencies
-- Test A-Z
+- <del>Remove extraneous dependencies</del>
+- <del>Test A-Z</del>
 - <del>Color comments for new creation</del>
-- Get Litmus account` 
+- <del>Get Litmus account</del>
 - <del>Component includes for html emails</del>
 - <del>Get feedback about builder</del>
 - <del>Set up Zurb scaffolding</del>
 - <del>Output a `dist.html`</del>
 - <del>Livereload certain components</del>
-- Get SASS for component level
 - Create video showing how it's done.
