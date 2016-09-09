@@ -182,7 +182,7 @@ gulp.task('create', function() {
 		}
 
 	} else {
-		console.error(chalk.white.bgRed(`Need to know what you're making. Try using gulp new --email [email name] or gulp new --component [component name]`));
+		console.error(chalk.white.bgRed(`Need to know what you're making. Try using gulp create --email [email name] or gulp create --component [component name]`));
 	}
 	
 });
