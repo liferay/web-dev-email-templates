@@ -13,13 +13,14 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
     - [Creating a New HTML Email](#creating-a-new-html-email)
     - [Making Changes to Emails ](#making-changes-to-emails)
     - [Component Includes](#component-includes)
-    - [Sending an Email to Test](#send-an-email-to-test)
-2. [How the System Works](#how-it-works)
+    - [Sending an Email to Test](#sending-an-email-to-test)
+4. [How the System Works](#how-the-system-works)
     - [Overview](#overview)
     - [Email Global Styles](#email-global-styles)
     - [Inky](#inky)
     - [Hubspot Email Settings](#hubspot-email-settings)
     - [Live Reload](#live-reload)
+5. [To Do Feature List](#to-do-feature-list)
 
 ## Getting Started
 
