@@ -4,16 +4,16 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
 ## Table of Contents
 1. [Getting Started](#getting-started)
 2. [Creating Hubspot Email Components](#creating-hubspot-email-components)
-    - [Creating a New Component](#creating-a-new-component)
-    - [Making Changes](#making-changes)
+    - [Create a New Component](#creating-a-new-component)
+    - [Making Changes to Components](#making-changes)
     - [Hubspot Variables](#hubspot-variables)
-    - [Sending to Test](#send-a-component-to-test)
+    - [Sending a Component to Test](#send-a-component-to-test)
     - [Transferring Components to Hubspot](#transferring-to-hubspot)
 3. [Creating HTML Emails](#creating-html-emails)
     - [Creating a New HTML Email](#creating-a-new-html-email)
-    - [Making Changes](#making-changes-to-emails)
+    - [Making Changes to Emails](#making-changes-to-emails)
     - [Component Includes](#component-includes)
-    - [Sending to Test](#send-an-email-to-test)
+    - [Sending an Email to Test](#send-an-email-to-test)
 2. [How the System Works](#how-it-works)
     - [Overview](#overview)
     - [Email Global Styles](#email-global-styles)
@@ -70,7 +70,7 @@ Example:
 {{widget.hero_text}}
 ```
 
-##### Sending to Test 
+##### Sending a Component to Test 
 See your component tested in Litmus:
 
 ```
@@ -115,7 +115,7 @@ You can include components that you've built for hubspot. Anywhere in your HTML 
 
 This will only work for components with hard-coded content and not with hubspot variables.
 
-##### Sending to Test 
+##### Sending an Email to Test 
 See your email tested in Litmus:
 
 ```
