@@ -274,11 +274,18 @@ gulp.task('watch', function() {
 
 	gulp.watch(
 		[
-			'src/**/*.scss',
-			'src/**/*.css'
+			'src/styles/*.scss'
 		], function(callback) {
 			runSequence(
-				'global-styles',
+				'global-styles'
+			);
+	})
+
+	gulp.watch(
+		[
+			'src/components/**/*.css'
+		], function(callback) {
+			runSequence(
 				'components-processing',
 				'emails-processing'
 			);
