@@ -30,7 +30,11 @@ The gateway to do everything:
 2. Install all [npm](https://www.npmjs.com/) dependencies with `npm install` from your terminal in the root directory.
 
 ## Creating Hubspot Email Components
-To create, update, test, and transfer custom and bullet-proof email components to Hubspot.
+To create, update, test, and transfer custom and bullet-proof email components to Hubspot. 
+
+[Video Tutorial](https://www.youtube.com/watch?v=HRHIBYca23U)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HRHIBYca23U" frameborder="0" allowfullscreen></iframe>
 
 #### Create a New Component:
 
@@ -84,7 +88,9 @@ gulp test --component [component-name]
 Unfortunately, there's no way to automatically create components in Hubspot. So what you'll basically do is copy the contents of `dist.html` to your Custom Module. This is similar to relationship between the lrdcom repo and templates in Liferay.com
 
 ## Creating HTML Emails
-We often have to send full HTML emails. 
+We often have to send full HTML emails. Create fully responsive and tested emails in minutes with a few commands.
+
+[Video Tutorial](https://www.youtube.com/watch?v=u2plHUtux-E&feature=youtu.be)
 
 #### Creating a New HTML Email
 ```
