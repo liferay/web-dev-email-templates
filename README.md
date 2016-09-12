@@ -89,7 +89,7 @@ Unfortunately, there's no way to automatically create components in Hubspot. So 
 ## Creating HTML Emails
 We often have to send full HTML emails. Create fully responsive and tested emails in minutes with a few commands.
 
-[Video Tutorial](https://www.youtube.com/watch?v=u2plHUtux-E&feature=youtu.be)
+[Video Tutorial](https://www.youtube.com/watch?v=_ns_uZXizbo&feature=youtu.be)
 
 #### Creating a New HTML Email
 ```
