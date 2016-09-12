@@ -26,7 +26,11 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
 The gateway to do everything: 
 
 1. Clone repo
-2. Install all [npm](https://www.npmjs.com/) dependencies with `npm install` from your terminal in the root directory.
+2. [Install node](https://nodejs.org/en/) (if you haven't)
+3. Install [Gulp](http://gulpjs.com/) `npm install -g gulp`
+4. Install all dependencies with `npm install` from your terminal in the root directory.
+
+*Note For Windows users: You may need to configure SASS after step 4 with `npm rebuild node-sass`*
 
 ## Creating Hubspot Email Components
 To create, update, test, and transfer custom and bullet-proof email components to Hubspot. 
