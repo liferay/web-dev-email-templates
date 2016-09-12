@@ -277,7 +277,9 @@ gulp.task('watch', function() {
 			'src/styles/*.scss'
 		], function(callback) {
 			runSequence(
-				'global-styles'
+				'global-styles',
+				'components-processing',
+				'emails-processing'
 			);
 	})
 
