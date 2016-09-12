@@ -20,7 +20,6 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
     - [Inky](#inky)
     - [Hubspot Email Settings](#hubspot-email-settings)
     - [Live Reload](#live-reload)
-5. [To Do Feature List](#to-do-feature-list)
 
 ## Getting Started
 
@@ -170,20 +169,3 @@ Some of Hubspot's email setting styles are found in `config.js`. These will affe
 2. Allow for local URLs (Extensions -> Check "Allow Access to File URLs")
 3. Run `gulp`
 4. Check the Livereload Button in Chrome Toolbar (Make sure the dot is filled)
-
-## To Do Feature List:
-- <del>Auto create new components</del>
-- <del>Build base with configs</del>
-- <del>Auto test</del>
-- <del>Need to have global theming at component level with SASS</del>
-- <del>Need to accomodate for HS variables and structure.</del>
-- <del>Remove extraneous dependencies</del>
-- <del>Test A-Z</del>
-- <del>Color comments for new creation</del>
-- <del>Get Litmus account</del>
-- <del>Component includes for html emails</del>
-- <del>Get feedback about builder</del>
-- <del>Set up Zurb scaffolding</del>
-- <del>Output a `dist.html`</del>
-- <del>Livereload certain components</del>
-- Create video showing how it's done.
