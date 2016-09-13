@@ -294,18 +294,6 @@ gulp.task('watch', function() {
 	})
 });
 
-
-gulp.task('clear-all', function () {
-  return del([
-    'src/components/**/*',
-    '!src/components/*.html',
-    '!src/components/*.css',
-    'src/emails/**/*',
-    '!src/emails/*.html',
-    '!src/emails/*.css'
-  ]);
-});
-
 /*
 	Default Task
 */ 
