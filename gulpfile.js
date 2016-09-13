@@ -78,6 +78,8 @@ gulp.task('components-processing', function() {
 			.pipe(wrap({ src: 'src/base/base.html'}))
 			// turn inky into regular html
 			.pipe(inky())
+			// any file includes
+			.pipe(fileinclude({prefix: '@@'}))
 			// inline CSS
 			.pipe(inlineCss())
 			// prettify HTML
@@ -92,6 +94,8 @@ gulp.task('components-processing', function() {
 		gulp.src('src/components/**/src.html', { base: './' })
 			// turn inky into regular html
 			.pipe(inky())
+			// any file includes
+			.pipe(fileinclude({prefix: '@@'}))
 			// remove HTML comments
 			.pipe(removeHtmlComments())
 			// inline CSS
