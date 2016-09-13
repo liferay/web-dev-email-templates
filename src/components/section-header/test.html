@@ -10,7 +10,7 @@
 
 </head>
 
-<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-moz-box-sizing: border-box; -ms-text-size-adjust: 100%; -webkit-box-sizing: border-box; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; background-color: #f2f2f2; box-sizing: border-box; color: #818181; font-family: Helvetica, Arial; font-size: 16px; font-weight: normal; height: 100% !important; line-height: 1.3; margin: 0; margin-bottom: 10px; min-width: 100%; padding: 0; text-align: left; width: 100% !important;">
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f2f2f2; font-family: Helvetica, Arial; height: 100% !important; margin: 0; padding: 0; width: 100% !important;">
     <!-- Preview text (text which appears right after subject) -->
     <div id="preview_text" style="display:none;font-size:1px;color:#f2f2f2;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
         {% text "preview_text" label="Preview Text <span class="help-text">This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}
@@ -19,24 +19,24 @@
         the email template, including preheader & footer. This is the only table you set the width of to, everything else is set to 
         100% and in the CSS above. Having the width here within the table is just a small win for Lotus Notes. -->
     <!-- Begin backgroundTable -->
-    <table align="center" bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; Margin: 0; background-color: #f2f2f2; border-collapse: collapse !important; border-spacing: 0; font-family: Helvetica, Arial; height: 100% !important; line-height: 100% !important; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; width: 100% !important;">
-        <tr style="padding: 0; text-align: left; vertical-align: top;">
-            <td align="center" valign="top" id="bodyCell" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; height: 100% !important; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; width: 100% !important; word-wrap: break-word;">
+    <table align="center" bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f2f2f2; border-collapse: collapse !important; font-family: Helvetica, Arial; height: 100% !important; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100% !important;">
+        <tr>
+            <td align="center" valign="top" id="bodyCell" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; height: 100% !important; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100% !important;">
                 <!-- When nesting tables within a TD, align center keeps it well, centered. -->
                 <!-- Begin Template Container -->
                 <!-- This holds everything together in a nice container -->
-                <table align="center" border="0" cellpadding="0" cellspacing="0" id="templateTable" style="-ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; background-color: #fff; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; width: 600px;">
-                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                        <td align="center" valign="top" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" id="templateTable" style="-ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; background-color: #fff; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px;">
+                    <tr>
+                        <td align="center" valign="top" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                             <!-- Begin Template Preheader -->
                             <table border="0" cellpadding="0" cellspacing="0" width="100%" id="headerTable" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f2f2f2
-        color: #444444; border-collapse: collapse !important; border-spacing: 0; font-family: Helvetica, Arial; font-size: 10px; line-height: 120%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-right: 30px; text-align: right; vertical-align: top;">
+        color: #444444; border-collapse: collapse !important; font-family: Helvetica, Arial; font-size: 10px; line-height: 120%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-right: 30px; text-align: right;">
                                 <div class="header-container-wrapper">
-                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                        <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 150%; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top;">
-                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                    <td valign="top" colspan="12" width="100.0%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 100.0%; word-wrap: break-word;">
+                                    <tr>
+                                        <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 150%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left;">
+                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                                <tr>
+                                                    <td valign="top" colspan="12" width="100.0%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 100.0%;">
                                                         <div class="widget-span widget-type-email_view_as_web_page " style="" data-widget-type="email_view_as_web_page">
                                                             View in browser text
                                                         </div>
@@ -52,43 +52,25 @@
                             <!-- End Template Preheader -->
                         </td>
                     </tr>
-                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                        <td align="center" valign="top" id="contentCell" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; background-color: #f2f2f2; border-collapse: collapse !important; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                    <tr>
+                        <td align="center" valign="top" id="contentCell" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f2f2f2; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                             <!-- Begin Template Wrapper -->
                             <!-- This separates the preheader which usually contains the "open in browser, etc" content
                                 from the actual body of the email. Can alternatively contain the footer too, but I choose not
                                 to so that it stays outside of the border. -->
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="contentTableOuter" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #fff; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 30px; text-align: left; vertical-align: top;">
-                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                    <td align="center" valign="top" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                        <table border="0" cellpadding="0" cellspacing="0" id="contentTableInner" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; width: 600px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="contentTableOuter" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #fff; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 30px;">
+                                <tr>
+                                    <td align="center" valign="top" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                        <table border="0" cellpadding="0" cellspacing="0" id="contentTableInner" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px;">
                                             <div class="body-container-wrapper">
-                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                    <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 150%; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top;">
-                                                            <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                <td valign="top" colspan="12" width="100.0%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 100.0%; word-wrap: break-word;">
+                                                <tr>
+                                                    <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 150%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left;">
+                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                                            <tr>
+                                                                <td valign="top" colspan="12" width="100.0%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 100.0%;">
                                                                     <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
                                                                         <div class="layout-widget-wrapper">
-                                                                            <!-- Don't Touch Me -->
-
-
-                                                                            <!-- Hubspot Variables
-	To insert hubspot variables, they have a general syntax of {{widget.FIELDNAME}}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
-
-	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
--->
-                                                                            <!-- Component HTML -->
-                                                                            <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
-                                                                                <tbody>
-                                                                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                                        <h2 class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #6a6f81; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center; word-wrap: normal;">{{ widget.section_title }}</h2>
-                                                                                        <p style="Margin: 0; Margin-bottom: 10px; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">{{ widget.section_text }}</p>
-                                                                                        <p style="Margin: 0; Margin-bottom: 10px; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">hard coded text</p>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-
+                                                                            <component-include></component-include>
                                                                         </div>
                                                                         <!--end layout-widget-wrapper -->
                                                                     </div>
@@ -98,11 +80,11 @@
                                                         </table>
                                                     </td>
                                                 </tr>
-                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                    <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 150%; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top;">
-                                                            <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                <td valign="top" colspan="3" width="25.0%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 25.0%; word-wrap: break-word;">
+                                                <tr>
+                                                    <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 150%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left;">
+                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                                            <tr>
+                                                                <td valign="top" colspan="3" width="25.0%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 25.0%;">
                                                                     <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
                                                                         <div class="layout-widget-wrapper">
                                                                             &nbsp;
@@ -111,28 +93,10 @@
                                                                     </div>
                                                                     <!--end widget-span -->
                                                                 </td>
-                                                                <td valign="top" colspan="9" width="75.0%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 75.0%; word-wrap: break-word;">
+                                                                <td valign="top" colspan="9" width="75.0%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 75.0%;">
                                                                     <div class="widget-span widget-type-rich_text " style="" data-widget-type="rich_text">
                                                                         <div class="layout-widget-wrapper">
-                                                                            <!-- Don't Touch Me -->
-
-
-                                                                            <!-- Hubspot Variables
-	To insert hubspot variables, they have a general syntax of {{widget.FIELDNAME}}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
-
-	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
--->
-                                                                            <!-- Component HTML -->
-                                                                            <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
-                                                                                <tbody>
-                                                                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                                        <h2 class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #6a6f81; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center; word-wrap: normal;">{{ widget.section_title }}</h2>
-                                                                                        <p style="Margin: 0; Margin-bottom: 10px; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">{{ widget.section_text }}</p>
-                                                                                        <p style="Margin: 0; Margin-bottom: 10px; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">hard coded text</p>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-
+                                                                            <component-include></component-include>
                                                                         </div>
                                                                         <!--end layout-widget-wrapper -->
                                                                     </div>
@@ -142,11 +106,11 @@
                                                         </table>
                                                     </td>
                                                 </tr>
-                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                    <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 150%; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top;">
-                                                            <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                <td valign="top" colspan="6" width="50.0%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 50.0%; word-wrap: break-word;">
+                                                <tr>
+                                                    <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 150%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left;">
+                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                                            <tr>
+                                                                <td valign="top" colspan="6" width="50.0%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 50.0%;">
                                                                     <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
                                                                         <div class="layout-widget-wrapper">
                                                                             &nbsp;
@@ -155,28 +119,10 @@
                                                                     </div>
                                                                     <!--end widget-span -->
                                                                 </td>
-                                                                <td valign="top" colspan="6" width="50.0%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 50.0%; word-wrap: break-word;">
+                                                                <td valign="top" colspan="6" width="50.0%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 50.0%;">
                                                                     <div class="widget-span widget-type-rich_text " style="" data-widget-type="rich_text">
                                                                         <div class="layout-widget-wrapper">
-                                                                            <!-- Don't Touch Me -->
-
-
-                                                                            <!-- Hubspot Variables
-	To insert hubspot variables, they have a general syntax of {{widget.FIELDNAME}}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
-
-	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
--->
-                                                                            <!-- Component HTML -->
-                                                                            <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
-                                                                                <tbody>
-                                                                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                                        <h2 class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #6a6f81; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center; word-wrap: normal;">{{ widget.section_title }}</h2>
-                                                                                        <p style="Margin: 0; Margin-bottom: 10px; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">{{ widget.section_text }}</p>
-                                                                                        <p style="Margin: 0; Margin-bottom: 10px; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">hard coded text</p>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-
+                                                                            <component-include></component-include>
                                                                         </div>
                                                                         <!--end layout-widget-wrapper -->
                                                                     </div>
@@ -186,11 +132,11 @@
                                                         </table>
                                                     </td>
                                                 </tr>
-                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                    <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 150%; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top;">
-                                                            <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                <td valign="top" colspan="8" width="66.66666666666666%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 66.66666666666666%; word-wrap: break-word;">
+                                                <tr>
+                                                    <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 150%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left;">
+                                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                                            <tr>
+                                                                <td valign="top" colspan="8" width="66.66666666666666%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 66.66666666666666%;">
                                                                     <div class="widget-span widget-type-raw_html " style="" data-widget-type="raw_html">
                                                                         <div class="layout-widget-wrapper">
                                                                             &nbsp;
@@ -199,28 +145,10 @@
                                                                     </div>
                                                                     <!--end widget-span -->
                                                                 </td>
-                                                                <td valign="top" colspan="4" width="33.33333333333333%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 33.33333333333333%; word-wrap: break-word;">
+                                                                <td valign="top" colspan="4" width="33.33333333333333%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 33.33333333333333%;">
                                                                     <div class="widget-span widget-type-rich_text " style="" data-widget-type="rich_text">
                                                                         <div class="layout-widget-wrapper">
-                                                                            <!-- Don't Touch Me -->
-
-
-                                                                            <!-- Hubspot Variables
-	To insert hubspot variables, they have a general syntax of {{widget.FIELDNAME}}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
-
-	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
--->
-                                                                            <!-- Component HTML -->
-                                                                            <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
-                                                                                <tbody>
-                                                                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                                        <h2 class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #6a6f81; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 30px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center; word-wrap: normal;">{{ widget.section_title }}</h2>
-                                                                                        <p style="Margin: 0; Margin-bottom: 10px; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">{{ widget.section_text }}</p>
-                                                                                        <p style="Margin: 0; Margin-bottom: 10px; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">hard coded text</p>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                            </table>
-
+                                                                            <component-include></component-include>
                                                                         </div>
                                                                         <!--end layout-widget-wrapper -->
                                                                     </div>
@@ -239,28 +167,28 @@
                             <!-- End Template Wrapper -->
                         </td>
                     </tr>
-                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                        <td align="center" valign="top" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #818181; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                    <tr>
+                        <td align="center" valign="top" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                             <!-- Begin Template Footer -->
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="footerTable" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f2f2f2; border-collapse: collapse !important; border-spacing: 0; color: #999999; font-family: Helvetica, Arial; font-size: 12px; line-height: 120%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px; text-align: center; vertical-align: top;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="footerTable" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f2f2f2; border-collapse: collapse !important; color: #999999; font-family: Helvetica, Arial; font-size: 12px; line-height: 120%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px; text-align: center;">
                                 <div class="footer-container-wrapper">
-                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                        <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 150%; margin: 0; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; vertical-align: top;">
-                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                    <td valign="top" colspan="12" width="100.0%" class=" column" style="-moz-hyphens: auto; -ms-text-size-adjust: 100%; -webkit-hyphens: auto; -webkit-text-size-adjust: 100%; Margin: 0 auto; Margin-bottom: 10px; border-collapse: collapse !important; color: #444444; font-family: Helvetica, Arial; font-size: 15px; font-weight: normal; hyphens: auto; line-height: 1.5em; margin: 0 auto; margin-bottom: 10px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; padding-bottom: 16px; padding-left: 16px; text-align: left; vertical-align: top; width: 100.0%; word-wrap: break-word;">
+                                    <tr>
+                                        <td align="center" valign="top" class="bodyContent" width="100%" colspan="12" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 150%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text-align: left;">
+                                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="templateColumnWrapper" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border-collapse: collapse !important; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                                                <tr>
+                                                    <td valign="top" colspan="12" width="100.0%" class=" column" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #444444; font-family: Helvetica, Arial; font-size: 15px; line-height: 1.5em; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: left; width: 100.0%;">
                                                         <div class="widget-span widget-type-email_can_spam " style="" data-widget-type="email_can_spam">
-                                                            <p id="footer" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; Margin: 0; Margin-bottom: 10px; color: #999999; display: block; font-family: Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 1.34em; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">
+                                                            <p id="footer" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #999999; display: block; font-family: Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; line-height: 1.34em; text-align: center;">
                                                                 Liferay 1400 Montefino Ave
                                                                 <br>
                                                                 <br>You received this email because you are subscribed to
 
                                                                 <br>
-                                                                <br>Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="#" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: none; Margin: 0; Margin-bottom: 10px; color: #999999; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: underline; whitespace: nowrap;">email preferences</a> to
+                                                                <br>Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="#" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: none; color: #999999; font-weight: normal; text-decoration: underline; whitespace: nowrap;">email preferences</a> to
                                                                 choose the types of emails you receive.
                                                                 <br>
                                                                 <br>&nbsp;
-                                                                <a class="hubspot-mergetag" data-unsubscribe="true" href="#" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: none; Margin: 0; Margin-bottom: 10px; color: #999999; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: underline; whitespace: nowrap;">Unsubscribe from all future emails</a>&nbsp;
+                                                                <a class="hubspot-mergetag" data-unsubscribe="true" href="#" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: none; color: #999999; font-weight: normal; text-decoration: underline; whitespace: nowrap;">Unsubscribe from all future emails</a>&nbsp;
                                                             </p>
                                                         </div>
                                                         <!--end widget-span -->
@@ -271,7 +199,7 @@
                                     </tr>
                                 </div>
                                 <!--end footer wrapper -->
-                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                <tr>
 
                                 </tr>
                             </table>

@@ -1,0 +1,78 @@
+.font-weight-lighter {
+	font-weight: 200;
+}
+
+.font-weight-bold {
+	font-weight: 600;
+}
+
+.no-margin-horizontal {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.no-margin-vertical {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.no-padding-horizontal {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.no-padding-vertical {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.large-padding {
+	padding: $largeSpacing;
+}
+
+.large-padding-horizontal {
+	padding-left: $largeSpacing;
+	padding-right: $largeSpacing;
+}
+
+.large-padding-vertical {
+	padding-bottom: $largeSpacing;
+	padding-top: $largeSpacing;
+}
+
+.section-padding {
+	padding-bottom: 6em;
+	padding-top: 5em;
+}
+
+.small-padding {
+	padding: $smallSpacing;
+}
+
+.small-padding-horizontal {
+	padding-left: $smallSpacing;
+	padding-right: $smallSpacing;
+}
+
+.small-padding-vertical {
+	padding-bottom: $smallSpacing;
+	padding-top: $smallSpacing;
+}
+
+.standard-padding {
+	padding: $standardSpacing;
+}
+
+.standard-padding-horizontal {
+	padding-left: $standardSpacing;
+	padding-right: $standardSpacing;
+}
+
+.standard-padding-vertical {
+	padding-bottom: $standardSpacing;
+	padding-top: $standardSpacing;
+}
