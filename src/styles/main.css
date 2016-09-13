@@ -1383,6 +1383,9 @@ body.outlook p {
   table.button.small-expanded center {
     min-width: 0; } }
 
+/* ---------- Borders ---------- */
+/* ---------- Colors ---------- */
+/* ---------- Spacing ---------- */
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
@@ -1429,3 +1432,65 @@ h4,
 h5,
 h6 {
   color: #6a6f81; }
+
+.font-weight-lighter {
+  font-weight: 200; }
+
+.font-weight-bold {
+  font-weight: 600; }
+
+.no-margin-horizontal {
+  margin-left: 0;
+  margin-right: 0; }
+
+.no-margin-vertical {
+  margin-bottom: 0;
+  margin-top: 0; }
+
+.no-padding {
+  padding: 0; }
+
+.no-padding-horizontal {
+  padding-left: 0;
+  padding-right: 0; }
+
+.no-padding-vertical {
+  padding-bottom: 0;
+  padding-top: 0; }
+
+.large-padding {
+  padding: 3em; }
+
+.large-padding-horizontal {
+  padding-left: 3em;
+  padding-right: 3em; }
+
+.large-padding-vertical {
+  padding-bottom: 3em;
+  padding-top: 3em; }
+
+.section-padding {
+  padding-bottom: 6em;
+  padding-top: 5em; }
+
+.small-padding {
+  padding: 0.5em; }
+
+.small-padding-horizontal {
+  padding-left: 0.5em;
+  padding-right: 0.5em; }
+
+.small-padding-vertical {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em; }
+
+.standard-padding {
+  padding: 1em; }
+
+.standard-padding-horizontal {
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.standard-padding-vertical {
+  padding-bottom: 1em;
+  padding-top: 1em; }
