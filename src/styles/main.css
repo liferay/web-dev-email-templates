@@ -988,8 +988,8 @@ table.button {
 table.button table td {
   text-align: left;
   color: #fefefe;
-  background: #2199e8;
-  border: 2px solid #2199e8; }
+  background: #2bb98b;
+  border: 2px solid #2bb98b; }
 
 table.button table td a {
   font-family: Helvetica, Arial, sans-serif;
@@ -999,7 +999,7 @@ table.button table td a {
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px 8px 16px;
-  border: 0 solid #2199e8;
+  border: 0 solid #2bb98b;
   border-radius: 3px; }
 
 table.button.radius table td {
@@ -1382,3 +1382,50 @@ body.outlook p {
   table.button.small-expand center,
   table.button.small-expanded center {
     min-width: 0; } }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlCxe5Tewm2_XWfbGchcXw4g.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB; }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlIa1YDtoarzwSXxTHggEXMw.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Source Sans Pro"), local("SourceSansPro-Regular"), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+
+body,
+table.body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+th,
+a {
+  color: #818181;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+  Margin-bottom: 10px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #6a6f81; }
