@@ -78,7 +78,9 @@ Example:
 {{widget.hero_text}}
 ```
 
-Read more about variables at Hubspot's Docs: http://designers.hubspot.com/docs/cos/custom-modules
+Read more about Hubspot's scripting language: 
+http://designers.hubspot.com/docs/cos/custom-modules
+http://designers.hubspot.com/docs/hubl/intro-to-hubl
 
 #### Sending a Component to Test 
 See your component tested in Litmus:
