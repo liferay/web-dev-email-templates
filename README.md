@@ -125,7 +125,7 @@ You can include components that you've built for hubspot. Anywhere in your HTML 
 {{components.[component-name]}}
 ```
 
-This will only work for components with hard-coded content and not with hubspot variables.
+This will only work for components with hard-coded content and not those with hubspot variables.
 
 #### Sending an Email to Test 
 See your email tested in Litmus:
