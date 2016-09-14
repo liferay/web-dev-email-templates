@@ -88,7 +88,7 @@ gulp.task('components-processing', function() {
 			// prettify HTML
 			.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
 			// rename file to test
-			.pipe(rename({basename: 'test'}))
+			.pipe(rename({basename: 'preview'}))
 			// move file to same location
 			.pipe(gulp.dest('.'))
 			.pipe(livereload({start: true}))
@@ -159,7 +159,7 @@ gulp.task('new-component', function() {
 	gulp.src('src/components/styles-template.css')
 		.pipe(rename({basename: 'main'}))
 		.pipe(gulp.dest(`src/components/${argv.component}`))
-	gulp.src(`src/components/${argv.component}/test.html`)
+	gulp.src(`src/components/${argv.component}/preview.html`)
 		.pipe(livereload({start: true}))
 		.pipe(open())
 
@@ -223,9 +223,9 @@ gulp.task('test', function () {
 	if (argv.component || argv.email) {
 
 		if (argv.component) {
-			console.log(chalk.bgBlue(`Testing src/components/${argv.name}/test.html`));
+			console.log(chalk.bgBlue(`Testing src/components/${argv.name}/preview.html`));
 
-			gulp.src(`src/components/${argv.component}/test.html`)
+			gulp.src(`src/components/${argv.component}/preview.html`)
 	        	.pipe(litmus(litmusConfig))
 
 	        gulp.src('index.html')
