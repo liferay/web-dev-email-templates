@@ -22,7 +22,7 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
     - [Live Reload](#live-reload)
 5. [Quirks](#quirks)
     - [Keeping Style Rules](#keeping-style-rules)
-    - [Inlining Hubspot Variables as Styles](#inlining-hubspot-styles)
+    - [Inlining Hubspot Variables as Styles](#inlining-hubspot-variables-as-styles)
 
 ## Getting Started
 
