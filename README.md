@@ -22,7 +22,7 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
     - [Live Reload](#live-reload)
 5. [Quirks](#quirks)
     - [Keeping Style Rules](#keeping-style-rules)
-    - [Inlining Hubspot Styles](#inlining-hubspot-styles)
+    - [Inlining Hubspot Variables as Styles](#inlining-hubspot-styles)
 
 ## Getting Started
 
@@ -183,17 +183,18 @@ Some of Hubspot's email setting styles are found in `config.js`. These will affe
 ## Quirks
 
 #### Keeping Style Rules 
-Sometimes you need to keep the style rules in the `dist.html` after inlining. 
+Sometimes you need to keep the style rules in the `dist.html` after inlining (e.g. for responsive styling). 
 
 After all, the tool by default will 1) take all styles, 2) inline them, 3) then remove the original to avoid redundancy. This is true for style includes (e.g. `<link rel="stylesheet" href="main.css">`). 
 
-But in order to provide functionality to allow written styles to remain in the component in addition to them being inlined, write styles in a `<style></style>` tag versus being included in. This is useful for responsive styling.
+But in order to provide functionality to allow written styles to remain in the component in addition to them being inlined, write styles in a `<style></style>` tag versus being included in. 
 
 So in short,
+
 1. If you want styles to be inlined AND removed, put it in `main.css`
 2. If you want styles to be inlined and preserved, put it in `<style></style>` in `src.html`
 
-#### Inlining Hubspot Styles
+#### Inlining Hubspot Variables as Styles
 Sometimes you need to use Hubspot variables for styles before they are inlined. To avoid breaking the inliner present in the application, use a double carret syntax `<< variable >>` and the application will convert it to a hubspot double curly syntax `{{ variable }}`.
 
 Example:
