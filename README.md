@@ -183,9 +183,11 @@ Some of Hubspot's email setting styles are found in `config.js`. These will affe
 ## Quirks
 
 #### Keeping Style Rules 
-Sometimes you need to keep the still in the component inside a `<style></style>` after inline. After all the tool, by default will 1) take all styles, 2) inline them, 3) then remove the original. This is true for style includes (e.g. `<link rel="stylesheet" href="main.css">`). 
+Sometimes you need to keep the style rules in the `dist.html` after inlining. 
 
-But in order to provide functionality to allow written styles to remain in the component in addition to them being inlined, write styles in a `<style></style>` tag versus being included in.
+After all, the tool by default will 1) take all styles, 2) inline them, 3) then remove the original to avoid redundancy. This is true for style includes (e.g. `<link rel="stylesheet" href="main.css">`). 
+
+But in order to provide functionality to allow written styles to remain in the component in addition to them being inlined, write styles in a `<style></style>` tag versus being included in. This is useful for responsive styling.
 
 So in short,
 1. If you want styles to be inlined AND removed, put it in `main.css`
