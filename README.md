@@ -20,7 +20,8 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
     - [Inky](#inky)
     - [Hubspot Email Settings](#hubspot-email-settings)
     - [Live Reload](#live-reload)
-5. Quirks
+5. [Quirks](#quirks)
+    - [Keeping Style Rules](#keeping-style-rules)
     - [Inlining Hubspot Styles](#inlining-hubspot-styles)
 
 ## Getting Started
@@ -180,6 +181,15 @@ Some of Hubspot's email setting styles are found in `config.js`. These will affe
 4. Check the Livereload Button in Chrome Toolbar (Make sure the dot is filled)
 
 ## Quirks
+
+#### Keeping Style Rules 
+Sometimes you need to keep the still in the component inside a `<style></style>` after inline. After all the tool, by default will 1) take all styles, 2) inline them, 3) then remove the original. This is true for style includes (e.g. `<link rel="stylesheet" href="main.css">`). 
+
+But in order to provide functionality to allow written styles to remain in the component in addition to them being inlined, write styles in a `<style></style>` tag versus being included in.
+
+So in short,
+1. If you want styles to be inlined AND removed, put it in `main.css`
+2. If you want styles to be inlined and preserved, put it in `<style></style>` in `src.html`
 
 #### Inlining Hubspot Styles
 Sometimes you need to use Hubspot variables for styles before they are inlined. To avoid breaking the inliner present in the application, use a double carret syntax `<< variable >>` and the application will convert it to a hubspot double curly syntax `{{ variable }}`.
