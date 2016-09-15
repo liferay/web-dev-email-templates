@@ -20,6 +20,8 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
     - [Inky](#inky)
     - [Hubspot Email Settings](#hubspot-email-settings)
     - [Live Reload](#live-reload)
+5. Quirks
+    - [Inlining Hubspot Styles](#inlining-hubspot-styles)
 
 ## Getting Started
 
@@ -176,3 +178,24 @@ Some of Hubspot's email setting styles are found in `config.js`. These will affe
 2. Allow for local URLs (Extensions -> Check "Allow Access to File URLs")
 3. Run `gulp`
 4. Check the Livereload Button in Chrome Toolbar (Make sure the dot is filled)
+
+## Quirks
+
+#### Inlining Hubspot Styles
+Sometimes you need to use Hubspot variables for styles before they are inlined. To avoid breaking the inliner present in the application, use a double carret syntax `<< variable >>` and the application will convert it to a hubspot double curly syntax `{{ variable }}`.
+
+Example:
+```
+table.button tr td {
+    background: << hex_color >> !important;
+    border: 0px solid << hex_color >> !important;
+}
+```
+
+Outputs to:
+```
+table.button tr td {
+    background: {{ hex_color }} !important;
+    border: 0px solid {{ hex_color }} !important;
+}
+```
