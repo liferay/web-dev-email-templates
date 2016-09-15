@@ -81,10 +81,9 @@ gulp.task('components-processing', function() {
 			// any file includes
 			.pipe(fileinclude({prefix: '@@'}))
 			// inline CSS
-			.pipe(inlineCss({
-				removeStyleTags: false,
-				applyStyleTags: true
-			}))
+			.pipe(inlineCss())
+			// convert 
+			
 			// prettify HTML
 			.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
 			// rename file to test
@@ -106,6 +105,9 @@ gulp.task('components-processing', function() {
 				removeStyleTags: false,
 				applyStyleTags: true
 			}))
+
+			.pipe(replace('<<', '{{'))
+			.pipe(replace('>>', '}}'))
 			// prettify HTML
 			.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
 			// rename file to test

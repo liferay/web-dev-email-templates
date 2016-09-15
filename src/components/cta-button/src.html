@@ -9,4 +9,59 @@
 -->
 
 <!-- Component HTML -->
-<button class="expanded" href="{{ widget.button_href }}">{{ widget.button_text }}</button>
+{% if widget.button_color == 'prospect' %}
+{% set hex_color = '#df584c' %}
+
+{% elif widget.button_color == 'community' %}
+{% set hex_color = '#00a2aa' %}
+
+{% elif widget.button_color == 'partner' %}
+{% set hex_color = '#67609b' %}
+
+{% else %}
+{% set hex_color = '#33b88b' %}
+
+{% endif %}
+
+{% if widget.alignment == 'left' %}
+
+
+<style>
+	table.button tr td {
+		background: << hex_color >> !important;
+		border: 0px solid << hex_color >> !important;
+	}
+
+	table.button tr a {
+		border: 0 solid << hex_color >>;
+	}
+</style>
+
+<table class="button medium small-expanded">
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td><a href="{ widget.button_href }}">{{ widget.button_text }} {{ hex_color }}</a></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+{% else %}
+<center>
+	<table class="button medium small-expanded">
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td><a href="{ widget.button_href }}">{{ widget.button_text }} {{ hex_color }}</a></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</center>
+
+{% endif %}
