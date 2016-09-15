@@ -195,7 +195,9 @@ So in short,
 2. If you want styles to be inlined and preserved, put it in `<style></style>` in `src.html`
 
 #### Inlining Hubspot Variables as Styles
-Sometimes you need to use Hubspot variables for styles before they are inlined. To avoid breaking the inliner present in the application, use a double carret syntax `<< variable >>` and the application will convert it to a hubspot double curly syntax `{{ variable }}`.
+Sometimes you need to use Hubspot variables for styles before they are inlined. 
+
+To avoid breaking the inliner present in the application, use a double carret syntax `<< variable >>` and the application will convert it to a hubspot double curly syntax `{{ variable }}`.
 
 Example:
 ```
