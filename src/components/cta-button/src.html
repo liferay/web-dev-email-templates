@@ -39,29 +39,14 @@
 	}
 
 	@media only screen and (max-width: 596px) {
-		table.button.small-expand,
-	    table.button.small-expanded {
-	        width: 100% !important;
-	    }
-	    table.button.small-expand table,
-	    table.button.small-expanded table {
-	        width: 100%;
-	    }
-	    table.button.small-expand table a,
-	    table.button.small-expanded table a {
-	        text-align: center !important;
-	        width: 100% !important;
-	        padding-left: 0 !important;
-	        padding-right: 0 !important;
-	    }
-	    table.button.small-expand center,
-	    table.button.small-expanded center {
-	        min-width: 0;
-	    }
+		table.button table td a {
+			padding: .75em 2em !important;
+			text-align: center !important;
+		}
 	}
 </style>
 
-<table class="button radius medium small-expanded">
+<table class="button radius medium">
 	<tr>
 		<td>
 			<table>
@@ -75,7 +60,7 @@
 
 {% else %}
 <center>
-	<table class="button radius medium small-expanded">
+	<table class="button radius medium">
 		<tr>
 			<td>
 				<table>
