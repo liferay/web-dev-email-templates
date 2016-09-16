@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="main.css">
 
 <!-- Hubspot Variables
-	To insert hubspot variables, they have a general syntax of {{widget.FIELDNAME}}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
 
 	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
 -->
@@ -11,9 +11,9 @@
 <!-- Component HTML -->
 
 <style>
-	p.<< widget.alignment >> {
+	h2.heading-two.<< widget.alignment >> {
 		text-align: << widget.alignment >> !important;
 	}
 </style>
 
-<p class="{{ widget.alignment }}">{{ widget.paragraph }} &nbsp;</p>
+<h2 class="heading-two {{ widget.alignment }}">{{ widget.heading }} &nbsp;</h2>
