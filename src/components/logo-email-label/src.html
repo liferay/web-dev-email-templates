@@ -12,15 +12,11 @@
 
 <center>
 {% if widget.show_company_logo %}
-    <a class="text-center" href="https://www.liferay.com">
-        {% if widget.use_svg_logo %}
-        <img src="http://discover.liferay.com/hubfs/Germany/LR_Banner/liferay-logo-sas.png">
-        {% else %}
-            <img src="{{ widget.company_logo.src }}" width="{{ widget.company_logo.width }}" height="{{ widget.company_logo.height }}" />
-        {% endif %}
-    </a>
+    <a class="" href="https://www.liferay.com" style="display:inline-block; margin: 40px auto 10px;">
+        <img style="" src="http://discover.liferay.com/hubfs/Blue-LR-Logo-for-Email.jpg">
+    </a><br>
+{% endif %}
+{% if widget.show_email_label %}
+    <span class="subtitle text-center" style="text-transform: uppercase; padding: 10px 0px 20px;">{{ widget.email_label }}</span>
 {% endif %}
 </center>
-{% if widget.show_email_label %}
-    <p class="subtitle text-center" style="text-transform: uppercase;">{{ widget.email_label }}</p>
-{% endif %}
