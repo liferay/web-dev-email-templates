@@ -112,7 +112,7 @@ This will create a new email in `src/emails`. In it are:
 /emails
     /[email-name]
         src.html    // HTML for your email
-        styles.css  // CSS for your email
+        main.css  // CSS for your email
         dist.html   // (Don't edit) Your fully baked HTML email
 ```
 
