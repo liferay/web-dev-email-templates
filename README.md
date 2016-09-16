@@ -54,7 +54,7 @@ This will create a new component in `src/components`. In it are:
 /components
     /[component-name]
         src.html    // HTML for your component
-        styles.css  // CSS for your component
+        main.css  // CSS for your component
         preview.html   // (Don't edit) Preview your component with all Hubspot/Global Styles
         dist.html   // (Don't edit) What you copy and paste into Hubspot
 ```
