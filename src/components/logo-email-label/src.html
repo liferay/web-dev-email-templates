@@ -10,13 +10,24 @@
 
 <!-- Component HTML -->
 
+<style>
+    a.liferay-logo {
+        display:inline-block;
+        margin: 40px auto 10px;
+    }
+    span.email-label {
+        padding: 10px 0px 20px;
+        text-transform: uppercase;
+    }
+</style>
+
 <center>
 {% if widget.show_company_logo %}
-    <a class="" href="https://www.liferay.com" style="display:inline-block; margin: 40px auto 10px;">
-        <img style="" src="http://discover.liferay.com/hubfs/Blue-LR-Logo-for-Email.jpg">
+    <a class="liferay-logo" href="https://www.liferay.com">
+        <img src="http://discover.liferay.com/hubfs/Blue-LR-Logo-for-Email.jpg">
     </a><br>
 {% endif %}
 {% if widget.show_email_label %}
-    <span class="subtitle text-center" style="text-transform: uppercase; padding: 10px 0px 20px;">{{ widget.email_label }}</span>
+    <span class="subtitle email-label">{{ widget.email_label }}</span>
 {% endif %}
 </center>
