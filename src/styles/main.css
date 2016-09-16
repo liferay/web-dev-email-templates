@@ -1419,7 +1419,7 @@ p,
 td,
 th,
 a {
-  color: #818181;
+  color: #474a4b;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: normal;
   margin-bottom: 10px;
@@ -1431,7 +1431,33 @@ h3,
 h4,
 h5,
 h6 {
-  color: #6a6f81; }
+  color: #6a708b; }
+
+h1 {
+  font-size: 32px;
+  line-height: 38px; }
+
+h2 {
+  font-size: 20px;
+  line-height: 28.8px; }
+
+h3 {
+  color: #474A4B;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase; }
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px; }
+
+.first {
+  padding-left: 16px; }
+
+.last {
+  padding-right: 16px; }
 
 .font-weight-lighter {
   font-weight: 200; }

@@ -9,14 +9,16 @@
 <!-- Component HTML -->
 
 <style>
-	h1.heading,
-	p.subtitle {
-		text-align: << widget.alignment >>
+	h1.heading.<< widget.alignment >>,
+	p.subtitle.<< widget.alignment >> {
+		text-align: << widget.alignment >> !important;
 	}
 </style>
 
 <row>
-	<h1 class="heading">{{ widget.section_title }}</h2>
-	<p class="subtitle">{{ widget.section_subtitle }}</p>
-	&nbsp;	
+	<td class="first last">
+		<h1 class="heading {{ widget.alignment }}">{{ widget.section_title }}</h1>
+		<p class="subtitle {{ widget.alignment }}">{{ widget.section_subtitle }}</p>
+		&nbsp;	
+	</td>
 </row>
