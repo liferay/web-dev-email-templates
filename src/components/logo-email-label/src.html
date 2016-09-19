@@ -12,14 +12,17 @@
 
 <style>
     a.liferay-logo {
-        display:inline-block;
+        display: inline-block;
     }
+
     a.liferay-logo.without-email-label {
         margin: 40px auto;
     }
+
     a.liferay-logo.with-email-label {
         margin: 40px auto 10px;
     }
+    
     span.email-label {
         color: #a3a7b8;
         font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
@@ -28,6 +31,7 @@
         text-transform: uppercase;
     }
 </style>
+
 {% if widget.show_email_label %}
     <center>
         <a class="liferay-logo with-email-label" href="https://www.liferay.com">
@@ -36,11 +40,12 @@
         <br>
         <span class="subtitle email-label">{{ widget.email_label }}</span>
     </center>
-{% else %}
 
+{% else %}
 <center>
     <a class="liferay-logo without-email-label" href="https://www.liferay.com">
         <img src="http://discover.liferay.com/hubfs/Blue-LR-Logo-for-Email.jpg">
     </a>
 </center>
+
 {% endif %}
