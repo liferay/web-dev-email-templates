@@ -1,6 +1,11 @@
 <style>
     a.liferay-logo {
         display:inline-block;
+    }
+    a.liferay-logo.without-email-label {
+        margin: 40px auto;
+    }
+    a.liferay-logo.with-email-label {
         margin: 40px auto 10px;
     }
     span.email-label {
@@ -11,13 +16,19 @@
         text-transform: uppercase;
     }
 </style>
-
+{% if widget.show_email_label %}
 <center data-parsed="" style="min-width: 580px; width: 100%;">
-    {% if widget.show_company_logo %}
-    <a class="liferay-logo float-center" href="https://www.liferay.com" align="center" style="Margin: 0; Margin-bottom: 10px; color: #474a4b; display: inline-block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 40px auto 10px; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;">
+    <a class="liferay-logo with-email-label float-center" href="https://www.liferay.com" align="center" style="Margin: 0; Margin-bottom: 10px; color: #474a4b; display: inline-block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 40px auto 10px; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;">
         <img src="http://discover.liferay.com/hubfs/Blue-LR-Logo-for-Email.jpg" style="-ms-interpolation-mode: bicubic; border: none; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto;">
     </a>
-    <br align="center" class="float-center">{% endif %} {% if widget.show_email_label %}
+    <br align="center" class="float-center">
     <span class="subtitle email-label float-center" align="center" style="color: #a3a7b8; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px; padding: 10px 0px 20px; text-transform: uppercase;">{{ widget.email_label }}</span>
-    {% endif %}
 </center>
+{% else %}
+
+<center data-parsed="" style="min-width: 580px; width: 100%;">
+    <a class="liferay-logo without-email-label float-center" href="https://www.liferay.com" align="center" style="Margin: 0; Margin-bottom: 10px; color: #474a4b; display: inline-block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 40px auto; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;">
+        <img src="http://discover.liferay.com/hubfs/Blue-LR-Logo-for-Email.jpg" style="-ms-interpolation-mode: bicubic; border: none; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+    </a>
+</center>
+{% endif %}
