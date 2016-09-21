@@ -1,0 +1,88 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+
+<!-- Begin Template Footer -->
+{% if site_settings.office_location_name == 'Liferay HQ' %}
+{% set bool_registration_location = False %}
+{% set bool_registration_number = False %}
+{% set bool_managing_director = False %}
+
+{% elif site_settings.office_location_name == 'Liferay Germany' %}
+{% set bool_registration_location = True %}
+{% set bool_registration_number = True %}
+{% set bool_managing_director = True %}
+
+{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+{% set var_registration_number = "HRB 93411" %}
+{% set var_managing_director = "Geschäftsführer: Bryan Cheung" %}
+
+{% elif site_settings.office_location_name == 'Liferay Spain' %}
+{% set bool_registration_location = True %}
+{% set bool_registration_number = True %}
+
+{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+{% set var_registration_number = "HRB 93411" %}
+
+{% elif site_settings.office_location_name == 'Liferay International' %}
+{% set bool_registration_location = True %}
+{% set bool_registration_number = True %}
+
+{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+{% set var_registration_number = "HRB 93411" %}
+
+{% elif site_settings.office_location_name == 'Liferay UK' %}
+{% set bool_registration_location = True %}
+{% set bool_registration_number = True %}
+
+{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+{% set var_registration_number = "HRB 93411" %}
+
+{% elif site_settings.office_location_name == 'Liferay Benelux BV' %}
+{% set bool_registration_location = False %}
+{% set bool_registration_number = True %}
+
+{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+{% set var_registration_number = "HRB 93411" %}
+
+{% endif %}
+
+<style>
+#footer a.link-text {
+    color: #ccc;
+}
+</style>
+
+<!-- Begin Template Footer -->
+<container id="footerTable">
+    <row class="footer-container-wrapper">
+        <center>
+            <columns class="templateColumnWrapper">
+                <div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
+                    <p id="footer" class="text-center"><br>Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a> or <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>.</p>
+                    <p class="text-center">{{ site_settings.company_name }}<br />
+                        {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}<br />
+                        {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip }}<br />
+                        {% if bool_registration_location == True %}
+                        {{ var_registration_location }}: {{ var_registration_number }}<br />
+                        {% endif %}
+                        {% if bool_managing_director == True %}
+                        {{ var_managing_director }}<br />
+                        {% endif %}
+                        {{ site_settings.company_phone }}</p>
+                </div><!--end widget-span -->
+            </columns>
+        </center>
+    </row><!--end footer wrapper -->
+    <row>
+        {% hubspot_footer %}
+    </row>
+</container>
