@@ -12,9 +12,9 @@ const inlineCss = require('gulp-inline-css');
 const litmus = require('gulp-litmus');
 const livereload = require('gulp-livereload');
 const open = require('gulp-open');
+const removeHtmlComments = require('gulp-remove-html-comments');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
-const removeHtmlComments = require('gulp-remove-html-comments');
 const runSequence = require('run-sequence');
 const sass = require('gulp-sass');
 const template = require('gulp-template');
@@ -82,8 +82,6 @@ gulp.task('components-processing', function() {
 			.pipe(fileinclude({prefix: '@@'}))
 			// inline CSS
 			.pipe(inlineCss())
-			// convert 
-			
 			// prettify HTML
 			.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
 			// rename file to test
@@ -105,7 +103,6 @@ gulp.task('components-processing', function() {
 				removeStyleTags: false,
 				applyStyleTags: true
 			}))
-
 			.pipe(replace('<<', '{{'))
 			.pipe(replace('>>', '}}'))
 			// prettify HTML
@@ -143,13 +140,6 @@ gulp.task('emails-processing', function() {
 
 		return;
 })
-
-// Component CSS Styling
-// gulp.task('component-sass', function() {
-// 	return gulp.src(['src/**/*.scss', '!src/components/styles-template.scss'], {base: './'})
-// 		.pipe(sass().on('error', sass.logError))
-//     	.pipe(gulp.dest('.'));
-// })
 
 // Create new components and emails
 gulp.task('new-component', function() {
