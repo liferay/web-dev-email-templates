@@ -1,0 +1,52 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+{% if widget.audience == 'prospect' %}
+{% set hex_color = '#df584c' %}
+
+{% elif widget.audience == 'community' %}
+{% set hex_color = '#00a2aa' %}
+
+{% elif widget.audience == 'partner' %}
+{% set hex_color = '#67609b' %}
+
+{% else %}
+{% set hex_color = '#33b88b' %}
+
+{% endif %}
+
+<style>
+    .hash-phrase {
+        padding: 30px;
+    }
+    .hash-phrase, .hash-phrase a {
+        color: << hex_color >> !important;
+    }
+    .hash-phrase a {
+        font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+    }
+</style>
+
+<center>
+    <table class="medium">
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td><p class="hash-phrase"></p></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</center>
