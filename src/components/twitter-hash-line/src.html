@@ -10,27 +10,27 @@
 
 <!-- Component HTML -->
 {% if widget.audience == 'prospect' %}
-{% set hex_color = '#df584c' %}
+    {% set hex_color = '#df584c' %}
 
 {% elif widget.audience == 'community' %}
-{% set hex_color = '#00a2aa' %}
+    {% set hex_color = '#00a2aa' %}
 
 {% elif widget.audience == 'partner' %}
-{% set hex_color = '#67609b' %}
+    {% set hex_color = '#67609b' %}
 
 {% else %}
-{% set hex_color = '#33b88b' %}
+    {% set hex_color = '#33b88b' %}
 
 {% endif %}
 
 <style>
-    .hash-phrase {
+    td.hash-phrase {
         padding: 30px;
     }
-    .hash-phrase, .hash-phrase a {
+    td.hash-phrase, .hash-phrase a {
         color: << hex_color >> !important;
     }
-    .hash-phrase a {
+    td.hash-phrase a {
         font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
         font-weight: bold;
         text-decoration: none;
@@ -43,7 +43,9 @@
             <td>
                 <table>
                     <tr>
-                        <td><p class="hash-phrase"></p></td>
+                        <td class="hash-phrase">
+                            <a href="{{ widget.hash_link }}">{{ widget.hash_phrase|replace(widget.hash_link_phrase, var) }}</a>
+                        </td>
                     </tr>
                 </table>
             </td>
