@@ -1,0 +1,70 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<style>
+    .border-top {
+        border-top: 1px solid #909295;
+    }
+
+    .liferay-footer {
+        float: right;
+    }
+
+    .liferay-footer img{
+        max-width: 94px;
+    }
+
+    .social-media-links {
+        padding: 0px;
+    }
+
+    .social-media-links li {
+        display: inline;
+        float: left;
+        padding: 4px 3px;
+    }
+
+    .social-media-links a.icon {
+        display: block;
+    }
+
+    .social-media-links li a img {
+        max-width: 20px;
+    }
+
+    .text-right th {
+        padding: 20px 0px 20px 20px;
+    }
+</style>
+
+<!-- Component HTML -->
+<container>
+    <row class="border-top">
+        <columns large="6">
+            {% if widget.social_media_options != 'none' %}
+            <ul class="social-media-links">
+                <li><a class="icon" href="//www.facebook.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_facebook2x.png" ></a></li>
+                <li><a class="icon" href="//github.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_linkedin2x.png" ></a></li>
+                <li><a class="icon" href="//twitter.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_twitter2x.png" ></a></li>
+                <li><a class="icon" href="//www.youtube.com/user/liferayinc" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_youtube2x.png" ></a></li>
+                <li><a class="icon" href="//github.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_github2x.png" ></a></li>
+                <li><a class="icon" href="//www.instagram.com/liferayinc" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_instagram2x.png" ></a></li>
+                {% if widget.social_media_options == 'german' %}
+                <li><a class="icon" href="https://www.xing.com/companies/liferaygmbh" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_xing2x.png" ></a></li>
+                {% endif %}
+            </ul>
+
+            {% endif %}
+        </columns>
+        <columns large="6" class="text-right float-right">
+            <a class="text-right float-right liferay-footer" href="//www.liferay.com" target="blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png"></a>
+        </columns>
+    </row>
+</container>
