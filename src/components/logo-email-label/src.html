@@ -15,18 +15,22 @@
         display: inline-block;
     }
 
+    a.liferay-logo img {
+        width: 151px;
+    }
+
     a.liferay-logo.without-email-label {
-        margin: 40px auto;
+        margin: 20px auto;
     }
 
     a.liferay-logo.with-email-label {
-        margin: 40px auto 10px;
+        margin: 20px auto 10px;
     }
     
     span.email-label {
         color: #a3a7b8;
         font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         padding: 10px 0px 20px;
         text-transform: uppercase;
     }
@@ -35,7 +39,7 @@
 {% if widget.show_email_label %}
     <center>
         <a class="liferay-logo with-email-label" href="https://www.liferay.com">
-            <img src="http://discover.liferay.com/hubfs/Blue-LR-Logo-for-Email.jpg">
+            <img src="http://cdn2.hubspot.net/hubfs/252686/Custom_Module_Files/liferay-blue2x.png">
         </a>
         <br>
         <span class="subtitle email-label">{{ widget.email_label }}</span>
@@ -44,7 +48,7 @@
 {% else %}
 <center>
     <a class="liferay-logo without-email-label" href="https://www.liferay.com">
-        <img src="http://discover.liferay.com/hubfs/Blue-LR-Logo-for-Email.jpg">
+        <img src="http://cdn2.hubspot.net/hubfs/252686/Custom_Module_Files/liferay-blue2x.png">
     </a>
 </center>
 
