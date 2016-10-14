@@ -62,12 +62,11 @@
 </style>
 
 <!-- Begin Template Footer -->
-<container id="footerTable">
-    <row class="footer-container-wrapper">
+<table class="row">
         <center>
             <columns class="templateColumnWrapper">
                 <div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
-                    <p id="footer" class="text-center"><br>Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a> or <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>.</p>
+                    <p class="text-center"><br>Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a> or <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>.</p>
                     <p class="text-center">{{ site_settings.company_name }}<br />
                         {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}<br />
                         {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip }}<br />
@@ -85,4 +84,4 @@
     <row>
         {% hubspot_footer %}
     </row>
-</container>
+</table>

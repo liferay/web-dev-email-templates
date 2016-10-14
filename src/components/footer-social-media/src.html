@@ -45,26 +45,28 @@
 </style>
 
 <!-- Component HTML -->
-<container>
+<table class="row">
     <row class="border-top">
-        <columns large="6">
-            {% if widget.social_media_options != 'none' %}
-            <ul class="social-media-links">
-                <li><a class="icon" href="//www.facebook.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_facebook2x.png" ></a></li>
-                <li><a class="icon" href="//github.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_linkedin2x.png" ></a></li>
-                <li><a class="icon" href="//twitter.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_twitter2x.png" ></a></li>
-                <li><a class="icon" href="//www.youtube.com/user/liferayinc" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_youtube2x.png" ></a></li>
-                <li><a class="icon" href="//github.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_github2x.png" ></a></li>
-                <li><a class="icon" href="//www.instagram.com/liferayinc" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_instagram2x.png" ></a></li>
-                {% if widget.social_media_options == 'german' %}
-                <li><a class="icon" href="https://www.xing.com/companies/liferaygmbh" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_xing2x.png" ></a></li>
-                {% endif %}
-            </ul>
+        <center>
+            <columns large="6">
+                {% if widget.social_media_options != 'none' %}
+                <ul class="social-media-links">
+                    <li><a class="icon" href="//www.facebook.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_facebook2x.png" ></a></li>
+                    <li><a class="icon" href="//github.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_linkedin2x.png" ></a></li>
+                    <li><a class="icon" href="//twitter.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_twitter2x.png" ></a></li>
+                    <li><a class="icon" href="//www.youtube.com/user/liferayinc" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_youtube2x.png" ></a></li>
+                    <li><a class="icon" href="//github.com/liferay" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_github2x.png" ></a></li>
+                    <li><a class="icon" href="//www.instagram.com/liferayinc" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_instagram2x.png" ></a></li>
+                    {% if widget.social_media_options == 'german' %}
+                    <li><a class="icon" href="https://www.xing.com/companies/liferaygmbh" target="_blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_xing2x.png" ></a></li>
+                    {% endif %}
+                </ul>
 
-            {% endif %}
-        </columns>
-        <columns large="6" class="text-right float-right">
-            <a class="text-right float-right liferay-footer" href="//www.liferay.com" target="blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png"></a>
-        </columns>
+                {% endif %}
+            </columns>
+            <columns large="6" class="text-right float-right">
+                <a class="text-right float-right liferay-footer" href="//www.liferay.com" target="blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png"></a>
+            </columns>
+        </center>
     </row>
-</container>
+</table>
