@@ -1,41 +1,44 @@
 {% if site_settings.office_location_name == 'Liferay HQ' %} {% set bool_registration_location = False %} {% set bool_registration_number = False %} {% set bool_managing_director = False %} {% elif site_settings.office_location_name == 'Liferay Germany'
-%} {% set bool_registration_location = True %} {% set bool_registration_number = True %} {% set bool_managing_director = True %} {% set var_registration_location = "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% set
-var_managing_director = "Geschäftsführer: Bryan Cheung" %} {% elif site_settings.office_location_name == 'Liferay Spain' %} {% set bool_registration_location = True %} {% set bool_registration_number = True %} {% set var_registration_location = "Amtsgericht
-Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% elif site_settings.office_location_name == 'Liferay International' %} {% set bool_registration_location = True %} {% set bool_registration_number = True %} {% set var_registration_location
-= "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% elif site_settings.office_location_name == 'Liferay UK' %} {% set bool_registration_location = True %} {% set bool_registration_number = True %} {% set var_registration_location
-= "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% elif site_settings.office_location_name == 'Liferay Benelux BV' %} {% set bool_registration_location = False %} {% set bool_registration_number = True %} {% set var_registration_location
-= "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% endif %}
+%} {% set bool_registration_location = True %} {% set bool_registration_number = True %} {% set bool_managing_director = True %} {% set bool_email = True %} {% set var_registration_location = "Amtsgericht Frankfurt am Main" %} {% set var_registration_number
+= "HRB 93411" %} {% set var_managing_director = "Geschäftsführer: Bryan Cheung" %} {% set var_email = sales-de@liferay.com %} {% elif site_settings.office_location_name == 'Liferay Spain' %} {% set bool_registration_location = True %} {% set bool_registration_number
+= True %} {% set var_registration_location = "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% elif site_settings.office_location_name == 'Liferay International' %} {% set bool_registration_location = True %} {% set
+bool_registration_number = True %} {% set var_registration_location = "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% elif site_settings.office_location_name == 'Liferay UK' %} {% set bool_registration_location =
+True %} {% set bool_registration_number = True %} {% set var_registration_location = "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% elif site_settings.office_location_name == 'Liferay Benelux BV' %} {% set bool_registration_location
+= False %} {% set bool_registration_number = True %} {% set var_registration_location = "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% endif %}
 
 <style>
-    #footer a.link-text {
-        color: #ccc;
+    .widget-type-email_can_spam p, .widget-type-email_can_spam a {
+        color: #cccccc !important;
+        font-size: 12px !important;
     }
 </style>
 
 
 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
     <center data-parsed="" style="min-width: 580px; width: 100%;">
-        <th class="templateColumnWrapper float-center small-12 large-12 columns first last" align="center" style="Margin: 0 auto; color: #474a4b; float: none; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; margin-bottom: 10px; padding: 0; padding-bottom: 16px; padding-left: 16px; padding-right: 16px; text-align: center; width: 564px;">
-            <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+        <table align="center" class="row float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; position: relative; text-align: center; vertical-align: top; width: 100%;">
+            <tbody>
                 <tr style="padding: 0; text-align: left; vertical-align: top;">
-                    <th style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left;">
-                        <div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
-                            <p class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">
-                                <br>Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;">email preferences</a> or
-                                <a
-                                class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;">unsubscribe</a>.</p>
-                            <p class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">{{ site_settings.company_name }}
-                                <br>{{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}
-                                <br>{{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip }}
-                                <br>{% if bool_registration_location == True %} {{ var_registration_location }}: {{ var_registration_number }}
-                                <br>{% endif %} {% if bool_managing_director == True %} {{ var_managing_director }}
-                                <br>{% endif %} {{ site_settings.company_phone }}</p>
-                        </div>
-                    </th>
-                    <th class="expander" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
+                    <div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
+                        <p class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">
+                            You've received this email because you're subscribed to {{ site_settings.company_name }}
+                        </p>
+                        <p class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;">email preferences</a>,
+                            <a
+                            class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;">unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;"> view in browser</a>.</p>
+                        <p class="text-center" style="Margin: 0; Margin-bottom: 10px; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">© 2016 Liferay, Inc. All Rights Reserved.
+                            <br>
+                            <b>{{ site_settings.company_name }}</b>, {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip
+                            }}
+                            <br>{% if bool_registration_location == True %} {{ var_registration_location }}: {{ var_registration_number }}
+                            <br>{% endif %} {% if bool_managing_director == True %} {{ var_managing_director }}
+                            <br>{% endif %} {% if bool_email == True %}
+                            <a href="mailto:{{ var_email }}" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; text-decoration: none;">{{ var_email }}</a>
+                            <br>{% endif %} {{ site_settings.company_phone }}</p>
+                    </div>
                 </tr>
-            </table>
-        </th>
+            </tbody>
+        </table>
     </center>
 
     <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">

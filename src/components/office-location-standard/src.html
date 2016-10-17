@@ -20,10 +20,12 @@
 {% set bool_registration_location = True %}
 {% set bool_registration_number = True %}
 {% set bool_managing_director = True %}
+{% set bool_email = True %}
 
 {% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
 {% set var_registration_number = "HRB 93411" %}
 {% set var_managing_director = "Geschäftsführer: Bryan Cheung" %}
+{% set var_email = sales-de@liferay.com %}
 
 {% elif site_settings.office_location_name == 'Liferay Spain' %}
 {% set bool_registration_location = True %}
@@ -56,29 +58,35 @@
 {% endif %}
 
 <style>
-#footer a.link-text {
-    color: #ccc;
-}
+    .widget-type-email_can_spam p, .widget-type-email_can_spam a {
+        color: #cccccc !important;
+        font-size: 12px !important;
+    }
 </style>
 
 <!-- Begin Template Footer -->
 <table class="row">
         <center>
-            <columns class="templateColumnWrapper">
+            <row>
                 <div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
-                    <p class="text-center"><br>Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a> or <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>.</p>
-                    <p class="text-center">{{ site_settings.company_name }}<br />
-                        {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}<br />
-                        {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip }}<br />
+                    <p class="text-center">
+                        You've received this email because you're subscribed to {{ site_settings.company_name }}
+                    </p>
+                    <p class="text-center">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a>, <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}"> view in browser</a>.</p>
+                    <p class="text-center">© 2016 Liferay, Inc. All Rights Reserved.<br />
+                        <b>{{ site_settings.company_name }}</b>, {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip }}<br />
                         {% if bool_registration_location == True %}
                         {{ var_registration_location }}: {{ var_registration_number }}<br />
                         {% endif %}
                         {% if bool_managing_director == True %}
                         {{ var_managing_director }}<br />
                         {% endif %}
+                        {% if bool_email == True %}
+                        <a href="mailto:{{ var_email }}">{{ var_email }}</a><br />
+                        {% endif %}
                         {{ site_settings.company_phone }}</p>
-                </div><!--end widget-span -->
-            </columns>
+                </div>
+            </row>
         </center>
     </row><!--end footer wrapper -->
     <row>
