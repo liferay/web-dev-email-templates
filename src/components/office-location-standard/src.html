@@ -12,48 +12,48 @@
 
 <!-- Begin Template Footer -->
 {% if site_settings.office_location_name == 'Liferay HQ' %}
-{% set bool_registration_location = False %}
-{% set bool_registration_number = False %}
-{% set bool_managing_director = False %}
+    {% set bool_registration_location = False %}
+    {% set bool_registration_number = False %}
+    {% set bool_managing_director = False %}
 
 {% elif site_settings.office_location_name == 'Liferay Germany' %}
-{% set bool_registration_location = True %}
-{% set bool_registration_number = True %}
-{% set bool_managing_director = True %}
-{% set bool_email = True %}
+    {% set bool_registration_location = True %}
+    {% set bool_registration_number = True %}
+    {% set bool_managing_director = True %}
+    {% set bool_email = True %}
 
-{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
-{% set var_registration_number = "HRB 93411" %}
-{% set var_managing_director = "Geschäftsführer: Bryan Cheung" %}
-{% set var_email = sales-de@liferay.com %}
+    {% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+    {% set var_registration_number = "HRB 93411" %}
+    {% set var_managing_director = "Geschäftsführer: Bryan Cheung" %}
+    {% set var_email = sales-de@liferay.com %}
 
 {% elif site_settings.office_location_name == 'Liferay Spain' %}
-{% set bool_registration_location = True %}
-{% set bool_registration_number = True %}
+    {% set bool_registration_location = True %}
+    {% set bool_registration_number = True %}
 
-{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
-{% set var_registration_number = "HRB 93411" %}
+    {% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+    {% set var_registration_number = "HRB 93411" %}
 
 {% elif site_settings.office_location_name == 'Liferay International' %}
-{% set bool_registration_location = True %}
-{% set bool_registration_number = True %}
+    {% set bool_registration_location = True %}
+    {% set bool_registration_number = True %}
 
-{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
-{% set var_registration_number = "HRB 93411" %}
+    {% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+    {% set var_registration_number = "HRB 93411" %}
 
 {% elif site_settings.office_location_name == 'Liferay UK' %}
-{% set bool_registration_location = True %}
-{% set bool_registration_number = True %}
+    {% set bool_registration_location = True %}
+    {% set bool_registration_number = True %}
 
-{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
-{% set var_registration_number = "HRB 93411" %}
+    {% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+    {% set var_registration_number = "HRB 93411" %}
 
 {% elif site_settings.office_location_name == 'Liferay Benelux BV' %}
-{% set bool_registration_location = False %}
-{% set bool_registration_number = True %}
+    {% set bool_registration_location = False %}
+    {% set bool_registration_number = True %}
 
-{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
-{% set var_registration_number = "HRB 93411" %}
+    {% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
+    {% set var_registration_number = "HRB 93411" %}
 
 {% endif %}
 
@@ -70,7 +70,7 @@
             <row>
                 <div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
                     <p class="text-center">
-                        You've received this email because you're subscribed to {{ site_settings.company_name }}
+                        {{ widget.subscription_reason }}
                     </p>
                     <p class="text-center">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a>, <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}"> view in browser</a>.</p>
                     <p class="text-center">© 2016 Liferay, Inc. All Rights Reserved.<br />

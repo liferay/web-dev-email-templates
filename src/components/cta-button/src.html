@@ -30,14 +30,17 @@
 	table.button tr td {
 		background: << hex_color >> !important;
 		border: 0px solid << hex_color >> !important;
+		border-radius: 1px;
 		color: #FFF !important;
 	}
 
 	table.button tr a {
 		border: 0 solid << hex_color >>;
+		border-radius: 1px;
 		color: #FFF !important;
 		font-weight: lighter !important;
 		margin-bottom: 0px !important;
+		Margin-bottom: 0px !important;
 	}
 
 	table.button.left-aligned {
@@ -58,7 +61,7 @@
 		<td>
 			<table>
 				<tr>
-					<td><a href="{ widget.button_href }}">{{ widget.button_text }}</a></td>
+					<td><a href="{{ widget.button_href }}">{{ widget.button_text }}</a></td>
 				</tr>
 			</table>
 		</td>
@@ -72,7 +75,7 @@
 			<td>
 				<table>
 					<tr>
-						<td><a href="{ widget.button_href }}">{{ widget.button_text }}</a></td>
+						<td><a href="{{ widget.button_href }}">{{ widget.button_text }}</a></td>
 					</tr>
 				</table>
 			</td>
