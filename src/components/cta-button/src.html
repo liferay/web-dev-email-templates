@@ -9,43 +9,18 @@
 -->
 
 <!-- Component HTML -->
-{% if widget.button_color == 'prospect' %}
-{% set hex_color = '#df584c' %}
-
-{% elif widget.button_color == 'community' %}
-{% set hex_color = '#00a2aa' %}
-
-{% elif widget.button_color == 'partner' %}
-{% set hex_color = '#67609b' %}
-
-{% else %}
-{% set hex_color = '#33b88b' %}
-
-{% endif %}
+{% set hex_color = widget.button_color %}
 
 {% if widget.alignment == 'left' %}
-
 
 <style>
 	table.button tr td {
 		background: << hex_color >> !important;
 		border: 0px solid << hex_color >> !important;
-		border-radius: 1px;
-		color: #FFF !important;
 	}
 
 	table.button tr a {
 		border: 0 solid << hex_color >>;
-		border-radius: 1px;
-		color: #FFF !important;
-		font-weight: lighter !important;
-		margin-bottom: 0px !important;
-		Margin-bottom: 0px !important;
-	}
-
-	table.button.left-aligned {
-		display: block;
-		padding-left: 16px;
 	}
 
 	@media only screen and (max-width: 596px) {

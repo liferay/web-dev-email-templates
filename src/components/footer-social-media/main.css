@@ -1,1 +1,35 @@
 /* Enter Component Styles Here */
+
+.border-top {
+    border-top: 1px solid #909295;
+}
+
+.liferay-footer {
+    float: right;
+}
+
+.liferay-footer img{
+    max-width: 94px;
+}
+
+.social-media-links {
+    padding: 0px;
+}
+
+.social-media-links li {
+    display: inline;
+    float: left;
+    padding: 4px;
+}
+
+.social-media-links a.icon {
+    display: block;
+}
+
+.social-media-links li a img {
+    max-width: 20px;
+}
+
+.text-right th {
+    padding: 20px 0px 20px 20px;
+}

@@ -1,1 +1,19 @@
 /* Enter Component Styles Here */
+
+table.button tr td {
+    border-radius: 1px;
+    color: #FFF !important;
+}
+
+table.button tr a {
+    border-radius: 1px;
+    color: #FFF !important;
+    font-weight: lighter !important;
+    margin-bottom: 0px !important;
+    Margin-bottom: 0px !important;
+}
+
+table.button.left-aligned {
+    display: block;
+    padding-left: 16px;
+}

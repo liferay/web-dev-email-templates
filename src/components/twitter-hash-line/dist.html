@@ -1,17 +1,8 @@
-{% if widget.audience == 'prospect' %} {% set hex_color = '#df584c' %} {% elif widget.audience == 'community' %} {% set hex_color = '#00a2aa' %} {% elif widget.audience == 'partner' %} {% set hex_color = '#67609b' %} {% else %} {% set hex_color = '#33b88b'
-%} {% endif %}
+{% set hex_color = widget.audience %}
 
 <style>
-    td.hash-phrase {
-        padding: 30px;
-    }
     td.hash-phrase, .hash-phrase a {
         color: {{ hex_color }} !important;
-    }
-    td.hash-phrase a {
-        font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-        font-weight: bold;
-        text-decoration: none;
     }
 </style>
 

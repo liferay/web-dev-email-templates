@@ -57,13 +57,6 @@
 
 {% endif %}
 
-<style>
-    .widget-type-email_can_spam p, .widget-type-email_can_spam a {
-        color: #cccccc !important;
-        font-size: 12px !important;
-    }
-</style>
-
 <!-- Begin Template Footer -->
 <table class="row">
         <center>
@@ -73,16 +66,16 @@
                         {{ widget.subscription_reason }}
                     </p>
                     <p class="text-center">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a>, <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}"> view in browser</a>.</p>
-                    <p class="text-center">© 2016 Liferay, Inc. All Rights Reserved.<br />
+                    <p class="text-center" > © 2016 Liferay, Inc. All Rights Reserved.<br />
                         <b>{{ site_settings.company_name }}</b>, {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip }}<br />
                         {% if bool_registration_location == True %}
-                        {{ var_registration_location }}: {{ var_registration_number }}<br />
+                            {{ var_registration_location }}: {{ var_registration_number }}<br />
                         {% endif %}
                         {% if bool_managing_director == True %}
-                        {{ var_managing_director }}<br />
+                            {{ var_managing_director }}<br />
                         {% endif %}
                         {% if bool_email == True %}
-                        <a href="mailto:{{ var_email }}">{{ var_email }}</a><br />
+                            <a href="mailto:{{ var_email }}">{{ var_email }}</a><br />
                         {% endif %}
                         {{ site_settings.company_phone }}</p>
                 </div>
