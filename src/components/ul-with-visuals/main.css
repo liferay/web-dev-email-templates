@@ -1,0 +1,17 @@
+/* Enter Component Styles Here */
+.list-item td {
+	padding: 1em;
+}
+
+td.list-item-description {
+	width: 66%;
+}
+
+td.list-item-image {
+	width: 33%;
+}
+
+td.list-item-image img {
+	margin: 0 auto;
+	Margin: 0 auto;
+}
