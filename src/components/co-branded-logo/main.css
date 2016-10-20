@@ -1,0 +1,27 @@
+/* Enter Component Styles Here */
+
+span.symbol {
+	line-height: 30px;
+	padding: 0 16px;
+}
+
+table.horizontal-rule {
+	width: 75% !important;
+}
+
+table.horizontal-rule td {
+	background: none;
+	border-bottom: 1px solid #e3e4e5;
+	height: 1px;
+	margin: 0;
+	width: 100%;
+	vertical-align: middle;
+}
+
+td.logo {
+	padding: 0 16px;
+}
+
+td.logo img {
+	max-height: 30px;
+}
