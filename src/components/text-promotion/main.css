@@ -1,0 +1,13 @@
+/* Enter Component Styles Here */
+
+table.text-promotion > tbody > tr > td {
+	background-color: #EFEFEF;
+}
+
+table.text-promotion th {
+	padding-bottom: 0;
+}
+
+table.text-promotion td.content {
+	padding: 2em 1em !important;
+}

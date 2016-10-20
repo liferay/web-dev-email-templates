@@ -1,0 +1,57 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+{% set hex_color = widget.button_audience %}
+
+<style>
+	table.button tr td {
+		background-color: transparent !important;
+		border: 0px solid << hex_color >> !important;
+	}
+
+	table.button tr td a {
+		border: 2px solid << hex_color >> !important;
+		border-radius: 3px;
+		color: << hex_color >> !important;
+	}
+
+	@media only screen and (max-width: 596px) {
+		table.button table td a {
+			padding: .75em 2em !important;
+			text-align: center !important;
+		}
+	}
+</style>
+
+<container class="text-promotion">
+	<row>
+		<columns>
+			<row>
+				<td class="content">
+					<row>
+						<td>
+							<h3>{{ widget.header }}</h3>
+						</td>
+					</row>
+
+					<row>
+						<td>
+							<p>{{ widget.body_text }}</p>
+						</td>
+					</row>
+
+					<button class="radius medium" href="{{ widget.button_href }}">{{ widget.button_text }}</button>
+				</td>
+			</row>
+		</columns>
+	</row>
+</container>
+
