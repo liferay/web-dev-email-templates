@@ -1,0 +1,84 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+{% set hex_color = widget.audience %}
+
+<style>
+	table.promotion tr td a {
+		color: << hex_color >> !important;
+	}
+</style>
+
+<container class="promotion">
+	<row>
+		<columns>
+			<row>
+				{% if widget.promotion_image_2.src %}
+					<td class="border-right double-promotion large-6 small-6">
+						<row>
+							<th class="logo">
+								{% if widget.promotion_image.src %}
+									<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
+								{% endif %}
+							</th>
+						</row>
+
+						<row>
+							<td>
+								<p>{{ widget.promotion_body_text }}</p>
+							</td>
+						</row>
+
+						<row>
+							<td>
+								<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>
+							</td>
+						</row>
+					</td>
+
+					<td class="double-promotion large-6 small-6">
+						<row>
+							<th class="logo">
+								{% if widget.promotion_image_2.src %}
+									<img src="{{ widget.promotion_image_2.src }}" width="{{ widget.promotion_image_2.width }}" height="{{ widget.promotion_image_2.height }}">
+								{% endif %}
+							</th>
+						</row>
+
+						<row>
+							<td>
+								<p>{{ widget.promotion_body_text_2 }}</p>
+							</td>
+						</row>
+
+						<row>
+							<td>
+								<a href="{{ widget.promotion_cta_url_2 }}">{{ widget.promotion_cta_text_2 }}</a>
+							</td>
+						</row>
+					</td>
+				{% else %}
+					<td class="single-promotion large-6 small-6" valign="middle">
+						{% if widget.promotion_image.src %}
+							<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
+						{% endif %}
+					</td>
+
+					<td class="single-promotion large-6 small-6">
+						<p>{{ widget.promotion_body_text }}</p>
+
+						<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>
+					</td>
+				{% endif %}
+			</row>
+		</columns>
+	</row>
+</container>

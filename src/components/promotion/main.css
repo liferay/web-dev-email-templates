@@ -1,0 +1,46 @@
+/* Enter Component Styles Here */
+
+table.promotion > tbody > tr > td {
+	background-color: #EFEFEF;
+}
+
+table.promotion th {
+	padding-bottom: 0;
+}
+
+table.promotion td.border-right {
+	border-right: 1px solid #FFF;
+}
+
+table.promotion td.double-promotion {
+	padding: 2em 1em !important;
+}
+
+table.promotion td.double-promotion a {
+	color: #31558F;
+	font-style: italic;
+	font-weight: 200;
+}
+
+table.promotion td.double-promotion img {
+	margin: 0 auto !important;
+	Margin: 0 auto !important;
+}
+
+table.promotion td.double-promotion th.logo {
+	padding-bottom: 1em;
+}
+
+table.promotion td.single-promotion {
+	padding: 2em 1em !important;
+	vertical-align: middle;
+}
+
+table.promotion td.single-promotion img {
+	margin: 0 auto;
+	Margin: 0 auto;
+}
+
+table.promotion td.double-promotion a, table.promotion td.double-promotion p, table.promotion td.double-promotion td {
+	text-align: center !important;
+}
