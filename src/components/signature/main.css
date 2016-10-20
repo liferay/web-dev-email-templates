@@ -1,0 +1,26 @@
+/* Enter Component Styles Here */
+table.signature td.headshot {
+	width: 92px;
+}
+
+table.signature td.headshot img {
+	height: 60px;
+	width: 60px;
+	border-radius: 60px;
+}
+
+table.signature td.headshot td, table.signature td.signee td {
+	padding: 16px !important;
+}
+
+table.signature td.signee img {
+	max-height: 60px;
+}
+
+table.signature td.signee div {
+	font-style: italic;
+}
+
+table.signature td.signee .signee-title {
+	font-weight: 200;
+}
