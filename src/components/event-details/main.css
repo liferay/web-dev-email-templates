@@ -1,0 +1,33 @@
+/* Enter Component Styles Here */
+
+td div, td h3 {
+	text-align: center;
+	width: 100%;
+}
+
+td img {
+	max-width: 216px;
+	height: 216px;
+	border-radius: 216px;
+}
+
+table.container {
+	width: 100%;
+}
+
+table.container > tbody > tr > td {
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+
+table.container tr td, table.container tr th {
+	color: #FFF;
+	font-weight: 200;
+}
+
+h3 {
+	color: #FFF;
+	letter-spacing: 0.5px;
+	margin-bottom: 0 !important;
+	text-transform: none;
+}
