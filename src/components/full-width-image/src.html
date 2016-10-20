@@ -1,0 +1,20 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+<container>
+	<row>
+		<td>
+			{% if widget.full_width_image.src %}
+				<img src="{{ widget.full_width_image.src }}" width="{{ widget.full_width_image.width }}" height="auto" alt="{{ widget.full_width_image.alt }}" style="width: 100%">
+			{% endif %}
+		</td>
+	</row>
+</container>
