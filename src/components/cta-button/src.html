@@ -12,40 +12,25 @@
 {% set hex_color = widget.button_color %}
 
 {% if widget.alignment == 'left' %}
-
-<style>
-	table.button tr td {
-		background: << hex_color >> !important;
-		border: 0px solid << hex_color >> !important;
-	}
-
-	table.button tr a {
-		border: 0 solid << hex_color >>;
-	}
-
-	@media only screen and (max-width: 596px) {
-		table.button table td a {
-			padding: .75em 2em !important;
-			text-align: center !important;
+	<style>
+		table.button tr td {
+			background-color: << hex_color >> !important;
+			border: 0px solid << hex_color >> !important;
 		}
-	}
-</style>
 
-<table class="button radius medium left-aligned">
-	<tr>
-		<td>
-			<table>
-				<tr>
-					<td><a href="{{ widget.button_href }}">{{ widget.button_text }}</a></td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-</table>
+		table.button tr a {
+			border: 0 solid << hex_color >>;
+		}
 
-{% else %}
-<center>
-	<table class="button radius medium">
+		@media only screen and (max-width: 596px) {
+			table.button table td a {
+				padding: .75em 2em !important;
+				text-align: center !important;
+			}
+		}
+	</style>
+
+	<table class="button radius medium left-aligned">
 		<tr>
 			<td>
 				<table>
@@ -56,6 +41,18 @@
 			</td>
 		</tr>
 	</table>
-</center>
-
+{% else %}
+	<center>
+		<table class="button radius medium">
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td><a href="{{ widget.button_href }}">{{ widget.button_text }}</a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</center>
 {% endif %}

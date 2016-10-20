@@ -13,23 +13,23 @@
 {% set hex_color = widget.audience %}
 
 <style>
-    td.hash-phrase, .hash-phrase a {
-        color: << hex_color >> !important;
-    }
+	td.hash-phrase, .hash-phrase a {
+		color: << hex_color >> !important;
+	}
 </style>
 
 <center>
-    <table class="medium">
-        <tr>
-            <td>
-                <table>
-                    <tr>
-                        <td class="hash-phrase">
-                            <a href="{{ widget.hash_link }}">{{ widget.hash_phrase|replace(widget.hash_link_phrase, var) }}</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+	<table class="medium">
+		<tr>
+			<td>
+				<table>
+					<tr>
+						<td class="hash-phrase">
+							<a href="{{ widget.hash_link }}">{{ widget.hash_phrase|replace(widget.hash_link_phrase, var) }}</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
 </center>
