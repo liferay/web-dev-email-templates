@@ -1155,19 +1155,16 @@ table.button table td a {
     font-weight: bold;
     color: $offWhite;
     text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px 8px 16px;
     border: 0 solid $customerColor;
     border-radius: 3px;
 }
 
-table.button.radius table td {
-    border-radius: 3px;
-    border: none;
+table.button a table td {
+    padding: 12px 24px;
 }
 
-table.button.rounded table td {
-    border-radius: 500px;
+table.button.radius table td {
+    border-radius: 3px;
     border: none;
 }
 
