@@ -9,17 +9,17 @@ a.liferay-logo img {
 }
 
 a.liferay-logo.without-email-label {
-    margin: 20px auto;
-    Margin: 20px auto;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 a.liferay-logo.with-email-label {
-    margin: 20px auto 0px !important;
-    Margin: 20px auto 0px !important;
+    margin: 0 auto 0 !important;
+    padding: 20px 0 0 0 !important;
 }
 
 .center-wrapper {
-    padding: 0px 0px 15px;
+    padding: 0 0p 15px;
 }
 
 span.email-label {
@@ -27,6 +27,6 @@ span.email-label {
     font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: lighter;
-    padding: 10px 0px;
+    padding: 10px 0;
     text-transform: uppercase;
 }

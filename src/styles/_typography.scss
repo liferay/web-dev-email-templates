@@ -38,7 +38,6 @@ a {
     color: #474a4b;
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-weight: normal;
-    margin-bottom: 10px;
 }
 
 h1,
@@ -52,21 +51,31 @@ h6 {
 
 h1 {
     font-size: 32px;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 38px;
 }
 
 h2 {
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 200;
     line-height: 28.8px;
+}
+
+h2.subheading {
+    font-size: 20px;
+    line-height: 24px;
 }
 
 h3 {
     color: #474A4B;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 20px;
+    text-transform: uppercase;
+}
+
+h3.small-caps {
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -74,4 +83,10 @@ p {
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
+}
+
+p.quote {
+    color: #708D9C;
+    font-size: 20px;
+    line-height: 24px;
 }

@@ -1,47 +1,112 @@
 {% set hex_color = widget.button_color %} {% if widget.alignment == 'left' %}
 <style>
-    table.button tr td {
-    			background-color: {{ hex_color }} !important;
-    			border: 0px solid {{ hex_color }} !important;
+    table.cta-button table.button table tr td {
+    			color: #FFF;
     		}
     
-    		table.button tr a {
-    			border: 0 solid {{ hex_color }};
+    		table.cta-button table.button a td {
+    			background-color: {{ hex_color }}; !important;
+    			color: #FFF;
+    			Margin-bottom: 0;
+    			margin-bottom: 0;
     		}
     
     		@media only screen and (max-width: 596px) {
-    			table.button table td a {
-    				padding: .75em 2em !important;
+    			table.cta-button table.button table td a {
     				text-align: center !important;
     			}
     		}
 </style>
 
-<table class="button radius medium left-aligned" style="Margin: 0 0 16px 0; border-collapse: collapse; border-spacing: 0; display: block; margin: 0 0 16px 0; padding: 0; padding-left: 16px; text-align: left; vertical-align: top; width: auto;">
-    <tr style="padding: 0; text-align: left; vertical-align: top;">
-        <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: {{ hex_color }} !important; border: 0px solid {{ hex_color }} !important; border-collapse: collapse !important; border-radius: 1px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-            <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
-                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                    <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background: #2bb98b; background-color: {{ hex_color }} !important; border: 0px solid {{ hex_color }} !important; border-collapse: collapse !important; border-radius: 3px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;"><a href="{{ widget.button_href }}" style="Margin: 0; Margin-bottom: 0px !important; border: 0 solid #2bb98b; border-radius: 3px; color: #FFF !important; display: inline-block; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: lighter !important; line-height: 1.3; margin: 0; margin-bottom: 0px !important; padding: 8px 16px 8px 16px; text-align: left; text-decoration: none;">{{ widget.button_text }}</a>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-{% else %}
-<center data-parsed="" style="min-width: 580px; width: 100%;">
-    <table class="button radius medium float-center" align="center" style="Margin: 0 0 16px 0; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 0 16px 0; padding: 0; text-align: center; vertical-align: top; width: auto;">
+<table align="center" class="container cta-button" style="Margin: 0 auto; background: #FEFEFE; border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 580px;">
+    <tbody>
         <tr style="padding: 0; text-align: left; vertical-align: top;">
-            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: {{ hex_color }} !important; border: 0px solid {{ hex_color }} !important; border-collapse: collapse !important; border-radius: 1px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
-                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                        <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background: #2bb98b; background-color: {{ hex_color }} !important; border: 0px solid {{ hex_color }} !important; border-collapse: collapse !important; border-radius: 3px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;"><a href="{{ widget.button_href }}" style="Margin: 0; Margin-bottom: 0px !important; border: 0 solid #2bb98b; border-radius: 3px; color: #FFF !important; display: inline-block; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: lighter !important; line-height: 1.3; margin: 0; margin-bottom: 0px !important; padding: 8px 16px 8px 16px; text-align: left; text-decoration: none;">{{ widget.button_text }}</a>
-                        </td>
-                    </tr>
+            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <th class="small-12 large-12 columns first last" style="Margin: 0 auto; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-left: 16px; padding-right: 16px; text-align: left; width: 564px;">
+                                <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                        <th style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+                                            <table class="button radius medium left-aligned" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0; padding-left: 16px; text-align: left; vertical-align: top; width: auto;">
+                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                    <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; border-radius: 1px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                        <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+                                                            <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background: #33B88B; border: none; border-collapse: collapse !important; border-radius: 3px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                                    <a href="{{ widget.button_href }}" style="Margin: 0; border: 0 solid #33B88B; border-radius: 3px; color: #FFF !important; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: lighter !important; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">
+                                                                        <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+                                                                            <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                                <td style="!important;color: #FFF; -moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; Margin-bottom: 0; background: #33B88B; background-color: {{ hex_color }}; border: none; border-collapse: collapse !important; border-radius: 3px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 0; padding: 12px 24px; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                                                    {{ widget.button_text }}
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </th>
+                                        <th class="expander" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
                 </table>
             </td>
         </tr>
-    </table>
-</center>
+    </tbody>
+</table>
+{% else %}
+<table align="center" class="container cta-button" style="Margin: 0 auto; background: #FEFEFE; border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 580px;">
+    <tbody>
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <th class="small-12 large-12 columns first last" style="Margin: 0 auto; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-left: 16px; padding-right: 16px; text-align: left; width: 564px;">
+                                <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                        <th style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
+                                            <center data-parsed="" style="min-width: 532px; width: 100%;">
+                                                <table class="button radius medium float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top; width: auto;">
+                                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                        <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; border-radius: 1px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                            <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+                                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                    <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background: #33B88B; border: none; border-collapse: collapse !important; border-radius: 3px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                                        <a href="{{ widget.button_href }}" style="Margin: 0; border: 0 solid #33B88B; border-radius: 3px; color: #FFF !important; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: lighter !important; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">
+                                                                            <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+                                                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                                                                    <td style="!important;color: #FFF; -moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; Margin-bottom: 0; background: #33B88B; background-color: {{ hex_color }}; border: none; border-collapse: collapse !important; border-radius: 3px; color: #FFF !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; margin-bottom: 0; padding: 12px 24px; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                                                        {{ widget.button_text }}
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </center>
+                                        </th>
+                                        <th class="expander" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0 !important; text-align: left; visibility: hidden; width: 0;"></th>
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
 {% endif %}
