@@ -59,11 +59,6 @@ a img {
     border: none;
 }
 
-p {
-    margin: 0 0 0 10px;
-    Margin: 0 0 0 10px;
-}
-
 table {
     border-spacing: 0;
     border-collapse: collapse;
@@ -88,18 +83,18 @@ td {
 @media only screen {
     html {
         min-height: 100%;
-        background: #f3f3f3;
+        background: $elementColor;
     }
 }
 
 table.body {
-    background: #f3f3f3;
+    background: $elementColor;
     height: 100%;
     width: 100%;
 }
 
 table.container {
-    background: #fefefe;
+    background: $offWhite;
     width: 580px;
     margin: 0 auto;
     Margin: 0 auto;
@@ -130,8 +125,6 @@ th.columns,
 th.column {
     margin: 0 auto;
     Margin: 0 auto;
-    padding-left: 16px;
-    padding-bottom: 16px;
 }
 
 td.columns .column,
@@ -155,13 +148,6 @@ th.columns .columns center,
 th.column .column center,
 th.column .columns center {
     min-width: none !important;
-}
-
-td.columns.last,
-td.column.last,
-th.columns.last,
-th.column.last {
-    padding-right: 16px;
 }
 
 td.columns table:not(.button),
@@ -989,7 +975,7 @@ p,
 td,
 th,
 a {
-    color: #0a0a0a;
+    color: $fontColor;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: normal;
     padding: 0;
@@ -1009,8 +995,7 @@ h6 {
     word-wrap: normal;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: normal;
-    margin-bottom: 10px;
-    Margin-bottom: 10px;
+    padding: 0.3em 0;
 }
 
 h1 {
@@ -1046,46 +1031,37 @@ th {
     line-height: 1.3;
 }
 
-p {
-    margin-bottom: 10px;
-    Margin-bottom: 10px;
-}
-
 p.lead {
     font-size: 20px;
     line-height: 1.6;
 }
 
 p.subheader {
-    margin-top: 4px;
-    margin-bottom: 8px;
-    Margin-top: 4px;
-    Margin-bottom: 8px;
     font-weight: normal;
     line-height: 1.4;
-    color: #8a8a8a;
+    color: $fontColor;
 }
 
 small {
     font-size: 80%;
-    color: #cacaca;
+    color: $fontColor;
 }
 
 a {
-    color: #2199e8;
+    color: $primaryColor;
     text-decoration: none;
 }
 
 a:hover {
-    color: #147dc2;
+    color: $altPrimaryColor;
 }
 
 a:active {
-    color: #147dc2;
+    color: $altPrimaryColor;
 }
 
 a:visited {
-    color: #2199e8;
+    color: $primaryColor;
 }
 
 h1 a,
@@ -1100,21 +1076,21 @@ h5 a,
 h5 a:visited,
 h6 a,
 h6 a:visited {
-    color: #2199e8;
+    color: $primaryColor;
 }
 
 pre {
-    background: #f3f3f3;
+    background: $elementColor;
     margin: 30px 0;
     Margin: 30px 0;
 }
 
 pre code {
-    color: #cacaca;
+    color: $fontColor;
 }
 
 pre code span.callout {
-    color: #8a8a8a;
+    color: $fontColor;
     font-weight: bold;
 }
 
@@ -1132,7 +1108,7 @@ table.hr th {
     max-width: 580px;
     border-top: 0;
     border-right: 0;
-    border-bottom: 1px solid #0a0a0a;
+    border-bottom: 1px solid $fontColor;
     border-left: 0;
     margin: 20px auto;
     Margin: 20px auto;
@@ -1154,7 +1130,7 @@ span.preheader {
     visibility: hidden;
     mso-hide: all !important;
     font-size: 1px;
-    color: #f3f3f3;
+    color: $elementColor;
     line-height: 1px;
     max-height: 0px;
     max-width: 0px;
@@ -1164,26 +1140,24 @@ span.preheader {
 
 table.button {
     width: auto;
-    margin: 0 0 16px 0;
-    Margin: 0 0 16px 0;
 }
 
 table.button table td {
     text-align: left;
-    color: #fefefe;
-    background: #2bb98b;
-    border: 2px solid #2bb98b;
+    color: $offWhite;
+    background: $customerColor;
+    border: 2px solid $customerColor;
 }
 
 table.button table td a {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
-    color: #fefefe;
+    color: $offWhite;
     text-decoration: none;
     display: inline-block;
     padding: 8px 16px 8px 16px;
-    border: 0 solid #2bb98b;
+    border: 0 solid $customerColor;
     border-radius: 3px;
 }
 
@@ -1209,7 +1183,7 @@ table.button.small table tr td a:visited,
 table.button.large:hover table tr td a,
 table.button.large:active table tr td a,
 table.button.large table tr td a:visited {
-    color: #fefefe;
+    color: $offWhite;
 }
 
 table.button.tiny table td,
@@ -1259,150 +1233,56 @@ table.button.expanded center {
 table.button:hover table td,
 table.button:visited table td,
 table.button:active table td {
-    background: #147dc2;
-    color: #fefefe;
+    background: $altPrimaryColor;
+    color: $offWhite;
 }
 
 table.button:hover table a,
 table.button:visited table a,
 table.button:active table a {
-    border: 0 solid #147dc2;
+    border: 0 solid $altPrimaryColor;
 }
 
 table.button.secondary table td {
-    background: #777777;
-    color: #fefefe;
-    border: 0px solid #777777;
+    background: $altFontColor;
+    color: $offWhite;
+    border: 0px solid $altFontColor;
 }
 
 table.button.secondary table a {
-    color: #fefefe;
-    border: 0 solid #777777;
+    color: $offWhite;
+    border: 0 solid $altFontColor;
 }
 
 table.button.secondary:hover table td {
-    background: #919191;
-    color: #fefefe;
+    background: $altFontColor;
+    color: $offWhite;
 }
 
 table.button.secondary:hover table a {
-    border: 0 solid #919191;
+    border: 0 solid $altFontColor;
 }
 
 table.button.secondary:hover table td a {
-    color: #fefefe;
+    color: $offWhite;
 }
 
 table.button.secondary:active table td a {
-    color: #fefefe;
+    color: $offWhite;
 }
 
 table.button.secondary table td a:visited {
-    color: #fefefe;
-}
-
-table.button.success table td {
-    background: #3adb76;
-    border: 0px solid #3adb76;
-}
-
-table.button.success table a {
-    border: 0 solid #3adb76;
-}
-
-table.button.success:hover table td {
-    background: #23bf5d;
-}
-
-table.button.success:hover table a {
-    border: 0 solid #23bf5d;
-}
-
-table.button.alert table td {
-    background: #ec5840;
-    border: 0px solid #ec5840;
-}
-
-table.button.alert table a {
-    border: 0 solid #ec5840;
-}
-
-table.button.alert:hover table td {
-    background: #e23317;
-}
-
-table.button.alert:hover table a {
-    border: 0 solid #e23317;
-}
-
-table.button.warning table td {
-    background: #ffae00;
-    border: 0px solid #ffae00;
-}
-
-table.button.warning table a {
-    border: 0px solid #ffae00;
-}
-
-table.button.warning:hover table td {
-    background: #cc8b00;
-}
-
-table.button.warning:hover table a {
-    border: 0px solid #cc8b00;
-}
-
-table.callout {
-    margin-bottom: 16px;
-    Margin-bottom: 16px;
-}
-
-th.callout-inner {
-    width: 100%;
-    border: 1px solid #cbcbcb;
-    padding: 10px;
-    background: #fefefe;
-}
-
-th.callout-inner.primary {
-    background: #def0fc;
-    border: 1px solid #444444;
-    color: #0a0a0a;
-}
-
-th.callout-inner.secondary {
-    background: #ebebeb;
-    border: 1px solid #444444;
-    color: #0a0a0a;
-}
-
-th.callout-inner.success {
-    background: #e1faea;
-    border: 1px solid #1b9448;
-    color: #fefefe;
-}
-
-th.callout-inner.warning {
-    background: #fff3d9;
-    border: 1px solid #996800;
-    color: #fefefe;
-}
-
-th.callout-inner.alert {
-    background: #fce6e2;
-    border: 1px solid #b42912;
-    color: #fefefe;
+    color: $offWhite;
 }
 
 .thumbnail {
-    border: solid 4px #fefefe;
+    border: solid 4px $offWhite;
     box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
     display: inline-block;
     line-height: 0;
     max-width: 100%;
     transition: box-shadow 200ms ease-out;
     border-radius: 3px;
-    margin-bottom: 16px;
 }
 
 .thumbnail:hover,
@@ -1422,7 +1302,7 @@ table.menu th.menu-item {
 
 table.menu td.menu-item a,
 table.menu th.menu-item a {
-    color: #2199e8;
+    color: $primaryColor;
 }
 
 table.menu.vertical td.menu-item,

@@ -1,3 +1,6 @@
+/* ---------- Borders ---------- */
+/* ---------- Colors ---------- */
+/* ---------- Spacing ---------- */
 .wrapper {
   width: 100%; }
 
@@ -50,10 +53,6 @@ center {
 a img {
   border: none; }
 
-p {
-  margin: 0 0 0 10px;
-  Margin: 0 0 0 10px; }
-
 table {
   border-spacing: 0;
   border-collapse: collapse; }
@@ -75,15 +74,15 @@ td {
 @media only screen {
   html {
     min-height: 100%;
-    background: #f3f3f3; } }
+    background: #E3E4E5; } }
 
 table.body {
-  background: #f3f3f3;
+  background: #E3E4E5;
   height: 100%;
   width: 100%; }
 
 table.container {
-  background: #fefefe;
+  background: #FEFEFE;
   width: 580px;
   margin: 0 auto;
   Margin: 0 auto;
@@ -108,9 +107,7 @@ td.column,
 th.columns,
 th.column {
   margin: 0 auto;
-  Margin: 0 auto;
-  padding-left: 16px;
-  padding-bottom: 16px; }
+  Margin: 0 auto; }
 
 td.columns .column,
 td.columns .columns,
@@ -132,12 +129,6 @@ th.columns .columns center,
 th.column .column center,
 th.column .columns center {
   min-width: none !important; }
-
-td.columns.last,
-td.column.last,
-th.columns.last,
-th.column.last {
-  padding-right: 16px; }
 
 td.columns table:not(.button),
 td.column table:not(.button),
@@ -834,7 +825,7 @@ p,
 td,
 th,
 a {
-  color: #0a0a0a;
+  color: #4C4C4E;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
   padding: 0;
@@ -853,8 +844,7 @@ h6 {
   word-wrap: normal;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
-  margin-bottom: 10px;
-  Margin-bottom: 10px; }
+  padding: 0.3em 0; }
 
 h1 {
   font-size: 34px; }
@@ -882,39 +872,31 @@ th {
   font-size: 16px;
   line-height: 1.3; }
 
-p {
-  margin-bottom: 10px;
-  Margin-bottom: 10px; }
-
 p.lead {
   font-size: 20px;
   line-height: 1.6; }
 
 p.subheader {
-  margin-top: 4px;
-  margin-bottom: 8px;
-  Margin-top: 4px;
-  Margin-bottom: 8px;
   font-weight: normal;
   line-height: 1.4;
-  color: #8a8a8a; }
+  color: #4C4C4E; }
 
 small {
   font-size: 80%;
-  color: #cacaca; }
+  color: #4C4C4E; }
 
 a {
-  color: #2199e8;
+  color: #1C75B9;
   text-decoration: none; }
 
 a:hover {
-  color: #147dc2; }
+  color: #005B96; }
 
 a:active {
-  color: #147dc2; }
+  color: #005B96; }
 
 a:visited {
-  color: #2199e8; }
+  color: #1C75B9; }
 
 h1 a,
 h1 a:visited,
@@ -928,18 +910,18 @@ h5 a,
 h5 a:visited,
 h6 a,
 h6 a:visited {
-  color: #2199e8; }
+  color: #1C75B9; }
 
 pre {
-  background: #f3f3f3;
+  background: #E3E4E5;
   margin: 30px 0;
   Margin: 30px 0; }
 
 pre code {
-  color: #cacaca; }
+  color: #4C4C4E; }
 
 pre code span.callout {
-  color: #8a8a8a;
+  color: #4C4C4E;
   font-weight: bold; }
 
 pre code span.callout-strong {
@@ -954,7 +936,7 @@ table.hr th {
   max-width: 580px;
   border-top: 0;
   border-right: 0;
-  border-bottom: 1px solid #0a0a0a;
+  border-bottom: 1px solid #4C4C4E;
   border-left: 0;
   margin: 20px auto;
   Margin: 20px auto;
@@ -973,7 +955,7 @@ span.preheader {
   visibility: hidden;
   mso-hide: all !important;
   font-size: 1px;
-  color: #f3f3f3;
+  color: #E3E4E5;
   line-height: 1px;
   max-height: 0px;
   max-width: 0px;
@@ -981,25 +963,23 @@ span.preheader {
   overflow: hidden; }
 
 table.button {
-  width: auto;
-  margin: 0 0 16px 0;
-  Margin: 0 0 16px 0; }
+  width: auto; }
 
 table.button table td {
   text-align: left;
-  color: #fefefe;
-  background: #2bb98b;
-  border: 2px solid #2bb98b; }
+  color: #FEFEFE;
+  background: #33B88B;
+  border: 2px solid #33B88B; }
 
 table.button table td a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: #fefefe;
+  color: #FEFEFE;
   text-decoration: none;
   display: inline-block;
   padding: 8px 16px 8px 16px;
-  border: 0 solid #2bb98b;
+  border: 0 solid #33B88B;
   border-radius: 3px; }
 
 table.button.radius table td {
@@ -1022,7 +1002,7 @@ table.button.small table tr td a:visited,
 table.button.large:hover table tr td a,
 table.button.large:active table tr td a,
 table.button.large table tr td a:visited {
-  color: #fefefe; }
+  color: #FEFEFE; }
 
 table.button.tiny table td,
 table.button.tiny table a {
@@ -1063,122 +1043,47 @@ table.button.expanded center {
 table.button:hover table td,
 table.button:visited table td,
 table.button:active table td {
-  background: #147dc2;
-  color: #fefefe; }
+  background: #005B96;
+  color: #FEFEFE; }
 
 table.button:hover table a,
 table.button:visited table a,
 table.button:active table a {
-  border: 0 solid #147dc2; }
+  border: 0 solid #005B96; }
 
 table.button.secondary table td {
-  background: #777777;
-  color: #fefefe;
-  border: 0px solid #777777; }
+  background: #909295;
+  color: #FEFEFE;
+  border: 0px solid #909295; }
 
 table.button.secondary table a {
-  color: #fefefe;
-  border: 0 solid #777777; }
+  color: #FEFEFE;
+  border: 0 solid #909295; }
 
 table.button.secondary:hover table td {
-  background: #919191;
-  color: #fefefe; }
+  background: #909295;
+  color: #FEFEFE; }
 
 table.button.secondary:hover table a {
-  border: 0 solid #919191; }
+  border: 0 solid #909295; }
 
 table.button.secondary:hover table td a {
-  color: #fefefe; }
+  color: #FEFEFE; }
 
 table.button.secondary:active table td a {
-  color: #fefefe; }
+  color: #FEFEFE; }
 
 table.button.secondary table td a:visited {
-  color: #fefefe; }
-
-table.button.success table td {
-  background: #3adb76;
-  border: 0px solid #3adb76; }
-
-table.button.success table a {
-  border: 0 solid #3adb76; }
-
-table.button.success:hover table td {
-  background: #23bf5d; }
-
-table.button.success:hover table a {
-  border: 0 solid #23bf5d; }
-
-table.button.alert table td {
-  background: #ec5840;
-  border: 0px solid #ec5840; }
-
-table.button.alert table a {
-  border: 0 solid #ec5840; }
-
-table.button.alert:hover table td {
-  background: #e23317; }
-
-table.button.alert:hover table a {
-  border: 0 solid #e23317; }
-
-table.button.warning table td {
-  background: #ffae00;
-  border: 0px solid #ffae00; }
-
-table.button.warning table a {
-  border: 0px solid #ffae00; }
-
-table.button.warning:hover table td {
-  background: #cc8b00; }
-
-table.button.warning:hover table a {
-  border: 0px solid #cc8b00; }
-
-table.callout {
-  margin-bottom: 16px;
-  Margin-bottom: 16px; }
-
-th.callout-inner {
-  width: 100%;
-  border: 1px solid #cbcbcb;
-  padding: 10px;
-  background: #fefefe; }
-
-th.callout-inner.primary {
-  background: #def0fc;
-  border: 1px solid #444444;
-  color: #0a0a0a; }
-
-th.callout-inner.secondary {
-  background: #ebebeb;
-  border: 1px solid #444444;
-  color: #0a0a0a; }
-
-th.callout-inner.success {
-  background: #e1faea;
-  border: 1px solid #1b9448;
-  color: #fefefe; }
-
-th.callout-inner.warning {
-  background: #fff3d9;
-  border: 1px solid #996800;
-  color: #fefefe; }
-
-th.callout-inner.alert {
-  background: #fce6e2;
-  border: 1px solid #b42912;
-  color: #fefefe; }
+  color: #FEFEFE; }
 
 .thumbnail {
-  border: solid 4px #fefefe;
+  border: solid 4px #FEFEFE;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
   display: inline-block;
   line-height: 0;
   max-width: 100%;
   transition: box-shadow 200ms ease-out;
-  border-radius: 3px;
-  margin-bottom: 16px; }
+  border-radius: 3px; }
 
 .thumbnail:hover,
 .thumbnail:focus {
@@ -1194,7 +1099,7 @@ table.menu th.menu-item {
 
 table.menu td.menu-item a,
 table.menu th.menu-item a {
-  color: #2199e8; }
+  color: #1C75B9; }
 
 table.menu.vertical td.menu-item,
 table.menu.vertical th.menu-item {
@@ -1383,9 +1288,6 @@ body.outlook p {
   table.button.small-expanded center {
     min-width: 0; } }
 
-/* ---------- Borders ---------- */
-/* ---------- Colors ---------- */
-/* ---------- Spacing ---------- */
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
@@ -1421,8 +1323,7 @@ th,
 a {
   color: #474a4b;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  margin-bottom: 10px; }
+  font-weight: normal; }
 
 h1,
 h2,
@@ -1434,25 +1335,38 @@ h6 {
 
 h1 {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 38px; }
 
 h2 {
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 200;
   line-height: 28.8px; }
+
+h2.subheading {
+  font-size: 20px;
+  line-height: 24px; }
 
 h3 {
   color: #474A4B;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 20px;
+  text-transform: uppercase; }
+
+h3.small-caps {
+  font-size: 14px;
   text-transform: uppercase; }
 
 p {
   font-size: 16px;
   font-weight: 300;
   line-height: 20px; }
+
+p.quote {
+  color: #708D9C;
+  font-size: 20px;
+  line-height: 24px; }
 
 .first {
   padding-left: 16px; }
