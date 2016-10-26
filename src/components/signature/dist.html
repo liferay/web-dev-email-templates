@@ -1,49 +1,35 @@
-<table align="center" class="container signature" style="Margin: 0 auto; background: #FEFEFE; border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 580px;">
+<table class="signature" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
     <tbody>
         <tr style="padding: 0; text-align: left; vertical-align: top;">
             <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                     <tbody>
                         <tr style="padding: 0; text-align: left; vertical-align: top;">
-                            <th class="small-12 large-12 columns first last" style="Margin: 0 auto; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0 auto; padding: 0; padding-left: 16px; padding-right: 16px; text-align: left; width: 564px;">
-                                <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+                            {% if widget.headshot.src %}
+                            <td class="headshot" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; width: 92px; word-wrap: break-word;">
+                                <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
                                     <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                        <th style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left;">
-                                            <table class="row" style="border-collapse: collapse; border-spacing: 0; display: table; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
-                                                <tbody>
-                                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                        {% if widget.headshot.src %}
-                                                        <td class="headshot" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; width: 92px; word-wrap: break-word;">
-                                                            <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
-                                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                    <td valign="top" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 16px !important; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                                                        <img src="{{ widget.headshot.src }}" width="{{ widget.headshot.width }}" height="{{ widget.headshot.height }}" style="-ms-interpolation-mode: bicubic; border-radius: 60px; clear: both; display: block; height: 60px; max-width: 100%; outline: none; text-decoration: none; width: 60px;">
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                        {% endif %} {% if widget.signature_image.src %}
-                                                        <td class="signee" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                                            <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
-                                                                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                                                    <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 16px !important; text-align: left; vertical-align: top; word-wrap: break-word;">
-                                                                        <img src="{{ widget.signature_image.src }}" width="{{ widget.signature_image.width }}" height="{{ widget.signature_image.height }}" style="-ms-interpolation-mode: bicubic; clear: both; display: block; max-height: 60px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
-
-                                                                        <div class="signee-name" style="font-style: italic;">{{ widget.signee_name }}</div>
-
-                                                                        <div class="signee-title" style="font-style: italic; font-weight: 200;">{{ widget.signee_title }}</div>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                        {% endif %}
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </th>
+                                        <td valign="top" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 16px !important; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                            <img src="{{ widget.headshot.src }}" width="{{ widget.headshot.width }}" height="{{ widget.headshot.height }}" style="-ms-interpolation-mode: bicubic; border-radius: 60px; clear: both; display: block; height: 60px; max-width: 100%; outline: none; text-decoration: none; width: 60px;">
+                                        </td>
                                     </tr>
                                 </table>
-                            </th>
+                            </td>
+                            {% endif %} {% if widget.signature_image.src %}
+                            <td class="signee" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
+                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                        <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 16px !important; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                            <img src="{{ widget.signature_image.src }}" width="{{ widget.signature_image.width }}" height="{{ widget.signature_image.height }}" style="-ms-interpolation-mode: bicubic; clear: both; display: block; height: 60px; max-height: 60px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+
+                                            <div class="signee-name" style="font-style: italic;">{{ widget.signee_name }}</div>
+
+                                            <div class="signee-title" style="font-style: italic; font-weight: 200;">{{ widget.signee_title }}</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            {% endif %}
                         </tr>
                     </tbody>
                 </table>
