@@ -1,17 +1,35 @@
 /* Enter Component Styles Here */
+table.cta-button {
+	width: 100%;
+}
+
+table.cta-button > tbody > tr > td {
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+table.cta-button table.button table tr td {
+	color: #FFF;
+}
+
+table.cta-button table.button a td {
+	color: #FFF;
+	Margin-bottom: 0;
+	margin-bottom: 0;
+}
 
 table.button tr td {
-    border-radius: 1px;
-    color: #FFF !important;
+	border-radius: 1px;
+	color: #FFF !important;
 }
 
 table.button tr a {
-    border-radius: 1px;
-    color: #FFF !important;
-    font-weight: lighter !important;
+	border-radius: 1px;
+	color: #FFF !important;
+	font-weight: lighter !important;
 }
 
 table.button.left-aligned {
-    display: block;
-    padding-left: 16px;
+	display: block;
+	padding-left: 16px;
 }
