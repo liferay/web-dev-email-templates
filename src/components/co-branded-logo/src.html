@@ -13,25 +13,33 @@
 <center>
 	<spacer size="16"></spacer>
 
-	<container>
-		<center>
-			<table>
-				<td class="logo">
-					{% if widget.liferay_logo.src %}
-						<img src="{{ widget.liferay_logo.src }}" width="{{ widget.liferay_logo.width }}" height="{{ widget.liferay_logo.height }}" alt="{{ widget.liferay_logo.alt }}">
-					{% endif %}
-				</td>
+	<table>
+		<tbody>
+			<tr>
 				<td>
-					<span class="symbol">{{ widget.relationship_symbol }}</span>
+					<center>
+						<table>
+							<td class="logo">
+								{% if widget.liferay_logo.src %}
+									<img src="{{ widget.liferay_logo.src }}" width="{{ widget.liferay_logo.width }}" height="{{ widget.liferay_logo.height }}" alt="{{ widget.liferay_logo.alt }}">
+								{% endif %}
+							</td>
+							<td>
+								<span class="symbol">{{ widget.relationship_symbol }}</span>
+							</td>
+							<td class="logo">
+								{% if widget.co_brand_company_logo.src %}
+									<img src="{{ widget.co_brand_company_logo.src }}" width="{{ widget.co_brand_company_logo.width }}" height="{{ widget.co_brand_company_logo.height }}" alt="{{ widget.co_brand_company_logo.alt }}">
+								{% endif %}
+							</td>
+						</table>
+					</center>
 				</td>
-				<td class="logo">
-					{% if widget.co_brand_company_logo.src %}
-						<img src="{{ widget.co_brand_company_logo.src }}" width="{{ widget.co_brand_company_logo.width }}" height="{{ widget.co_brand_company_logo.height }}" alt="{{ widget.co_brand_company_logo.alt }}">
-					{% endif %}
-				</td>
-			</table>
-		</center>
-	</container>
+			</tr>
+		</tbody>
+	</table>
+
+	<spacer size="16"></spacer>
 
 	<table width="75%" class="horizontal-rule">
 		<tr>

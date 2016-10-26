@@ -11,20 +11,22 @@
 <!-- Component HTML -->
 
 <table class="list-item">
-	<tr>
-		{% if widget.list_item_visual.src %}
-			<td class="list-item-image" valign="top">
-				<img src="{{ widget.list_item_visual.src }}" width="{{ widget.list_item_visual.width }}" height="{{ widget.list_item_visual.height }}" alt="{{ widget.list_item_visual.alt }}">
-			</td>
-		{% endif %}
-		<td class="list-item-description">
-			{% if widget.list_item_header %}
-				<strong style="line-height: 30px !important;">{{ widget.list_item_header }}</strong>
+	<tbody>
+		<tr>
+			{% if widget.list_item_visual.src %}
+				<td class="list-item-image" valign="top">
+					<img src="{{ widget.list_item_visual.src }}" width="{{ widget.list_item_visual.width }}" height="{{ widget.list_item_visual.height }}" alt="{{ widget.list_item_visual.alt }}">
+				</td>
 			{% endif %}
+			<td class="list-item-description">
+				{% if widget.list_item_header %}
+					<strong style="line-height: 30px !important;">{{ widget.list_item_header }}</strong>
+				{% endif %}
 
-			{% if widget.list_item_text %}
-				<p>{{ widget.list_item_text }}</p>
-			{% endif %}
-		</td>
-	</tr>
+				{% if widget.list_item_text %}
+					<p>{{ widget.list_item_text }}</p>
+				{% endif %}
+			</td>
+		</tr>
+	</tbody>
 </table>

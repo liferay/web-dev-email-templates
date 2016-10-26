@@ -17,68 +17,74 @@
 	}
 </style>
 
-<container class="promotion">
-	<row>
-		<columns>
-			<row>
-				{% if widget.promotion_image_2.src %}
-					<td class="border-right double-promotion large-6 small-6">
-						<row>
-							<th class="logo">
-								{% if widget.promotion_image.src %}
-									<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
-								{% endif %}
-							</th>
-						</row>
+<spacer size="16"></spacer>
 
-						<row>
-							<td>
-								<p>{{ widget.promotion_body_text }}</p>
-							</td>
-						</row>
+<table class="promotion">
+	<tbody>
+		<tr>
+			<td>
+				<row class="content">
+					{% if widget.promotion_image_2.src %}
+						<td class="border-right double-promotion">
+							<row>
+								<th class="logo">
+									{% if widget.promotion_image.src %}
+										<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
+									{% endif %}
+								</th>
+							</row>
 
-						<row>
-							<td>
-								<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>
-							</td>
-						</row>
-					</td>
+							<row>
+								<td>
+									<p>{{ widget.promotion_body_text }}</p>
+								</td>
+							</row>
 
-					<td class="double-promotion large-6 small-6">
-						<row>
-							<th class="logo">
-								{% if widget.promotion_image_2.src %}
-									<img src="{{ widget.promotion_image_2.src }}" width="{{ widget.promotion_image_2.width }}" height="{{ widget.promotion_image_2.height }}">
-								{% endif %}
-							</th>
-						</row>
+							<row>
+								<td>
+									<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>
+								</td>
+							</row>
+						</td>
 
-						<row>
-							<td>
-								<p>{{ widget.promotion_body_text_2 }}</p>
-							</td>
-						</row>
+						<td class="double-promotion">
+							<row>
+								<th class="logo">
+									{% if widget.promotion_image_2.src %}
+										<img src="{{ widget.promotion_image_2.src }}" width="{{ widget.promotion_image_2.width }}" height="{{ widget.promotion_image_2.height }}">
+									{% endif %}
+								</th>
+							</row>
 
-						<row>
-							<td>
-								<a href="{{ widget.promotion_cta_url_2 }}">{{ widget.promotion_cta_text_2 }}</a>
-							</td>
-						</row>
-					</td>
-				{% else %}
-					<td class="single-promotion large-6 small-6" valign="middle">
-						{% if widget.promotion_image.src %}
-							<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
-						{% endif %}
-					</td>
+							<row>
+								<td>
+									<p>{{ widget.promotion_body_text_2 }}</p>
+								</td>
+							</row>
 
-					<td class="single-promotion large-6 small-6">
-						<p>{{ widget.promotion_body_text }}</p>
+							<row>
+								<td>
+									<a href="{{ widget.promotion_cta_url_2 }}">{{ widget.promotion_cta_text_2 }}</a>
+								</td>
+							</row>
+						</td>
+					{% else %}
+						<td class="single-promotion" valign="middle">
+							{% if widget.promotion_image.src %}
+								<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
+							{% endif %}
+						</td>
 
-						<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>
-					</td>
-				{% endif %}
-			</row>
-		</columns>
-	</row>
-</container>
+						<td class="single-promotion">
+							<p>{{ widget.promotion_body_text }}</p>
+
+							<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>
+						</td>
+					{% endif %}
+				</row>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<spacer size="16"></spacer>

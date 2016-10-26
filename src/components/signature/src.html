@@ -10,38 +10,40 @@
 
 <!-- Component HTML -->
 
-<container class="signature">
-	<row>
-		<columns>
-			<row>
-				{% if widget.headshot.src %}
-					<td class="headshot">
-						<table>
-							<tr>
-								<td valign="top">
-									<img src="{{ widget.headshot.src }}" width="{{ widget.headshot.width }}" height="{{ widget.headshot.height }}">
-								</td>
-							</tr>
-						</table>
-					</td>
-				{% endif %}
+<table class="signature">
+	<tbody>
+		<tr>
+			<td>
+				<row>
+					{% if widget.headshot.src %}
+						<td class="headshot">
+							<table>
+								<tr>
+									<td valign="top">
+										<img src="{{ widget.headshot.src }}" width="{{ widget.headshot.width }}" height="{{ widget.headshot.height }}">
+									</td>
+								</tr>
+							</table>
+						</td>
+					{% endif %}
 
-				{% if widget.signature_image.src %}
-					<td class="signee">
-						<table>
-							<tr>
-								<td>
-									<img src="{{ widget.signature_image.src }}" width="{{ widget.signature_image.width }}" height="{{ widget.signature_image.height }}">
+					{% if widget.signature_image.src %}
+						<td class="signee">
+							<table>
+								<tr>
+									<td>
+										<img src="{{ widget.signature_image.src }}" width="{{ widget.signature_image.width }}" height="{{ widget.signature_image.height }}">
 
-									<div class="signee-name">{{ widget.signee_name }}</div>
+										<div class="signee-name">{{ widget.signee_name }}</div>
 
-									<div class="signee-title">{{ widget.signee_title }}</div>
-								</td>
-							</tr>
-						</table>
-					</td>
-				{% endif %}
-			</row>
-		</columns>
-	</row>
-</container>
+										<div class="signee-title">{{ widget.signee_title }}</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					{% endif %}
+				</row>
+			</td>
+		</tr>
+	</tbody>
+</table>

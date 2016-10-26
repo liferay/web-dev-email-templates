@@ -13,49 +13,83 @@
 {% set hex_color = widget.audience %}
 
 <style>
-	table.container.event-details > tbody > tr > td {
+	table.event-details > tbody > tr > td {
 		background-color: << hex_color >>;
 	}
 </style>
 
-<container class="event-details">
-	<row>
-		<columns>
-			<a href="{{ widget.event_url }}">
-				{% if widget.event_image.src %}
-					<row>
-						<td>
-							<center>
-								<img src="{{ widget.event_image.src }}" width="{{ widget.event_image.width }}" height="{{ widget.event_image.height }}" alt="{{ widget.event_image.alt }}" style="width: 100%">
-							</center>
-						</td>
-					</row>
-				{% endif %}
+<spacer size="16"></spacer>
 
-				<row>
-					<td>
-						<div>{{ widget.event_date }}</div>
-					</td>
-				</row>
+<table class="event-details">
+	<tbody>
+		<tr>
+			<td>
+				<a href="{{ widget.event_url }}">
+					{% if widget.event_image.src %}
+						<table class="map">
+							<tbody>
+								<tr>
+									<td>
+										<center>
+											<img src="{{ widget.event_image.src }}" alt="{{ widget.event_image.alt }}" style="width: 100%">
+										</center>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					{% endif %}
 
-				<row>
-					<td>
-						<div>{{ widget.event_time }}</div>
-					</td>
-				</row>
+					<table class="details">
+						<tbody>
+							<tr>
+								<td>
+									<table>
+										<tbody>
+											<tr>
+												<td>
+													<div>{{ widget.event_date }}</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 
-				<row>
-					<td>
-						<h3>{{ widget.event_venue }}</h3>
-					</td>
-				</row>
+									<table>
+										<tbody>
+											<tr>
+												<td>
+													<div>{{ widget.event_time }}</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 
-				<row>
-					<td>
-						<div>{{ widget.event_address }}</div>
-					</td>
-				</row>
-			</a>
-		</columns>
-	</row>
-</container>
+									<table>
+										<tbody>
+											<tr>
+												<td>
+													<h3>{{ widget.event_venue }}</h3>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table>
+										<tbody>
+											<tr>
+												<td>
+													<div>{{ widget.event_address }}</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<spacer size="16"></spacer>

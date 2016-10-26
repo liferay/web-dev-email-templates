@@ -9,12 +9,14 @@
 -->
 
 <!-- Component HTML -->
-<container>
-	<row>
-		<td>
-			{% if widget.full_width_image.src %}
-				<img src="{{ widget.full_width_image.src }}" width="{{ widget.full_width_image.width }}" height="auto" alt="{{ widget.full_width_image.alt }}" style="width: 100%">
-			{% endif %}
-		</td>
-	</row>
-</container>
+<table class="full-width-image">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				{% if widget.full_width_image.src %}
+					<img src="{{ widget.full_width_image.src }}" width="{{ widget.full_width_image.width }}" height="auto" alt="{{ widget.full_width_image.alt }}" style="width: 100%">
+				{% endif %}
+			</td>
+		</tr>
+	</tbody>
+</table>
