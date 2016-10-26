@@ -1,32 +1,22 @@
 /* Enter Component Styles Here */
+table.logo-email-label {
+	width: 100%;
+}
 
 a.liferay-logo {
-    display: inline-block;
+	display: inline-block;
+	margin: 0 auto;
 }
 
 a.liferay-logo img {
-    max-width: 151px;
+	max-width: 151px;
 }
 
-a.liferay-logo.without-email-label {
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-a.liferay-logo.with-email-label {
-    margin: 0 auto 0 !important;
-    padding: 20px 0 0 0 !important;
-}
-
-.center-wrapper {
-    padding: 0 0p 15px;
-}
-
-span.email-label {
-    color: #a3a7b8;
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: lighter;
-    padding: 10px 0;
-    text-transform: uppercase;
+div.email-label {
+	color: #a3a7b8;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	padding-top: 8px;
+	text-transform: uppercase;
 }

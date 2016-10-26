@@ -10,18 +10,20 @@
 
 <!-- Component HTML -->
 
-{% if widget.show_email_label %}
-	<center class="center-wrapper">
-		<a class="liferay-logo with-email-label" href="https://www.liferay.com">
-			<img src="http://cdn2.hubspot.net/hubfs/252686/Custom_Module_Files/liferay-blue2x.png">
-		</a>
-		<br>
-		<span class="subtitle email-label">{{ widget.email_label }}</span>
-	</center>
-{% else %}
-	<center>
-		<a class="liferay-logo without-email-label" href="https://www.liferay.com">
-			<img src="http://cdn2.hubspot.net/hubfs/252686/Custom_Module_Files/liferay-blue2x.png">
-		</a>
-	</center>
-{% endif %}
+<table class="logo-email-label">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				<center class="center-wrapper">
+					<a class="liferay-logo with-email-label" href="https://www.liferay.com">
+						<img src="http://cdn2.hubspot.net/hubfs/252686/Custom_Module_Files/liferay-blue2x.png">
+					</a>
+					{% if widget.email_label %}
+						<br>
+						<div class="email-label subtitle">{{ widget.email_label }}</div>
+					{% endif %}
+				</center>
+			</td>
+		</tr>
+	</tbody>
+</table>
