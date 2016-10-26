@@ -96,6 +96,13 @@ gulp test --component [component-name]
 #### Transferring Components to Hubspot
 Unfortunately, there's no way to automatically create components in Hubspot. So what you'll basically do is copy the contents of `dist.html` to your Custom Module. This is similar to relationship between the lrdcom repo and templates in Liferay.com
 
+#### Components Best Practices
+- Wrap all components in a `table` with class name of the component. E.g: `<table class="signature">...</table`
+- Use only these Inky Components (otherwise it will break):
+    - Button
+    - Row
+    - Spacer
+
 ## Creating HTML Emails
 We often have to send full HTML emails. Create fully responsive and tested emails in minutes with a few commands.
 
