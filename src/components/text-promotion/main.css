@@ -1,13 +1,21 @@
 /* Enter Component Styles Here */
+table.button a {
+	border-radius: 3px;
+}
+
+table.button a td, table.button table tr td {
+	background-color: transparent !important;
+}
+
+td.content {
+	background-color: #EFEFEF;
+	padding: 2em 1em !important;
+}
 
 table.text-promotion > tbody > tr > td {
-	background-color: #EFEFEF;
+	padding: 0 1em;
 }
 
 table.text-promotion th {
 	padding-bottom: 0;
-}
-
-table.text-promotion td.content {
-	padding: 2em 1em !important;
 }

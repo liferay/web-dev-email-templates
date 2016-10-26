@@ -12,46 +12,60 @@
 {% set hex_color = widget.button_audience %}
 
 <style>
-	table.button tr td {
-		background-color: transparent !important;
-		border: 0px solid << hex_color >> !important;
+	table.text-promotion table.button table tr td {
+		color: << hex_color >>;
 	}
 
-	table.button tr td a {
-		border: 2px solid << hex_color >> !important;
-		border-radius: 3px;
-		color: << hex_color >> !important;
+	table.text-promotion table.button a table tr {
+		border: 1px solid << hex_color >>;
+	}
+
+	table.text-promotion table.button a td {
+		border: 0px solid << hex_color >> !important;
+		color: << hex_color >>;
 	}
 
 	@media only screen and (max-width: 596px) {
-		table.button table td a {
-			padding: .75em 2em !important;
+		table.text-promotion table.button table td a {
 			text-align: center !important;
 		}
 	}
 </style>
 
-<container class="text-promotion">
-	<row>
-		<columns>
-			<row>
-				<td class="content">
-					<row>
-						<td>
-							<h3>{{ widget.header }}</h3>
-						</td>
-					</row>
+<spacer size="16"></spacer>
 
-					<row>
-						<td>
-							<p>{{ widget.body_text }}</p>
-						</td>
-					</row>
+<table class="text-promotion">
+	<tbody>
+		<tr>
+			<td>
+				<row>
+					<td class="content">
+						<row>
+							<td>
+								<h3>{{ widget.header }}</h3>
+							</td>
+						</row>
 
-					<button class="radius medium" href="{{ widget.button_href }}">{{ widget.button_text }}</button>
-				</td>
-			</row>
-		</columns>
-	</row>
-</container>
+						<row>
+							<td>
+								<p>{{ widget.body_text }}</p>
+							</td>
+						</row>
 
+						<button class="radius medium" href="{{ widget.button_href }}">
+							<table>
+								<tr>
+									<td>
+										{{ widget.button_text }}
+									</td>
+								</tr>
+							</table>
+						</button>
+					</td>
+				</row>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<spacer size="16"></spacer>
