@@ -9,11 +9,6 @@ table.button a td, table.button table tr td {
 
 td.content {
 	background-color: #EFEFEF;
-	padding: 2em 1em !important;
-}
-
-table.text-promotion > tbody > tr > td {
-	padding: 0 1em;
 }
 
 table.text-promotion th {

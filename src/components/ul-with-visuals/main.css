@@ -1,4 +1,8 @@
 /* Enter Component Styles Here */
+center {
+	min-width: 0;
+}
+
 table.list-item {
 	width: 100%;
 }

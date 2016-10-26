@@ -4,17 +4,13 @@ table.signature {
 }
 
 td.headshot {
-	width: 92px;
+	width: 60px;
 }
 
 td.headshot img {
 	height: 60px;
 	width: 60px;
 	border-radius: 60px;
-}
-
-td.headshot td, td.signee td {
-	padding: 16px !important;
 }
 
 td.signee img {

@@ -52,6 +52,20 @@
 	padding-top: $largeSpacing;
 }
 
+.medium-padding {
+	padding: 2em;
+}
+
+.medium-padding-horizontal {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.medium-padding-vertical {
+	padding-bottom: 2em;
+	padding-top: 2em;
+}
+
 .section-padding {
 	padding-bottom: 6em;
 	padding-top: 5em;

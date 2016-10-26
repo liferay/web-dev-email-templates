@@ -22,14 +22,16 @@
 <table class="promotion">
 	<tbody>
 		<tr>
-			<td>
+			<td class="standard-padding-horizontal">
 				<row class="content">
 					{% if widget.promotion_image_2.src %}
-						<td class="border-right double-promotion">
+						<td class="border-right double-promotion medium-padding">
 							<row>
 								<th class="logo">
 									{% if widget.promotion_image.src %}
-										<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
+										<center>
+											<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
+										</center>
 									{% endif %}
 								</th>
 							</row>
@@ -47,11 +49,13 @@
 							</row>
 						</td>
 
-						<td class="double-promotion">
+						<td class="double-promotion medium-padding">
 							<row>
 								<th class="logo">
 									{% if widget.promotion_image_2.src %}
-										<img src="{{ widget.promotion_image_2.src }}" width="{{ widget.promotion_image_2.width }}" height="{{ widget.promotion_image_2.height }}">
+										<center>
+											<img src="{{ widget.promotion_image_2.src }}" width="{{ widget.promotion_image_2.width }}" height="{{ widget.promotion_image_2.height }}">
+										</center>
 									{% endif %}
 								</th>
 							</row>
@@ -69,13 +73,15 @@
 							</row>
 						</td>
 					{% else %}
-						<td class="single-promotion" valign="middle">
+						<td class="single-promotion medium-padding" valign="middle">
 							{% if widget.promotion_image.src %}
-								<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
+								<center>
+									<img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}">
+								</center>
 							{% endif %}
 						</td>
 
-						<td class="single-promotion">
+						<td class="single-promotion medium-padding">
 							<p>{{ widget.promotion_body_text }}</p>
 
 							<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>

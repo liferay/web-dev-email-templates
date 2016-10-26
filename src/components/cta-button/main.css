@@ -3,11 +3,6 @@ table.cta-button {
 	width: 100%;
 }
 
-table.cta-button > tbody > tr > td {
-	padding-bottom: 1em;
-	padding-top: 1em;
-}
-
 table.cta-button table.button table tr td {
 	color: #FFF;
 }
@@ -31,5 +26,4 @@ table.button tr a {
 
 table.button.left-aligned {
 	display: block;
-	padding-left: 16px;
 }
