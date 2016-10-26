@@ -17,18 +17,21 @@
 <table class="promotion" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
     <tbody>
         <tr style="padding: 0; text-align: left; vertical-align: top;">
-            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0 1em !important; text-align: left; vertical-align: top; word-wrap: break-word;">
+            <td class="standard-padding-horizontal" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; padding-left: 1em; padding-right: 1em; text-align: left; vertical-align: top; word-wrap: break-word;">
                 <table class="row content" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                     <tbody>
                         <tr style="padding: 0; text-align: left; vertical-align: top;">
                             {% if widget.promotion_image_2.src %}
-                            <td class="border-right double-promotion" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; border-right: 1px solid #FFF; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em 1em !important; text-align: left; vertical-align: top; width: 50%; word-wrap: break-word;">
+                            <td class="border-right double-promotion medium-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; border-right: 1px solid #FFF; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em; text-align: left; vertical-align: top; width: 50%; word-wrap: break-word;">
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
                                         <tr style="padding: 0; text-align: left; vertical-align: top;">
                                             <th class="logo" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; padding-bottom: 1em; text-align: left;">
                                                 {% if widget.promotion_image.src %}
-                                                <img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}" style="-ms-interpolation-mode: bicubic; Margin: 0 auto !important; clear: both; display: block; margin: 0 auto !important; max-width: 100%; outline: none; text-decoration: none; width: auto;">{% endif %}
+                                                <center data-parsed="" style="min-width: 0; width: 100%;">
+                                                    <img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}" align="center" class="float-center" style="-ms-interpolation-mode: bicubic; Margin: 0 auto !important; clear: both; display: block; float: none; margin: 0 auto !important; max-width: 100%; outline: none; text-align: center; text-decoration: none; width: auto;">
+                                                </center>
+                                                {% endif %}
                                             </th>
                                         </tr>
                                     </tbody>
@@ -37,8 +40,8 @@
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
                                         <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: center !important; vertical-align: top; word-wrap: break-word;">
-                                                <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center !important;">{{ widget.promotion_body_text }}</p>
+                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: center; vertical-align: top; word-wrap: break-word;">
+                                                <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">{{ widget.promotion_body_text }}</p>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -47,21 +50,24 @@
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
                                         <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: center !important; vertical-align: top; word-wrap: break-word;">
-                                                <a href="{{ widget.promotion_cta_url }}" style="Margin: 0; color: {{ hex_color }} !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-style: italic; font-weight: 200; line-height: 1.3; margin: 0; padding: 0; text-align: center !important; text-decoration: none;">{{ widget.promotion_cta_text }}</a>
+                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: center; vertical-align: top; word-wrap: break-word;">
+                                                <a href="{{ widget.promotion_cta_url }}" style="Margin: 0; color: {{ hex_color }} !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-style: italic; font-weight: 200; line-height: 1.3; margin: 0; padding: 0; text-align: center; text-decoration: none;">{{ widget.promotion_cta_text }}</a>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </td>
 
-                            <td class="double-promotion" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em 1em !important; text-align: left; vertical-align: top; width: 50%; word-wrap: break-word;">
+                            <td class="double-promotion medium-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em; text-align: left; vertical-align: top; width: 50%; word-wrap: break-word;">
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
                                         <tr style="padding: 0; text-align: left; vertical-align: top;">
                                             <th class="logo" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; padding-bottom: 1em; text-align: left;">
                                                 {% if widget.promotion_image_2.src %}
-                                                <img src="{{ widget.promotion_image_2.src }}" width="{{ widget.promotion_image_2.width }}" height="{{ widget.promotion_image_2.height }}" style="-ms-interpolation-mode: bicubic; Margin: 0 auto !important; clear: both; display: block; margin: 0 auto !important; max-width: 100%; outline: none; text-decoration: none; width: auto;">{% endif %}
+                                                <center data-parsed="" style="min-width: 0; width: 100%;">
+                                                    <img src="{{ widget.promotion_image_2.src }}" width="{{ widget.promotion_image_2.width }}" height="{{ widget.promotion_image_2.height }}" align="center" class="float-center" style="-ms-interpolation-mode: bicubic; Margin: 0 auto !important; clear: both; display: block; float: none; margin: 0 auto !important; max-width: 100%; outline: none; text-align: center; text-decoration: none; width: auto;">
+                                                </center>
+                                                {% endif %}
                                             </th>
                                         </tr>
                                     </tbody>
@@ -70,8 +76,8 @@
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
                                         <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: center !important; vertical-align: top; word-wrap: break-word;">
-                                                <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center !important;">{{ widget.promotion_body_text_2 }}</p>
+                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: center; vertical-align: top; word-wrap: break-word;">
+                                                <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">{{ widget.promotion_body_text_2 }}</p>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -80,23 +86,26 @@
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
                                         <tr style="padding: 0; text-align: left; vertical-align: top;">
-                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: center !important; vertical-align: top; word-wrap: break-word;">
-                                                <a href="{{ widget.promotion_cta_url_2 }}" style="Margin: 0; color: {{ hex_color }} !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-style: italic; font-weight: 200; line-height: 1.3; margin: 0; padding: 0; text-align: center !important; text-decoration: none;">{{ widget.promotion_cta_text_2 }}</a>
+                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: center; vertical-align: top; word-wrap: break-word;">
+                                                <a href="{{ widget.promotion_cta_url_2 }}" style="Margin: 0; color: {{ hex_color }} !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-style: italic; font-weight: 200; line-height: 1.3; margin: 0; padding: 0; text-align: center; text-decoration: none;">{{ widget.promotion_cta_text_2 }}</a>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </td>
                             {% else %}
-                            <td class="single-promotion" valign="middle" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em 1em !important; text-align: left; vertical-align: middle; width: 50%; word-wrap: break-word;">
+                            <td class="single-promotion medium-padding" valign="middle" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em; text-align: left; vertical-align: middle; width: 50%; word-wrap: break-word;">
                                 {% if widget.promotion_image.src %}
-                                <img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}" style="-ms-interpolation-mode: bicubic; Margin: 0 auto; clear: both; display: block; margin: 0 auto; max-width: 100%; outline: none; text-decoration: none; width: auto;">{% endif %}
+                                <center data-parsed="" style="min-width: 0; width: 100%;">
+                                    <img src="{{ widget.promotion_image.src }}" width="{{ widget.promotion_image.width }}" height="{{ widget.promotion_image.height }}" align="center" class="float-center" style="-ms-interpolation-mode: bicubic; Margin: 0 auto; clear: both; display: block; float: none; margin: 0 auto; max-width: 100%; outline: none; text-align: center; text-decoration: none; width: auto;">
+                                </center>
+                                {% endif %}
                             </td>
 
-                            <td class="single-promotion" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em 1em !important; text-align: left; vertical-align: middle; width: 50%; word-wrap: break-word;">
+                            <td class="single-promotion medium-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em; text-align: left; vertical-align: middle; width: 50%; word-wrap: break-word;">
                                 <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: left;">{{ widget.promotion_body_text }}</p>
 
-                                <a href="{{ widget.promotion_cta_url }}" style="Margin: 0; color: {{ hex_color }} !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">{{ widget.promotion_cta_text }}</a>
+                                <a href="{{ widget.promotion_cta_url }}" style="Margin: 0; color: {{ hex_color }} !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-style: italic; font-weight: 200; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">{{ widget.promotion_cta_text }}</a>
                             </td>
                             {% endif %}
                         </tr>
