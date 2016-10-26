@@ -26,7 +26,7 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
 
 ## Getting Started
 
-The gateway to do everything: 
+The gateway to do everything:
 
 1. Clone repo
 2. [Install node](https://nodejs.org/en/) (if you haven't)
@@ -36,7 +36,7 @@ The gateway to do everything:
 *Note For Windows users: You may need to configure SASS after step 4 with `npm rebuild node-sass`*
 
 ## Creating Hubspot Email Components
-To create, update, test, and transfer custom and bullet-proof email components to Hubspot. 
+To create, update, test, and transfer custom and bullet-proof email components to Hubspot.
 
 [Video Tutorial](https://www.youtube.com/watch?v=HRHIBYca23U)
 
@@ -81,12 +81,12 @@ Example:
 {{widget.hero_text}}
 ```
 
-Read more about Hubspot's scripting language: 
+Read more about Hubspot's scripting language:
 
 - http://designers.hubspot.com/docs/cos/custom-modules
 - http://designers.hubspot.com/docs/hubl/intro-to-hubl
 
-#### Sending a Component to Test 
+#### Sending a Component to Test
 See your component tested in Litmus:
 
 ```
@@ -140,7 +140,7 @@ You can include components that you've built for hubspot. Anywhere in your HTML 
 
 This will only work for components with hard-coded content and not those with hubspot variables.
 
-#### Sending an Email to Test 
+#### Sending an Email to Test
 See your email tested in Litmus:
 
 ```
@@ -158,16 +158,16 @@ This is how the build system works:
 
 What's what:
 - **Hubspot Styles and Infrastructure** (`/src/base/`)
-The base is used to create a code environment as close to Hubspot as possible so that when component are being built, it should reflect what you see on Hubspot.com. what base archictecture for emails. This should include all code that Hubspot uses. 
+The base is used to create a code environment as close to Hubspot as possible so that when component are being built, it should reflect what you see on Hubspot.com. what base archictecture for emails. This should include all code that Hubspot uses.
 - **Global Email Styles** (`/src/styles`) - This will contain global styles that will apply to every component. `main.css` is the final file that will be included in every component.
 - **Custom Components** (`/src/base/components`) - Where our collection of components go.
 
 #### Email Global Styles
 In `/src/styles` you'll find global styles for all components.
 
-- This allows global theming and styling as it will write css for every component. 
-- Supports SASS. 
-- If you have `gulp` running, it will automagically process and update all components on save. 
+- This allows global theming and styling as it will write css for every component.
+- Supports SASS.
+- If you have `gulp` running, it will automagically process and update all components on save.
 
 #### Inky
 This email builder has [Inky](https://foundation.zurb.com/emails/) fully integrated.
@@ -189,12 +189,12 @@ Some of Hubspot's email setting styles are found in `config.js`. These will affe
 
 ## Quirks
 
-#### Keeping Style Rules 
-Sometimes you need to keep the style rules in the `dist.html` after inlining (e.g. for responsive styling). 
+#### Keeping Style Rules
+Sometimes you need to keep the style rules in the `dist.html` after inlining (e.g. for responsive styling).
 
-After all, the tool by default will 1) take all styles, 2) inline them, 3) then remove the original to avoid redundancy. This is true for style includes (e.g. `<link rel="stylesheet" href="main.css">`). 
+After all, the tool by default will 1) take all styles, 2) inline them, 3) then remove the original to avoid redundancy. This is true for style includes (e.g. `<link rel="stylesheet" href="main.css">`).
 
-But in order to provide functionality to allow written styles to remain in the component in addition to them being inlined, write styles in a `<style></style>` tag versus being included in. 
+But in order to provide functionality to allow written styles to remain in the component in addition to them being inlined, write styles in a `<style></style>` tag versus being included in.
 
 So in short,
 
@@ -202,7 +202,7 @@ So in short,
 2. If you want styles to be inlined and preserved, put it in `<style></style>` in `src.html`
 
 #### Inlining Hubspot Variables as Styles
-Sometimes you need to use Hubspot variables for styles before they are inlined. 
+Sometimes you need to use Hubspot variables for styles before they are inlined.
 
 To avoid breaking the inliner present in the application, use a double carret syntax `<< variable >>` and the application will convert it to a hubspot double curly syntax `{{ variable }}`.
 
