@@ -7,38 +7,45 @@ True %} {% set bool_registration_number = True %} {% set var_registration_locati
 = False %} {% set bool_registration_number = True %} {% set var_registration_location = "Amtsgericht Frankfurt am Main" %} {% set var_registration_number = "HRB 93411" %} {% endif %}
 
 
-<table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
-    <center data-parsed="" style="min-width: 580px; width: 100%;">
-        <table align="center" class="row float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; position: relative; text-align: center; vertical-align: top; width: 100%;">
-            <tbody>
-                <tr style="padding: 0; text-align: left; vertical-align: top;">
-                    <div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
-                        <p class="text-center" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">
-                            {{ widget.subscription_reason }}
-                        </p>
-                        <p class="text-center" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">email preferences</a>,
-                            <a
-                            class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;"> view in browser</a>.</p>
-                        <p class="text-center" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">© 2016 Liferay, Inc. All Rights Reserved.
-                            <br>
-                            <b>{{ site_settings.company_name }}</b>, {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip
-                            }}
-                            <br>{% if bool_registration_location == True %} {{ var_registration_location }}: {{ var_registration_number }}
-                            <br>{% endif %} {% if bool_managing_director == True %} {{ var_managing_director }}
-                            <br>{% endif %} {% if bool_email == True %}
-                            <a href="mailto:{{ var_email }}" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">{{ var_email }}</a>
-                            <br>{% endif %} {{ site_settings.company_phone }}</p>
-                    </div>
-                </tr>
-            </tbody>
-        </table>
-    </center>
-
-    <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+<center data-parsed="" style="min-width: 580px; width: 100%;">
+    <table align="center" class="float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; text-align: center; vertical-align: top;">
         <tbody>
             <tr style="padding: 0; text-align: left; vertical-align: top;">
-                {% hubspot_footer %}
+                <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                    <center data-parsed="" style="min-width: 580px; width: 100%;">
+                        <table align="center" class="row float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; padding: 0; position: relative; text-align: center; vertical-align: top; width: 100%;">
+                            <tbody>
+                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                    <div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
+                                        <p class="text-center" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">
+                                            {{ widget.subscription_reason }}
+                                        </p>
+                                        <p class="text-center" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">email preferences</a>,
+                                            <a
+                                            class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;"> view in browser</a>.</p>
+                                        <p class="text-center" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">© 2016 Liferay, Inc. All Rights Reserved.
+                                            <br>
+                                            <b>{{ site_settings.company_name }}</b>, {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip
+                                            }}
+                                            <br>{% if bool_registration_location == True %} {{ var_registration_location }}: {{ var_registration_number }}
+                                            <br>{% endif %} {% if bool_managing_director == True %} {{ var_managing_director }}
+                                            <br>{% endif %} {% if bool_email == True %}
+                                            <a href="mailto:{{ var_email }}" style="Margin: 0; color: #cccccc !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">{{ var_email }}</a>
+                                            <br>{% endif %} {{ site_settings.company_phone }}</p>
+                                    </div>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </center>
+                    <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                        <tbody>
+                            <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                {% hubspot_footer %}
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
             </tr>
         </tbody>
     </table>
-</table>
+</center>
