@@ -1,8 +1,4 @@
 /* Enter Component Styles Here */
-table.container {
+table.full-width-image {
 	width: 100%;
-}
-
-table.container > tbody > tr > td {
-	padding: 0 15px !important;
 }

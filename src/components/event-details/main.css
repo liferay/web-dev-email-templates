@@ -1,4 +1,16 @@
 /* Enter Component Styles Here */
+h3 {
+	color: #FFF;
+	letter-spacing: 0.5px;
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+	padding-top: 1em;
+	text-transform: none;
+}
+
+table {
+	width: 100%;
+}
 
 td div, td h3 {
 	text-align: center;
@@ -6,28 +18,26 @@ td div, td h3 {
 }
 
 td img {
-	max-width: 216px;
+	width: 216px !important;
 	height: 216px;
 	border-radius: 216px;
 }
 
-table.container {
+table.details > tbody > tr > td {
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+table.event-details {
 	width: 100%;
 }
 
-table.container > tbody > tr > td {
+table.event-details > tbody > tr > td {
 	padding-top: 2em;
-	padding-bottom: 3em;
+	padding-bottom: 2em;
 }
 
-table.container tr td, table.container tr th {
+table.event-details tr td, table.event-details tr th {
 	color: #FFF;
 	font-weight: 200;
-}
-
-h3 {
-	color: #FFF;
-	letter-spacing: 0.5px;
-	margin-bottom: 0 !important;
-	text-transform: none;
 }

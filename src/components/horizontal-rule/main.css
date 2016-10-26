@@ -1,14 +1,14 @@
 /* Enter Component Styles Here */
 
 table.horizontal-rule {
-    width: 75% !important;
+	width: 75% !important;
 }
 
 table.horizontal-rule td {
-    background: none;
-    border-bottom: 1px solid #e3e4e5;
-    height: 1px;
-    margin: 0;
-    width: 100%;
-    vertical-align: middle;
+	background-color: #E3E4E5;
+	font-size: 1px;
+	height: 1px;
+	margin: 0;
+	vertical-align: middle;
+	width: 100%;
 }

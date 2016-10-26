@@ -1,14 +1,14 @@
 /* Enter Component Styles Here */
-.list-item td {
+table.list-item {
+	width: 100%;
+}
+
+table.list-item td {
 	padding: 1em;
 }
 
-td.list-item-description {
-	width: 66%;
-}
-
 td.list-item-image {
-	width: 33%;
+	width: 151px;
 }
 
 td.list-item-image img {

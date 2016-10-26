@@ -1,11 +1,15 @@
 /* Enter Component Styles Here */
-
-table.promotion > tbody > tr > td {
-	background-color: #EFEFEF;
+table.promotion {
+	width: 100%;
 }
 
-table.promotion th {
-	padding-bottom: 0;
+table.promotion > tbody > tr > td {
+	padding: 0 1em !important;
+}
+
+table.content > tbody > tr > td {
+	background-color: #EFEFEF;
+	width: 50%;
 }
 
 table.promotion td.border-right {
