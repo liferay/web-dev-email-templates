@@ -1,14 +1,14 @@
 <style>
-    p {
+    table.paragraph td, table.paragraph td p {
     		text-align: {{ widget.alignment }};
     	}
 </style>
 
-<table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+<table class="paragraph" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
     <tbody>
         <tr style="padding: 0; text-align: left; vertical-align: top;">
-            <td class="first last" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; padding-left: 16px; padding-right: 16px; text-align: left; vertical-align: top; word-wrap: break-word;">
-                <p class="{{ widget.alignment }}" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: left;">{{ widget.paragraph }} &nbsp;</p>
+            <td class="standard-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 1em; text-align: {{ widget.alignment }}; vertical-align: top; word-wrap: break-word;">
+                <p class="{{ widget.alignment }}" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: {{ widget.alignment }};">{{ widget.paragraph }} &nbsp;</p>
             </td>
         </tr>
     </tbody>
