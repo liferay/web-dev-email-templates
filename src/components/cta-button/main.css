@@ -3,7 +3,7 @@ table.cta-button {
 	width: 100%;
 }
 
-table.cta-button table.button table tr td {
+table.cta-button td {
 	color: #FFF;
 }
 
@@ -15,13 +15,12 @@ table.cta-button table.button a td {
 
 table.button tr td {
 	border-radius: 1px;
-	color: #FFF !important;
 }
 
 table.button tr a {
 	border-radius: 1px;
-	color: #FFF !important;
-	font-weight: lighter !important;
+	color: #FFF;
+	font-weight: lighter;
 }
 
 table.button.left-aligned {

@@ -1,6 +1,8 @@
 /* Enter Component Styles Here */
+#footer, a, p {
+	color: #909295;
+}
 
 #footer a.link-text {
-    color: #ccc;
-    font-style: italic;
+	font-style: italic;
 }

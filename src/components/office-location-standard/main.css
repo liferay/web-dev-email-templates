@@ -1,6 +1,6 @@
 /* Enter Component Styles Here */
 
 .widget-type-email_can_spam p, .widget-type-email_can_spam a {
-    color: #cccccc !important;
-    font-size: 12px !important;
+	color: #909295;
+	font-size: 12px !important;
 }

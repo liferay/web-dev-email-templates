@@ -11,13 +11,17 @@
 <!-- Component HTML -->
 
 <style>
-	p {
+	table.paragraph td, table.paragraph td p {
 		text-align: << widget.alignment >>;
 	}
 </style>
 
-<row>
-	<td class="first last">
-		<p class="{{ widget.alignment }}">{{ widget.paragraph }} &nbsp;</p>
-	</td>
-</row>
+<table class="paragraph">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				<p class="{{ widget.alignment }}">{{ widget.paragraph }} &nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -17,6 +17,7 @@ div.email-label {
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	font-weight: lighter;
+	letter-spacing: 0.4px;
 	padding-top: 8px;
 	text-transform: uppercase;
 }

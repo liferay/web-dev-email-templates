@@ -1,11 +1,6 @@
 /* Enter Component Styles Here */
-
-td.hash-phrase {
-    padding: 30px;
-}
-
 td.hash-phrase a {
-    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
+	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
 }
