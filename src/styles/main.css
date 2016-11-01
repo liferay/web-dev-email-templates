@@ -1348,6 +1348,7 @@ h3 {
   color: #474A4B;
   font-size: 16px;
   font-weight: 600;
+  letter-spacing: 0.4px;
   line-height: 20px;
   text-transform: uppercase; }
 
@@ -1397,50 +1398,63 @@ p.quote {
   padding-top: 0; }
 
 .large-padding {
+  box-sizing: border-box;
   padding: 3em; }
 
 .large-padding-horizontal {
+  box-sizing: border-box;
   padding-left: 3em;
   padding-right: 3em; }
 
 .large-padding-vertical {
+  box-sizing: border-box;
   padding-bottom: 3em;
   padding-top: 3em; }
 
 .medium-padding {
+  box-sizing: border-box;
   padding: 2em; }
 
 .medium-padding-horizontal {
+  box-sizing: border-box;
   padding-left: 2em;
   padding-right: 2em; }
 
 .medium-padding-vertical {
+  box-sizing: border-box;
   padding-bottom: 2em;
   padding-top: 2em; }
 
 .section-padding {
+  box-sizing: border-box;
   padding-bottom: 6em;
   padding-top: 5em; }
 
 .small-padding {
+  box-sizing: border-box;
   padding: 0.5em; }
 
 .small-padding-horizontal {
+  box-sizing: border-box;
   padding-left: 0.5em;
   padding-right: 0.5em; }
 
 .small-padding-vertical {
+  box-sizing: border-box;
   padding-bottom: 0.5em;
   padding-top: 0.5em; }
 
 .standard-padding {
+  box-sizing: border-box;
   padding: 1em; }
 
 .standard-padding-horizontal {
+  box-sizing: border-box;
   padding-left: 1em;
   padding-right: 1em; }
 
 .standard-padding-vertical {
+  box-sizing: border-box;
   padding-bottom: 1em;
   padding-top: 1em; }
 

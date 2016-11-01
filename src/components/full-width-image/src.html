@@ -14,7 +14,9 @@
 		<tr>
 			<td class="standard-padding">
 				{% if widget.full_width_image.src %}
-					<img src="{{ widget.full_width_image.src }}" width="{{ widget.full_width_image.width }}" height="auto" alt="{{ widget.full_width_image.alt }}" style="width: 100%">
+					<a href="{{ widget.href }}">
+						<img src="{{ widget.full_width_image.src }}" width="{{ widget.full_width_image.width }}" height="auto" alt="{{ widget.full_width_image.alt }}" style="width: 100%">
+					</a>
 				{% endif %}
 			</td>
 		</tr>

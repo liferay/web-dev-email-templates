@@ -10,42 +10,34 @@
 
 <!-- Component HTML -->
 
-<center>
-	<spacer size="16"></spacer>
-
-	<table>
-		<tbody>
-			<tr>
-				<td>
-					<center>
-						<table>
-							<td class="logo">
-								{% if widget.liferay_logo.src %}
-									<img src="{{ widget.liferay_logo.src }}" width="{{ widget.liferay_logo.width }}" height="{{ widget.liferay_logo.height }}" alt="{{ widget.liferay_logo.alt }}">
-								{% endif %}
-							</td>
-							<td>
-								<span class="symbol">{{ widget.relationship_symbol }}</span>
-							</td>
-							<td class="logo">
-								{% if widget.co_brand_company_logo.src %}
-									<img src="{{ widget.co_brand_company_logo.src }}" width="{{ widget.co_brand_company_logo.width }}" height="{{ widget.co_brand_company_logo.height }}" alt="{{ widget.co_brand_company_logo.alt }}">
-								{% endif %}
-							</td>
-						</table>
-					</center>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<spacer size="16"></spacer>
-
-	<table width="75%" class="horizontal-rule">
+<table class="co-branded-logo">
+	<tbody>
 		<tr>
-			<td>&nbsp;</td>
+			<td class="standard-padding">
+				<row>
+					<td class="standard-padding border-bottom">
+						<center>
+							<table>
+								<td class="logo standard-padding-horizontal">
+									{% if widget.liferay_logo.src %}
+										<img src="{{ widget.liferay_logo.src }}" width="{{ widget.liferay_logo.width }}" height="{{ widget.liferay_logo.height }}" alt="{{ widget.liferay_logo.alt }}">
+									{% endif %}
+								</td>
+								<td class="symbol">
+									<span>{{ widget.relationship_symbol }}</span>
+								</td>
+								<td class="logo standard-padding-horizontal">
+									{% if widget.co_brand_company_logo.src %}
+										<img src="{{ widget.co_brand_company_logo.src }}" width="{{ widget.co_brand_company_logo.width }}" height="{{ widget.co_brand_company_logo.height }}" alt="{{ widget.co_brand_company_logo.alt }}">
+									{% endif %}
+								</td>
+							</table>
+						</center>
+					</td>
+				</row>
+			</td>
 		</tr>
-	</table>
+	</tbody>
+</table>
 
-	<spacer size="16"></spacer>
-</center>
+<spacer size="16"></spacer>

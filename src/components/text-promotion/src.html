@@ -21,7 +21,7 @@
 	}
 
 	table.text-promotion table.button a td {
-		border: 0px solid << hex_color >> !important;
+		border: 0px solid << hex_color >>;
 		color: << hex_color >>;
 	}
 
@@ -32,12 +32,10 @@
 	}
 </style>
 
-<spacer size="16"></spacer>
-
 <table class="text-promotion">
 	<tbody>
 		<tr>
-			<td class="no-padding-vertical standard-padding-horizontal">
+			<td class="standard-padding">
 				<row>
 					<td class="content medium-padding">
 						<row>
@@ -52,20 +50,22 @@
 							</td>
 						</row>
 
-						<button class="radius medium" href="{{ widget.button_href }}">
-							<table>
-								<tr>
-									<td>
-										{{ widget.button_text }}
-									</td>
-								</tr>
-							</table>
-						</button>
+						<row>
+							<td class="standard-padding-vertical">
+								<button class="radius medium" href="{{ widget.button_href }}">
+									<table>
+										<tr>
+											<td>
+												{{ widget.button_text }}
+											</td>
+										</tr>
+									</table>
+								</button>
+							</td>
+						</row>
 					</td>
 				</row>
 			</td>
 		</tr>
 	</tbody>
 </table>
-
-<spacer size="16"></spacer>

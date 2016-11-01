@@ -1,27 +1,16 @@
 /* Enter Component Styles Here */
-
-span.symbol {
-	line-height: 30px;
-	padding: 0 16px;
+center {
+	min-width: 0;
 }
 
-table.horizontal-rule {
-	width: 75% !important;
-}
-
-table.horizontal-rule td {
-	background-color: #e3e4e5;
-	height: 1px;
-	margin: 0;
+.co-branded-logo {
 	width: 100%;
+}
+
+td.border-bottom {
+	border-bottom: 1px solid #E3E4E5;
+}
+
+td {
 	vertical-align: middle;
-	font-size: 1px;
-}
-
-td.logo {
-	padding: 0 16px;
-}
-
-td.logo img {
-	max-height: 30px;
 }

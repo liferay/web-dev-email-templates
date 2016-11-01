@@ -3,17 +3,18 @@ center {
 	min-width: 0;
 }
 
-table.promotion {
-	width: 100%;
-}
-
 table.content > tbody > tr > td {
 	background-color: #EFEFEF;
+	box-sizing: border-box;
 	width: 50%;
 }
 
 td.border-right {
 	border-right: 1px solid #FFF;
+}
+
+td.double-promotion img {
+	box-sizing: border-box;
 }
 
 td.double-promotion a, td.single-promotion a {
@@ -31,6 +32,7 @@ td.double-promotion th.logo {
 }
 
 td.single-promotion {
+	box-sizing: border-box;
 	vertical-align: middle;
 }
 

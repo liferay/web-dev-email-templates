@@ -4,7 +4,7 @@ table.button a {
 }
 
 table.button a td, table.button table tr td {
-	background-color: transparent !important;
+	background-color: transparent;
 }
 
 td.content {

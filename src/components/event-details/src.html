@@ -13,83 +13,114 @@
 {% set hex_color = widget.audience %}
 
 <style>
-	table.event-details > tbody > tr > td {
+	table.event-details table.content > tbody > tr > td {
 		background-color: << hex_color >>;
 	}
 </style>
-
-<spacer size="16"></spacer>
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Event",
+		"name": "{{ widget.event_name }}",
+		"sponsor": {
+			"@type": "Organization",
+			"name": "{{ widget.schema_organization }}",
+			"url": "{{ widget.schema_organization_website_url }}"
+		},
+		"startDate": "{{ widget.schema_start_date }}T{{ widget.schema_start_time }}",
+		"endDate": "{{ widget.schema_end_date }}T{{ widget.schema_end_time }}",
+		"description": "{{ widget.schema_event_description }}",
+		"location": {
+			"@type": "Place",
+			"name": "{{ widget.event_venue }}",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "{{ widget.event_street_address }}",
+				"addressLocality": "{{ widget.event_locality }}",
+				"addressRegion": "{{ widget.event_region }}",
+				"postalCode": "{{ widget.event_postal_code }}",
+				"addressCountry": "{{ widget.event_country }}"
+			}
+		}
+	}
+</script>
 
 <table class="event-details">
 	<tbody>
 		<tr>
-			<td>
-				<a href="{{ widget.event_url }}">
-					{% if widget.event_image.src %}
-						<table class="map">
-							<tbody>
-								<tr>
-									<td>
-										<center>
-											<img src="{{ widget.event_image.src }}" alt="{{ widget.event_image.alt }}" style="width: 100%">
-										</center>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					{% endif %}
+			<td class="standard-padding">
+				<row class="content">
+					<td class="standard-padding">
+						<a href="{{ widget.event_url }}">
+							{% if widget.event_image.src %}
+								<table class="map">
+									<tbody>
+										<tr>
+											<td class="standard-padding-vertical">
+												<center>
+													<img src="{{ widget.event_image.src }}" alt="{{ widget.event_image.alt }}" style="width: 100%">
+												</center>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							{% endif %}
 
-					<table class="details">
-						<tbody>
-							<tr>
-								<td>
-									<table>
-										<tbody>
-											<tr>
-												<td>
-													<div>{{ widget.event_date }}</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+							<table class="details">
+								<tbody>
+									<tr>
+										<td>
+											<table>
+												<tbody>
+													<tr>
+														<td>
+															<div>{{ widget.event_date }}</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
 
-									<table>
-										<tbody>
-											<tr>
-												<td>
-													<div>{{ widget.event_time }}</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+											<table>
+												<tbody>
+													<tr>
+														<td>
+															<div>{{ widget.event_time }}</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
 
-									<table>
-										<tbody>
-											<tr>
-												<td>
-													<h3>{{ widget.event_venue }}</h3>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+											<row>
+												<td class="standard-padding-vertical">
+													<table>
+														<tbody>
+															<tr>
+																<td>
+																	<h3>{{ widget.event_venue }}</h3>
+																</td>
+															</tr>
+														</tbody>
+													</table>
 
-									<table>
-										<tbody>
-											<tr>
-												<td>
-													<div>{{ widget.event_address }}</div>
+													<table>
+														<tbody>
+															<tr>
+																<td>
+																	<div>{{ widget.event_address }}</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
 												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</a>
+											</row>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</a>
+					</td>
+				</row>
 			</td>
 		</tr>
 	</tbody>
 </table>
-
-<spacer size="16"></spacer>

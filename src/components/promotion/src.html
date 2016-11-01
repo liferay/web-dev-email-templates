@@ -15,14 +15,20 @@
 	table.promotion tr td a {
 		color: << hex_color >> !important;
 	}
-</style>
 
-<spacer size="16"></spacer>
+	@media only screen and (max-width: 596px) {
+		table.promotion table.content td.double-promotion, table.promotion table.content td.single-promotion {
+			border-right-width: 0 !important;
+			display: inline-block !important;
+			width: 100% !important;
+		}
+	}
+</style>
 
 <table class="promotion">
 	<tbody>
 		<tr>
-			<td class="standard-padding-horizontal">
+			<td class="standard-padding">
 				<row class="content">
 					{% if widget.promotion_image_2.src %}
 						<td class="border-right double-promotion medium-padding">
@@ -92,5 +98,3 @@
 		</tr>
 	</tbody>
 </table>
-
-<spacer size="16"></spacer>

@@ -1,10 +1,13 @@
 /* Enter Component Styles Here */
+center {
+	min-width: 0;
+}
+
 h3 {
 	color: #FFF;
 	letter-spacing: 0.5px;
 	margin-bottom: 0 !important;
 	margin-top: 0 !important;
-	padding-top: 1em;
 	text-transform: none;
 }
 
@@ -13,6 +16,7 @@ table {
 }
 
 td div, td h3 {
+	box-sizing: border-box;
 	text-align: center;
 	width: 100%;
 }
@@ -21,20 +25,6 @@ td img {
 	width: 216px !important;
 	height: 216px;
 	border-radius: 216px;
-}
-
-table.details > tbody > tr > td {
-	padding-bottom: 1em;
-	padding-top: 1em;
-}
-
-table.event-details {
-	width: 100%;
-}
-
-table.event-details > tbody > tr > td {
-	padding-top: 2em;
-	padding-bottom: 2em;
 }
 
 table.event-details tr td, table.event-details tr th {

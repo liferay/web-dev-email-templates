@@ -13,7 +13,7 @@
 <table class="signature">
 	<tbody>
 		<tr>
-			<td class="standard-padding">
+			<td class="standard-padding medium-padding-vertical">
 				<row>
 					{% if widget.headshot.src %}
 						<td class="headshot">
@@ -27,16 +27,22 @@
 						</td>
 					{% endif %}
 
-					{% if widget.signature_image.src %}
+					{% if widget.signature_image.src or widget.signee_name or widget.signee_title %}
 						<td class="signee">
 							<table>
 								<tr>
 									<td class="standard-padding-horizontal">
-										<img src="{{ widget.signature_image.src }}" width="{{ widget.signature_image.width }}" height="{{ widget.signature_image.height }}">
+										{% if widget.signature_image.src %}
+											<img src="{{ widget.signature_image.src }}" width="{{ widget.signature_image.width }}" height="{{ widget.signature_image.height }}">
+										{% endif %}
 
-										<div class="signee-name">{{ widget.signee_name }}</div>
+										{% if widget.signee_name %}
+											<div class="signee-name">{{ widget.signee_name }}</div>
+										{% endif %}
 
-										<div class="signee-title">{{ widget.signee_title }}</div>
+										{% if widget.signee_title %}
+											<div class="signee-title">{{ widget.signee_title }}</div>
+										{% endif %}
 									</td>
 								</tr>
 							</table>

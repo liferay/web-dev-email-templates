@@ -13,13 +13,17 @@ td.headshot img {
 	border-radius: 60px;
 }
 
-td.signee img {
-	height: 60px;
-	max-height: 60px;
+td.signee {
+	vertical-align: bottom;
 }
 
 td.signee div {
 	font-style: italic;
+}
+
+td.signee img {
+	height: 60px;
+	max-height: 60px;
 }
 
 td.signee .signee-title {

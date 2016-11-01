@@ -9,18 +9,36 @@
 -->
 
 <!-- Component HTML -->
+<style>
+	@media only screen and (max-width: 596px) {
+		table.list-item td.list-item-description, table.list-item td.list-item-description p {
+			text-align: center !important;
+		}
+
+		table.list-item td.list-item-description, table.list-item td.list-item-image {
+			box-sizing: border-box;
+			display: inline-block !important;
+			width: 100% !important;
+		}
+
+		table.list-item td.list-item-image img {
+			width: << widget.list_item_visual.width >>;
+			height: << widget.list_item_visual.height >>;
+		}
+	}
+</style>
 
 <table class="list-item">
 	<tbody>
 		<tr>
 			{% if widget.list_item_visual.src %}
-				<td class="list-item-image" valign="top">
+				<td class="list-item-image standard-padding" valign="top">
 					<center>
 						<img src="{{ widget.list_item_visual.src }}" width="{{ widget.list_item_visual.width }}" height="{{ widget.list_item_visual.height }}" alt="{{ widget.list_item_visual.alt }}">
 					</center>
 				</td>
 			{% endif %}
-			<td class="list-item-description">
+			<td class="list-item-description standard-padding">
 				{% if widget.list_item_header %}
 					<strong style="line-height: 30px !important;">{{ widget.list_item_header }}</strong>
 				{% endif %}

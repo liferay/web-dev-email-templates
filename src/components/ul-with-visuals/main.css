@@ -7,15 +7,12 @@ table.list-item {
 	width: 100%;
 }
 
-table.list-item td {
-	padding: 1em;
-}
-
 td.list-item-image {
-	width: 151px;
+	width: 182px;
 }
 
 td.list-item-image img {
 	margin: 0 auto;
 	Margin: 0 auto;
+	max-width: 150px;
 }
