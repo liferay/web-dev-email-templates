@@ -39,62 +39,75 @@
 }
 
 .large-padding {
+	box-sizing: border-box;
 	padding: $largeSpacing;
 }
 
 .large-padding-horizontal {
+	box-sizing: border-box;
 	padding-left: $largeSpacing;
 	padding-right: $largeSpacing;
 }
 
 .large-padding-vertical {
+	box-sizing: border-box;
 	padding-bottom: $largeSpacing;
 	padding-top: $largeSpacing;
 }
 
 .medium-padding {
+	box-sizing: border-box;
 	padding: 2em;
 }
 
 .medium-padding-horizontal {
+	box-sizing: border-box;
 	padding-left: 2em;
 	padding-right: 2em;
 }
 
 .medium-padding-vertical {
+	box-sizing: border-box;
 	padding-bottom: 2em;
 	padding-top: 2em;
 }
 
 .section-padding {
+	box-sizing: border-box;
 	padding-bottom: 6em;
 	padding-top: 5em;
 }
 
 .small-padding {
+	box-sizing: border-box;
 	padding: $smallSpacing;
 }
 
 .small-padding-horizontal {
+	box-sizing: border-box;
 	padding-left: $smallSpacing;
 	padding-right: $smallSpacing;
 }
 
 .small-padding-vertical {
+	box-sizing: border-box;
 	padding-bottom: $smallSpacing;
 	padding-top: $smallSpacing;
 }
 
 .standard-padding {
+	box-sizing: border-box;
 	padding: $standardSpacing;
 }
 
 .standard-padding-horizontal {
+	box-sizing: border-box;
 	padding-left: $standardSpacing;
 	padding-right: $standardSpacing;
 }
 
 .standard-padding-vertical {
+	box-sizing: border-box;
 	padding-bottom: $standardSpacing;
 	padding-top: $standardSpacing;
 }
