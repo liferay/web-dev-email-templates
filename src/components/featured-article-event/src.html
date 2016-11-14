@@ -1,0 +1,108 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+
+{% set hex_color = widget.audience %}
+
+<style>
+	table.featured-article-event a {
+		color: << hex_color >> !important;
+	}
+
+	table.featured-article-event h1 {
+		text-align: << widget.alignment >> !important;
+	}
+
+	table.featured-article-event .button a td {
+		background-color: << hex_color >> !important;
+	}
+</style>
+
+<script type="application/ld+json">
+	{
+		"@context": "http://schema.org",
+		"@type": "Event",
+		"name": "{{ widget.event_name }}",
+		"potentialAction": {
+			"@type": "RsvpAction",
+			"target": "{{ widget.button_href }}"
+		}
+	}
+}
+</script>
+
+<table class="featured-article-event">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				{% if widget.full_width_image.src %}
+					<row>
+						<td>
+							<img alt="{{ widget.full_width_image.alt }}" height="auto" src="{{ widget.full_width_image.src }}" style="width: 100%">
+						</td>
+					</row>
+				{% endif %}
+
+				<row>
+					<td class="standard-padding">
+						{% if widget.heading %}
+							<row>
+								<td>
+									<h1 class="{{ widget.alignment }}">{{ widget.heading }}</h1>
+								</td>
+							</row>
+						{% endif %}
+
+						{% if widget.blurb_text %}
+							<row>
+								<td class="small-padding">
+									<p>{{ widget.blurb_text }}</p>
+								</td>
+							</row>
+						{% endif %}
+
+						{% if widget.event_date %}
+							<row>
+								<td class="small-padding-horizontal">
+									<p>{{ widget.event_date }}</p>
+								</td>
+							</row>
+						{% endif %}
+
+						{% if widget.event_time %}
+							<row>
+								<td class="small-padding-horizontal">
+									<p>{{ widget.event_time }}</p>
+								</td>
+							</row>
+						{% endif %}
+					</td>
+				</row>
+
+				{% if widget.button_href and widget.button_text %}
+					<row>
+						<td class="standard-padding">
+							<center>
+								<button class="radius medium" href="{{ widget.button_href }}">
+									<row>
+										<td>
+											{{ widget.button_text }}
+										</td>
+									</row>
+								</button>
+							</center>
+						</td>
+					</row>
+				{% endif %}
+			</td>
+		</tr>
+	</tbody>
+</table>
