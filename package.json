@@ -4,16 +4,25 @@
   "description": "A build system for building and testing robust customized email components",
   "main": "index.html",
   "dependencies": {
+    "chalk": "^1.1.3",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-dust": "^3.0.0",
     "gulp-file": "^0.3.0",
+    "gulp-file-include": "^0.14.0",
     "gulp-html-prettify": "0.0.1",
     "gulp-inline-css": "^3.1.0",
     "gulp-litmus": "0.0.7",
     "gulp-livereload": "^3.8.1",
+    "gulp-open": "^2.0.0",
+    "gulp-remove-html-comments": "^1.0.1",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-template": "^4.0.0",
     "gulp-wrap": "^0.13.0",
     "gulp-wrapper": "^1.0.0",
+    "inky": "^1.3.7",
     "run-sequence": "^1.2.2",
     "yargs": "^5.0.0"
   },
@@ -29,7 +38,8 @@
     "gulp-sass": "^2.3.2",
     "gulp-template": "^4.0.0",
     "gulp-wrap": "^0.13.0",
-    "inky": "^1.3.7"
+    "inky": "^1.3.7",
+    "yargs": "^5.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
