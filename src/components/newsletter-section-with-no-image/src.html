@@ -1,0 +1,90 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+
+{% set hex_color = widget.audience %}
+
+<style>
+	table.newsletter-section a {
+		color: << hex_color >> !important;
+	}
+</style>
+
+{% macro print_article_info(article_title, article_blurb, article_url)  %}
+	<row>
+		<td class="small-padding">
+			{% if article_title %}
+				<row>
+					<td>
+						<h2 class="no-margin-vertical no-padding subheading">{{ article_title }}</h2>
+					</td>
+				</row>
+			{% endif %}
+
+			{% if article_blurb %}
+				<row>
+					<td>
+						<p>{{ article_blurb }}</p>
+					</td>
+				</row>
+			{% endif %}
+		</td>
+	</row>
+
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Article",
+			"name": "{{ article_title }}",
+			"url": "{{article_url }}",
+			"description": "{{ article_blurb }}",
+			"publisher": {
+				"@type": "Organization",
+				"name": "Liferay"
+			}
+		}
+	</script>
+{% endmacro %}
+
+<table class="newsletter-section">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				<row>
+					<td class="small-padding-horizontal">
+						<h3>{{ widget.section_title }}</h3>
+					</td>
+				</row>
+
+				{% if widget.article_title1 or widget.article_blurb1 %}
+					{{ print_article_info(widget.article_title1, widget.article_blurb1, widget.article_url1) }}
+				{% endif %}
+
+				{% if widget.article_title2 or widget.article_blurb2 %}
+					{{ print_article_info(widget.article_title2, widget.article_blurb2, widget.article_url2) }}
+				{% endif %}
+
+				{% if widget.article_title3 or widget.article_blurb3 %}
+					{{ print_article_info(widget.article_title3, widget.article_blurb3, widget.article_url3) }}
+				{% endif %}
+
+				{% if widget.article_title4 or widget.article_blurb4 %}
+					{{ print_article_info(widget.article_title4, widget.article_blurb4, widget.article_url4) }}
+				{% endif %}
+
+				{% if widget.article_title5 or widget.article_blurb5 %}
+					{{ print_article_info(widget.article_title5, widget.article_blurb5, widget.article_url5) }}
+				{% endif %}
+			</td>
+		</tr>
+	</tbody>
+</table>
+
