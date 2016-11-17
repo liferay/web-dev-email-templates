@@ -17,7 +17,7 @@
 		color: << hex_color >> !important;
 	}
 
-	table.featured-article-event h1 {
+	table.featured-article-event h1, table.featured-article-event p {
 		text-align: << widget.alignment >> !important;
 	}
 
@@ -52,7 +52,7 @@
 				{% endif %}
 
 				<row>
-					<td class="standard-padding">
+					<td>
 						{% if widget.heading %}
 							<row>
 								<td>
@@ -63,7 +63,7 @@
 
 						{% if widget.blurb_text %}
 							<row>
-								<td class="small-padding">
+								<td class="small-padding-vertical">
 									<p>{{ widget.blurb_text }}</p>
 								</td>
 							</row>
@@ -71,7 +71,7 @@
 
 						{% if widget.event_date %}
 							<row>
-								<td class="small-padding-horizontal">
+								<td>
 									<p>{{ widget.event_date }}</p>
 								</td>
 							</row>
@@ -79,7 +79,7 @@
 
 						{% if widget.event_time %}
 							<row>
-								<td class="small-padding-horizontal">
+								<td>
 									<p>{{ widget.event_time }}</p>
 								</td>
 							</row>
@@ -89,8 +89,18 @@
 
 				{% if widget.button_href and widget.button_text %}
 					<row>
-						<td class="standard-padding">
-							<center>
+						<td class="standard-padding-vertical">
+							{% if widget.alignment != "left" %}
+								<center>
+									<button class="radius medium" href="{{ widget.button_href }}">
+										<row>
+											<td>
+												{{ widget.button_text }}
+											</td>
+										</row>
+									</button>
+								</center>
+							{% else %}
 								<button class="radius medium" href="{{ widget.button_href }}">
 									<row>
 										<td>
@@ -98,7 +108,7 @@
 										</td>
 									</row>
 								</button>
-							</center>
+							{% endif %}
 						</td>
 					</row>
 				{% endif %}
