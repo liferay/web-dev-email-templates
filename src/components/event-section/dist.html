@@ -1,0 +1,99 @@
+{% if widget.event_type == 'webinars' %} {% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_webinars.png' %} {% elif widget.event_type == 'conferences' %} {% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_liferayconferences.png'
+%} {% elif widget.event_type == 'roadshows' %} {% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_roadshows.png' %} {% elif widget.event_type == 'industry' %} {% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_industryevents.png'
+%} {% elif widget.event_type == 'community' %} {% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_communityevents.png' %} {% endif %} {% if widget.component_position == 'left' %} {% set position = 'padding: 1em
+.5em 1em 1em' %} {% else %} {% set position = 'padding: 1em 1em 1em .5em' %} {% endif %} {% macro print_event_info(event_title, event_date, event_location, event_link) %} {% if event_title and event_link %}
+<table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+    <tbody>
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+            <td class="standard-padding-vertical">
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td>
+                                <a href="{{ event_link }}" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">
+                                    <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: left;"><strong>{{ event_title }}</strong>
+                                    </p>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                {% if event_date %}
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td>
+                                <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: left;">{{ event_date }}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% endif %} {% if event_location %}
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td>
+                                <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: left;">{{ event_location }}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% endif %}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="application/ld+json">
+    {
+    				"@context": "http://schema.org",
+    				"@type": "Event",
+    				"name": "{{ event_title }}",
+    				"location": {
+    					"@type": "Place",
+    					"name": "{{ event_location }}",
+    				}
+    			}
+</script>
+{% endif %} {% endmacro %}
+
+<table class="event-section" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
+    <tbody>
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+            <td style="{{ position }}">
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td class="event-border medium-padding" style="Margin: 0; border: 1px solid #E3E4E5; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 2em; text-align: left; vertical-align: top;">
+                                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                                    <tbody>
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                            <td style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top;">
+                                                <img alt="{{ widget.event_type }} event icon" height="40" src="{{ section_illustration }}" width="40" style="-ms-interpolation-mode: bicubic; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                                    <tbody>
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                            <td style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top;">
+                                                <h2 class="subheading" style="Margin: 0; color: #6a708b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 200; line-height: 24px; margin: 0; padding: 0.3em 0; text-align: left; word-wrap: normal;">{{ widget.section_title }}</h2>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                {{ print_event_info(widget.event_title1, widget.event_date1, widget.event_location1, widget.link1) }} {{ print_event_info(widget.event_title2, widget.event_date2, widget.event_location2, widget.link2) }} {{ print_event_info(widget.event_title3, widget.event_date3,
+                                widget.event_location3, widget.link3) }} {{ print_event_info(widget.event_title4, widget.event_date4, widget.event_location4, widget.link4) }} {{ print_event_info(widget.event_title5, widget.event_date5, widget.event_location5,
+                                widget.link5) }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
