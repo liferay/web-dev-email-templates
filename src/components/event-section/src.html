@@ -1,0 +1,100 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+{% if widget.event_type == 'webinars' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+{% elif widget.event_type == 'conferences' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+{% elif widget.event_type == 'roadshows' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+{% elif widget.event_type == 'industry' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+{% elif widget.event_type == 'community' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+{% endif %}
+
+{% macro print_event_info(event_title, event_date, event_location, event_link) %}
+	{% if event_title and event_link %}
+		<row>
+			<td class="standard-padding-vertical">
+				<row>
+					<td>
+						<a href="{{ event_link }}">
+							<p><strong>{{ event_title }}</strong></p>
+						</a>
+					</td>
+				</row>
+
+				{% if event_date %}
+					<row>
+						<td>
+							<p>{{ event_date }}</p>
+						</td>
+					</row>
+				{% endif %}
+
+				{% if event_location %}
+					<row>
+						<td>
+							<p>{{ event_location }}</p>
+						</td>
+					</row>
+				{% endif %}
+			</td>
+		</row>
+
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Event",
+				"name": "{{ event_title }}",
+				"location": {
+					"@type": "Place",
+					"name": "{{ event_location }}",
+				}
+			}
+		</script>
+	{% endif %}
+{% endmacro %}
+
+<table class="event-section">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				<row>
+					<td class="event-border medium-padding">
+						<row>
+							<td>
+								<img alt="{{ widget.event_type }} event icon" height="40" src="{{ section_illustration }}" width="40">
+							</td>
+						</row>
+
+						<row>
+							<td>
+								<h2 class="subheading">{{ widget.section_title }}</h2>
+							</td>
+						</row>
+
+						{{ print_event_info(widget.event_title1, widget.event_date1, widget.event_location1, widget.link1) }}
+
+						{{ print_event_info(widget.event_title2, widget.event_date2, widget.event_location2, widget.link2) }}
+
+						{{ print_event_info(widget.event_title3, widget.event_date3, widget.event_location3, widget.link3) }}
+
+						{{ print_event_info(widget.event_title4, widget.event_date4, widget.event_location4, widget.link4) }}
+
+						{{ print_event_info(widget.event_title5, widget.event_date5, widget.event_location5, widget.link5) }}
+					</td>
+				</row>
+			</td>
+		</tr>
+	</tbody>
+</table>
