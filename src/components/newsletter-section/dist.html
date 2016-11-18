@@ -1,4 +1,4 @@
-{% set hex_color = widget.audience %} {% set section_width = "width: 100%;" %}
+{% set hex_color = widget.audience %} {% set section_width = 'width: 100%;' %}
 
 <style>
     table.newsletter-section a {
@@ -16,7 +16,7 @@
                         <tr style="padding: 0; text-align: left; vertical-align: top;">
                             <td>
                                 {% if article_url %}
-                                <a href=" {{ article_url }}" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">
+                                <a href="{{ article_url }}" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">
                                     <h2 class="no-margin-vertical no-padding subheading" style="Margin: 0; color: #6a708b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 200; line-height: 24px; margin: 0; margin-bottom: 0; margin-top: 0; padding: 0; text-align: left; word-wrap: normal;">{{ article_title }}</h2>
                                 </a>
                                 {% else %}
@@ -61,7 +61,7 @@
 <table class="newsletter-section" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
     <tbody>
         <tr style="padding: 0; text-align: left; vertical-align: top;">
-            {% if widget.section_image.src %} {% set section_width = "width: 70%;" %}
+            {% if widget.section_image.src %} {% set section_width = 'width: 70%;' %}
 
             <td class="standard-padding" style="width: 30%;">
                 <img alt="{{ widget.section_image.alt }}" height="auto" src="{{ widget.section_image.src }}" style="-ms-interpolation-mode: bicubic; clear: both; display: block; max-width: 100%; outline: none; text-decoration: none; width: 100%;">

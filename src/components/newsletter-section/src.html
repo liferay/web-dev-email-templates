@@ -11,7 +11,7 @@
 <!-- Component HTML -->
 
 {% set hex_color = widget.audience %}
-{% set section_width = "width: 100%;" %}
+{% set section_width = 'width: 100%;' %}
 
 <style>
 	table.newsletter-section a {
@@ -19,14 +19,14 @@
 	}
 </style>
 
-{% macro print_article_info(article_title, article_blurb, article_url)  %}
+{% macro print_article_info(article_title, article_blurb, article_url) %}
 	{% if article_title %}
 		<row>
 			<td class="small-padding">
 				<row>
 					<td>
 						{% if article_url %}
-							<a href=" {{ article_url }}">
+							<a href="{{ article_url }}">
 								<h2 class="no-margin-vertical no-padding subheading">{{ article_title }}</h2>
 							</a>
 						{% else %}
@@ -65,7 +65,7 @@
 	<tbody>
 		<tr>
 			{% if widget.section_image.src %}
-				{% set section_width = "width: 70%;" %}
+				{% set section_width = 'width: 70%;' %}
 
 				<td class="standard-padding" style="width: 30%;">
 					<img alt="{{ widget.section_image.alt }}" height="auto" src="{{ widget.section_image.src }}" style="width: 100%">

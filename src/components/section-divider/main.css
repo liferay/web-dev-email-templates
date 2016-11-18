@@ -1,4 +1,8 @@
 /* Enter Component Styles Here */
+center {
+	min-width: 0;
+}
+
 table.border-top {
 	border-top: 1px solid #E3E4E5;
 	width: 75%;
