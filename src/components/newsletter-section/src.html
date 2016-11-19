@@ -67,27 +67,33 @@
 			{% if widget.section_image.src %}
 				{% set section_width = 'width: 70%;' %}
 
-				<td class="standard-padding" style="width: 30%;">
-					<img alt="{{ widget.section_image.alt }}" height="auto" src="{{ widget.section_image.src }}" style="width: 100%">
+				<td class="standard-padding" style="padding: 1em; width: 30%;">
+					<center>
+						<img alt="{{ widget.section_image.alt }}" class="standard-padding" height="auto" src="{{ widget.section_image.src }}" style="width: 100%">
+					</center>
 				</td>
 			{% endif %}
 
-			<td class="standard-padding" style="{{ section_width }}">
+			<td style="{{ section_width }}">
 				<row>
-					<td>
-						<h3>{{ widget.section_title }}</h3>
+					<td class="standard-padding">
+						<row>
+							<td>
+								<h3>{{ widget.section_title }}</h3>
+							</td>
+						</row>
+
+						{{ print_article_info(widget.article_title1, widget.article_blurb1, widget.article_url1) }}
+
+						{{ print_article_info(widget.article_title2, widget.article_blurb2, widget.article_url2) }}
+
+						{{ print_article_info(widget.article_title3, widget.article_blurb3, widget.article_url3) }}
+
+						{{ print_article_info(widget.article_title4, widget.article_blurb4, widget.article_url4) }}
+
+						{{ print_article_info(widget.article_title5, widget.article_blurb5, widget.article_url5) }}
 					</td>
 				</row>
-
-				{{ print_article_info(widget.article_title1, widget.article_blurb1, widget.article_url1) }}
-
-				{{ print_article_info(widget.article_title2, widget.article_blurb2, widget.article_url2) }}
-
-				{{ print_article_info(widget.article_title3, widget.article_blurb3, widget.article_url3) }}
-
-				{{ print_article_info(widget.article_title4, widget.article_blurb4, widget.article_url4) }}
-
-				{{ print_article_info(widget.article_title5, widget.article_blurb5, widget.article_url5) }}
 			</td>
 		</tr>
 	</tbody>
