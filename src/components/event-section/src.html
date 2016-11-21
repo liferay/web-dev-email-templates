@@ -10,15 +10,21 @@
 
 <!-- Component HTML -->
 {% if widget.event_type == 'webinars' %}
-	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_webinars.png' %}
 {% elif widget.event_type == 'conferences' %}
-	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_liferayconferences.png' %}
 {% elif widget.event_type == 'roadshows' %}
-	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_roadshows.png' %}
 {% elif widget.event_type == 'industry' %}
-	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_industryevents.png' %}
 {% elif widget.event_type == 'community' %}
-	{% set section_illustration = 'http://discover.liferay.com/hubfs/US/Email/GL_Marketing_Campaign_Assets/80x80Placeholder.png' %}
+	{% set section_illustration = 'http://discover.liferay.com/hubfs/Custom_Module_Files/80x80_communityevents.png' %}
+{% endif %}
+
+{% if widget.component_position == 'left' %}
+	{% set position = 'padding: 1em .5em 1em 1em' %}
+{% else %}
+	{% set position = 'padding: 1em 1em 1em .5em' %}
 {% endif %}
 
 {% macro print_event_info(event_title, event_date, event_location, event_link) %}
@@ -68,7 +74,7 @@
 <table class="event-section">
 	<tbody>
 		<tr>
-			<td class="standard-padding">
+			<td style="{{ position }}">
 				<row>
 					<td class="event-border medium-padding">
 						<row>
