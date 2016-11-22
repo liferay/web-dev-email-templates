@@ -2,3 +2,11 @@
 center {
 	min-width: 0;
 }
+
+table.featured-article-event .blurb {
+	color: #474A4B;
+}
+
+table.featured-article-event .featured-image {
+	padding-bottom: 2em;
+}

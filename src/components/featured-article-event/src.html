@@ -17,7 +17,7 @@
 		color: << hex_color >> !important;
 	}
 
-	table.featured-article-event h1, table.featured-article-event p {
+	table.featured-article-event h1 {
 		text-align: << widget.alignment >> !important;
 	}
 
@@ -45,8 +45,14 @@
 			<td class="standard-padding">
 				{% if widget.full_width_image.src %}
 					<row>
-						<td>
-							<img alt="{{ widget.full_width_image.alt }}" height="auto" src="{{ widget.full_width_image.src }}" style="width: 100%">
+						<td class="featured-image">
+							{% if widget.button_href %}
+								<a href="{{ widget.button_href }}">
+									<img alt="{{ widget.full_width_image.alt }}" height="auto" src="{{ widget.full_width_image.src }}" style="width: 100%">
+								</a>
+							{% else %}
+								<img alt="{{ widget.full_width_image.alt }}" height="auto" src="{{ widget.full_width_image.src }}" style="width: 100%">
+							{% endif %}
 						</td>
 					</row>
 				{% endif %}
@@ -64,7 +70,7 @@
 						{% if widget.blurb_text %}
 							<row>
 								<td class="small-padding-vertical">
-									<p>{{ widget.blurb_text }}</p>
+									<h2 class="blurb subheading">{{ widget.blurb_text }}</h2>
 								</td>
 							</row>
 						{% endif %}
@@ -72,7 +78,7 @@
 						{% if widget.event_date %}
 							<row>
 								<td>
-									<p>{{ widget.event_date }}</p>
+									<h2 class="blurb subheading">{{ widget.event_date }}</h2>
 								</td>
 							</row>
 						{% endif %}
@@ -80,7 +86,7 @@
 						{% if widget.event_time %}
 							<row>
 								<td>
-									<p>{{ widget.event_time }}</p>
+									<h2 class="blurb subheading">{{ widget.event_time }}</h2>
 								</td>
 							</row>
 						{% endif %}

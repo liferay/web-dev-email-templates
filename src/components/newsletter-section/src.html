@@ -22,7 +22,7 @@
 {% macro print_article_info(article_title, article_blurb, article_url) %}
 	{% if article_title %}
 		<row>
-			<td class="small-padding">
+			<td style="padding-bottom: .5em; padding-top: .5em;">
 				<row>
 					<td>
 						{% if article_url %}
@@ -79,7 +79,7 @@
 					<td class="standard-padding">
 						<row>
 							<td>
-								<h3>{{ widget.section_title }}</h3>
+								<h3 class="small-caps">{{ widget.section_title }}</h3>
 							</td>
 						</row>
 
