@@ -50,19 +50,21 @@
 							</td>
 						</row>
 
-						<row>
-							<td class="standard-padding-vertical">
-								<button class="radius medium" href="{{ widget.button_href }}">
-									<table>
-										<tr>
-											<td>
-												{{ widget.button_text }}
-											</td>
-										</tr>
-									</table>
-								</button>
-							</td>
-						</row>
+						{% if widget.button_href and widget.button_text %}
+							<row>
+								<td class="standard-padding-vertical">
+									<button class="radius medium" href="{{ widget.button_href }}">
+										<table>
+											<tr>
+												<td>
+													{{ widget.button_text }}
+												</td>
+											</tr>
+										</table>
+									</button>
+								</td>
+							</row>
+						{% endif %}
 					</td>
 				</row>
 			</td>
