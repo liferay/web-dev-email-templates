@@ -1,14 +1,14 @@
-{% set hex_color = widget.button_color %} {% if widget.alignment == 'left' %}
+{% set hex_color = widget.button_color %} {% if widget.button_href and widget.button_text %} {% if widget.alignment == 'left' %}
 <style>
     table.cta-button table.button a td {
-    			background-color: {{ hex_color }} !important;
-    		}
-    
-    		@media only screen and (max-width: 596px) {
-    			table.cta-button table.button table td a {
-    				text-align: center !important;
+    				background-color: {{ hex_color }} !important;
     			}
-    		}
+    
+    			@media only screen and (max-width: 596px) {
+    				table.cta-button table.button table td a {
+    					text-align: center !important;
+    				}
+    			}
 </style>
 
 <table class="cta-button" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
@@ -72,4 +72,4 @@
         </tr>
     </tbody>
 </table>
-{% endif %}
+{% endif %} {% endif %}
