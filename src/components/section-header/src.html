@@ -17,8 +17,11 @@
 
 <row>
 	<td class="first last section-header">
-		<h2 class="heading">{{ widget.section_title }}</h2>
-		<p class="subtitle">{{ widget.section_subtitle }}</p>
+		<h2 class="heading">{{ widget.section_title|title}}</h2>
+
+		{% if widget.section_subtitle != '' %}
+			<p class="subtitle">{{ widget.section_subtitle }}</p>
+		{% endif %}
 		&nbsp;
 	</td>
 </row>
