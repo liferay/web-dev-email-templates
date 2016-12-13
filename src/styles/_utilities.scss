@@ -6,6 +6,10 @@
 	padding-right: 16px;
 }
 
+.float-right {
+	float: right;
+}
+
 .font-weight-lighter {
 	font-weight: 200;
 }
@@ -110,4 +114,16 @@
 	box-sizing: border-box;
 	padding-bottom: $standardSpacing;
 	padding-top: $standardSpacing;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
 }

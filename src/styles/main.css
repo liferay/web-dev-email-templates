@@ -1372,6 +1372,9 @@ p.quote {
 .last {
   padding-right: 16px; }
 
+.float-right {
+  float: right; }
+
 .font-weight-lighter {
   font-weight: 200; }
 
@@ -1457,6 +1460,15 @@ p.quote {
   box-sizing: border-box;
   padding-bottom: 1em;
   padding-top: 1em; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
 
 table.button.prospect table td {
   background: #df584c;
