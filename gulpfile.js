@@ -199,7 +199,6 @@ gulp.task('test', function () {
 
 	var litmusConfig = {
 	    username: 'phillipchan1@gmail.com',
-	    password: 'thebible',
 	    url: 'https://phillipchan1.litmus.com',
 	    applications: [
 	        'chromeaolonline',
@@ -258,6 +257,7 @@ gulp.task('watch', function() {
 
 	gulp.watch('src/**/src.html', function(callback) {
 		runSequence(
+			'base',
 			'components-processing',
 			'emails-processing'
 		);
