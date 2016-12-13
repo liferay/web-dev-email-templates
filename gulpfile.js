@@ -69,7 +69,7 @@ gulp.task('global-styles', function() {
 	Component Tasks
 */
 
-// Update and process components 
+// Update and process components
 gulp.task('components-processing', function() {
 
 		// creating a version to be wrapped in base styles
@@ -176,17 +176,17 @@ gulp.task('create', function() {
 	// acceptable flags to pass in this command
 	if (argv.component || argv.email) {
 		if (argv.component) {
-			runSequence('new-component', 'base', 'global-styles', 'components-processing', 'watch' );	
+			runSequence('new-component', 'base', 'global-styles', 'components-processing', 'watch' );
 		}
 
 		if (argv.email) {
-			runSequence('new-email', 'base', 'global-styles', 'emails-processing', 'watch' );	
+			runSequence('new-email', 'base', 'global-styles', 'emails-processing', 'watch' );
 		}
 
 	} else {
 		console.error(chalk.white.bgRed(`Need to know what you're making. Try using gulp create --email [email name] or gulp create --component [component name]`));
 	}
-	
+
 });
 
 /*
@@ -237,7 +237,7 @@ gulp.task('test', function () {
 
 	else {
 		console.log(chalk.white.bgRed('Error: Nothing sent to test. Try again with gulp test --component [component-name] or gulp test --email [email-name]'));
-	}    
+	}
 });
 
 /*
@@ -258,7 +258,6 @@ gulp.task('watch', function() {
 
 	gulp.watch('src/**/src.html', function(callback) {
 		runSequence(
-			'base',
 			'components-processing',
 			'emails-processing'
 		);
@@ -298,7 +297,7 @@ gulp.task('watch', function() {
 
 /*
 	Default Task
-*/ 
+*/
 
 gulp.task('default', function(callback) {
 	runSequence(
