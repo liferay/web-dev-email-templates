@@ -22,6 +22,10 @@ td.double-promotion a, td.single-promotion a {
 	font-weight: 200;
 }
 
+td.double-promotion a, td.double-promotion p, td.double-promotion td {
+	text-align: center;
+}
+
 td.double-promotion img {
 	margin: 0 auto !important;
 	Margin: 0 auto !important;
@@ -29,6 +33,10 @@ td.double-promotion img {
 
 td.double-promotion th.logo {
 	padding-bottom: 1em;
+}
+
+table.promotion {
+	width: 100%;
 }
 
 td.single-promotion {
@@ -39,8 +47,4 @@ td.single-promotion {
 td.single-promotion img {
 	margin: 0 auto;
 	Margin: 0 auto;
-}
-
-td.double-promotion a, td.double-promotion p, td.double-promotion td {
-	text-align: center;
 }

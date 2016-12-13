@@ -11,6 +11,10 @@ td.content {
 	background-color: #EFEFEF;
 }
 
+table.text-promotion {
+	width: 100%;
+}
+
 table.text-promotion th {
 	padding-bottom: 0;
 }
