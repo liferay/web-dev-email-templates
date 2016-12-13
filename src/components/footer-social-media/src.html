@@ -8,15 +8,40 @@
 	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
 -->
 
+<style>
+	/* Enter Component Styles Here */
+	.border-top {
+		border-top: 1px solid #909295;
+	}
+
+	.social-media-wrapper {
+		width: 80%;
+	}
+
+	td.social-media-icon, td.social-media-icon a.icon {
+		max-width: 28px;
+		width: 28px;
+	}
+
+	td.social-media-icon img {
+		max-width: 20px;
+		width: 20px;
+	}
+
+	table.social-media-links {
+		width: auto;
+	}
+</style>
+
 <!-- Component HTML -->
-<table class="row">
+<table class="row social-media">
 	<tbody>
 		<tr>
 			<td class="standard-padding">
 				<row class="border-top">
 					<center>
-						<td class="social-media-wrapper standard-padding">
-							{% if widget.social_media_options != 'none' %}
+						{% if widget.social_media_options != 'none' %}
+							<td class="social-media-wrapper standard-padding">
 								<row class="social-media-links">
 									<td class="social-media-icon">
 										<a class="icon" href="//facebook.com/liferay" target="_blank"><img width="20" height="20" alt="Liferay on Facebook" src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_facebook2x.png" ></a>
@@ -48,10 +73,18 @@
 										</td>
 									{% endif %}
 								</row>
-							{% endif %}
-						</td>
-						<td class="float-right footer-logo standard-padding">
-							<a class="float-right liferay-footer" href="//www.liferay.com" target="blank"><img src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png"></a>
+							</td>
+						{% endif %}
+
+						{% if widget.social_media_options == 'none' %}
+							{% set positioning_styles = 'text-align: center; !important' %}
+						{% else %}
+							{% set positioning_styles = 'float: right; !important' %}
+						{% endif %}
+						<td style="padding: 1em; {{positioning_styles}}">
+							<a href="//www.liferay.com" style="{{positioning_styles}}" target="blank">
+								<img class="liferay-logo" src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png" style="max-width: 94px; width: 94px; {{positioning_styles}}">
+							</a>
 						</td>
 					</center>
 				</row>
