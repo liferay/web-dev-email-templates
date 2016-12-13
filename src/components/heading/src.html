@@ -11,13 +11,21 @@
 <!-- Component HTML -->
 
 <style>
-	h1.heading-one {
-		text-align: << widget.alignment >> !important;
+	h1, h2 {
+		text-align: <<widget.alignment>> !important;
 	}
 </style>
 
 <row>
 	<td class="first last">
-		<h1 class="heading-one {{ widget.alignment }}">{{ widget.heading }} &nbsp;</h1>
+		{% if widget.heading_type == 'h1' %}
+			<h1>
+				{{ widget.heading_text }} &nbsp;
+			</h1>
+		{% elif widget.heading_type == 'h2' %}
+			<h2>
+				{{ widget.heading_text }} &nbsp;
+			</h2>
+		{% endif %}
 	</td>
 </row>
