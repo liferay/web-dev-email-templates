@@ -20,11 +20,11 @@
 	<td class="first last">
 		{% if widget.heading_type == 'h1' %}
 			<h1>
-				{{ widget.heading_text }} &nbsp;
+				{{ widget.heading_text|title}} &nbsp;
 			</h1>
 		{% elif widget.heading_type == 'h2' %}
 			<h2>
-				{{ widget.heading_text }} &nbsp;
+				{{ widget.heading_text|title }} &nbsp;
 			</h2>
 		{% endif %}
 	</td>
