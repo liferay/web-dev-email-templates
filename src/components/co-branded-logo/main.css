@@ -14,3 +14,7 @@ td.border-bottom {
 td {
 	vertical-align: middle;
 }
+
+.logo img {
+	max-width: 150px;
+}
