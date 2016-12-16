@@ -16,10 +16,12 @@
 
 	.social-media-wrapper {
 		width: 80%;
+		vertical-align: top;
 	}
 
 	td.social-media-icon, td.social-media-icon a.icon {
 		max-width: 28px;
+		padding: 0 0.5em;
 		width: 28px;
 	}
 
@@ -72,6 +74,8 @@
 											<a class="icon" href="//xing.com/companies/liferaygmbh" target="_blank"><img width="20" height="20" alt="Liferay on Xing" src="https://discover.liferay.com/hubfs/Custom_Module_Files/20x20_xing2x.png" ></a>
 										</td>
 									{% endif %}
+
+									<td width=100%>&nbsp;</td>
 								</row>
 							</td>
 						{% endif %}
@@ -82,7 +86,7 @@
 							{% set positioning_styles = 'float: right; !important' %}
 						{% endif %}
 
-						<td style="padding: 1em; {{positioning_styles}}">
+						<td style="height: 100%; padding: 1em; vertical-align: top; {{positioning_styles}}">
 							<a href="//www.liferay.com" style="{{positioning_styles}}" target="blank">
 								<img class="liferay-logo" src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png" style="max-width: 94px; width: 94px; {{positioning_styles}}">
 							</a>
