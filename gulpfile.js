@@ -101,10 +101,12 @@ gulp.task('components-processing', function() {
 			// inline CSS
 			.pipe(inlineCss({
 				removeStyleTags: false,
-				applyStyleTags: true
+				applyStyleTags: true,
+				removeLinkTags: true
 			}))
 			.pipe(replace('<<', '{{'))
 			.pipe(replace('>>', '}}'))
+			.pipe(replace('<elink', '<link'))
 			// prettify HTML
 			.pipe(htmlPrettify({indent_char: ' ', indent_size: 4}))
 			// rename file to test
