@@ -21,7 +21,9 @@
 									<img src="http://cdn2.hubspot.net/hubfs/252686/Custom_Module_Files/liferay-blue2x.png" />
 								</td>
 								<td class="symbol">
-									<span>{{ widget.relationship_symbol }}</span>
+									{% if widget.relationship_symbol %}
+										<span>{{ widget.relationship_symbol }}</span>
+									{% endif %}
 								</td>
 								<td class="logo standard-padding-horizontal">
 									{% if widget.co_brand_company_logo.src %}
