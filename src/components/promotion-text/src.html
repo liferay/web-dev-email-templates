@@ -38,17 +38,21 @@
 			<td class="standard-padding">
 				<row>
 					<td class="content medium-padding">
-						<row>
-							<td>
-								<h3>{{ widget.header }}</h3>
-							</td>
-						</row>
+						{% if widget.header %}
+							<row>
+								<td>
+									<h3>{{ widget.header }}</h3>
+								</td>
+							</row>
+						{% endif %}
 
+						{% if widget.body_text %}
 						<row>
 							<td>
 								<p>{{ widget.body_text }}</p>
 							</td>
 						</row>
+						{% endif %}
 
 						{% if widget.button_href and widget.button_text %}
 							<row>
