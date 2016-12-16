@@ -70,16 +70,19 @@
 								<tbody>
 									<tr>
 										<td>
-											<table>
-												<tbody>
-													<tr>
-														<td>
-															<div>{{ widget.event_date }}</div>
-														</td>
-													</tr>
-												</tbody>
-											</table>
+											{% if widget.event_date %}
+												<table>
+													<tbody>
+														<tr>
+															<td>
+																<div>{{ widget.event_date }}</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											{% endif %}
 
+											{% if widget.event_time %}
 											<table>
 												<tbody>
 													<tr>
@@ -89,9 +92,11 @@
 													</tr>
 												</tbody>
 											</table>
+											{% endif %}
 
 											<row>
 												<td class="standard-padding-vertical">
+													{% if widget.event_venue %}
 													<table>
 														<tbody>
 															<tr>
@@ -101,7 +106,9 @@
 															</tr>
 														</tbody>
 													</table>
+													{% endif %}
 
+													{% if widget.event_address %}
 													<table>
 														<tbody>
 															<tr>
@@ -111,6 +118,7 @@
 															</tr>
 														</tbody>
 													</table>
+													{% endif %}
 												</td>
 											</row>
 										</td>
