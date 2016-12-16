@@ -42,11 +42,13 @@
 								</th>
 							</row>
 
-							<row>
-								<td>
-									<p>{{ widget.promotion_body_text }}</p>
-								</td>
-							</row>
+							{% if widget.promotion_body_text %}
+								<row>
+									<td>
+										<p>{{ widget.promotion_body_text }}</p>
+									</td>
+								</row>
+							{% endif %}
 
 							<row>
 								<td>
@@ -66,11 +68,13 @@
 								</th>
 							</row>
 
-							<row>
-								<td>
-									<p>{{ widget.promotion_body_text_2 }}</p>
-								</td>
-							</row>
+							{% if widget.promotion_body_text %}
+								<row>
+									<td>
+										<p>{{ widget.promotion_body_text_2 }}</p>
+									</td>
+								</row>
+							{% endif %}
 
 							<row>
 								<td>
@@ -88,9 +92,13 @@
 						</td>
 
 						<td class="single-promotion medium-padding">
-							<p>{{ widget.promotion_body_text }}</p>
+							{% if widget.promotion_body_text %}
+								<p>{{ widget.promotion_body_text }}</p>
+							{% endif %}
 
-							<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>
+							{% if widget.promotion_cta_url %}
+								<a href="{{ widget.promotion_cta_url }}">{{ widget.promotion_cta_text }}</a>
+							{% endif %}
 						</td>
 					{% endif %}
 				</row>

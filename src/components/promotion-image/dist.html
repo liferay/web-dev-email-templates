@@ -37,6 +37,7 @@
                                     </tbody>
                                 </table>
 
+                                {% if widget.promotion_body_text %}
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
                                         <tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -46,6 +47,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                {% endif %}
 
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
@@ -73,6 +75,7 @@
                                     </tbody>
                                 </table>
 
+                                {% if widget.promotion_body_text %}
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
                                         <tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -82,6 +85,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                {% endif %}
 
                                 <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                                     <tbody>
@@ -103,9 +107,11 @@
                             </td>
 
                             <td class="single-promotion medium-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; background-color: #EFEFEF; border-collapse: collapse !important; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 2em; text-align: left; vertical-align: middle; width: 50%; word-wrap: break-word;">
+                                {% if widget.promotion_body_text %}
                                 <p style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: left;">{{ widget.promotion_body_text }}</p>
-
+                                {% endif %} {% if widget.promotion_cta_url %}
                                 <a href="{{ widget.promotion_cta_url }}" style="Margin: 0; color: {{ hex_color }} !important; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-style: italic; font-weight: 200; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">{{ widget.promotion_cta_text }}</a>
+                                {% endif %}
                             </td>
                             {% endif %}
                         </tr>
