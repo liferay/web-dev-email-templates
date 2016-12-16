@@ -23,6 +23,7 @@ The automagic builder that can 1) build tested components for Hubspot and 2) bui
 5. [Quirks](#quirks)
     - [Keeping Style Rules](#keeping-style-rules)
     - [Inlining Hubspot Variables as Styles](#inlining-hubspot-variables-as-styles)
+    - [External Style Sheets](#external-style-sheets)
 
 ## Getting Started
 
@@ -220,4 +221,15 @@ table.button tr td {
     background: {{ hex_color }} !important;
     border: 0px solid {{ hex_color }} !important;
 }
+```
+
+#### External Style Sheets
+Sometimes you need to link an external stylesheet to your components (e.g. for web fonts).
+
+By default, the inliner removes any references to local stylesheets to avoid any HTTP errors, but sometimes you want to keep an external stylesheet.
+
+To keep your external stylesheet:
+```
+// elink will be escaped
+<elink href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600" rel="stylesheet">
 ```
