@@ -18,14 +18,12 @@
 
 <row>
 	<td class="first last">
-		{% if widget.heading_type == 'h1' %}
-			<h1>
-				{{ widget.heading_text|title}} &nbsp;
-			</h1>
-		{% elif widget.heading_type == 'h2' %}
-			<h2>
-				{{ widget.heading_text|title }} &nbsp;
-			</h2>
+		{% if widget.heading_one %}
+			<h1>{{ widget.heading_one}} &nbsp;</h1>
+		{% endif %}
+
+		{% if widget.heading_two %}
+			<h2>{{ widget.heading_two }} &nbsp;</h2>
 		{% endif %}
 	</td>
 </row>
