@@ -19,8 +19,10 @@
 <table class="paragraph">
 	<tbody>
 		<tr>
-			<td class="standard-padding">
-				<p class="{{ widget.alignment }}">{{ widget.paragraph }} &nbsp;</p>
+			<td class="standard-padding-horizontal">
+				{% if widget.paragraph %}
+					<p class="{{ widget.alignment }}">{{ widget.paragraph }} &nbsp;</p>
+				{%endif %}
 			</td>
 		</tr>
 	</tbody>
