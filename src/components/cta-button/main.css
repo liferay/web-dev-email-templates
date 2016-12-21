@@ -20,7 +20,7 @@ table.button tr td {
 table.button tr a {
 	border-radius: 1px;
 	color: #FFF;
-	display: block !important;
+	display: block;
 	font-weight: lighter;
 }
 
