@@ -24,9 +24,18 @@
                                     <p class="text-center" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">
                                         {{ widget.subscription_reason }}
                                     </p>
+
+                                    {% if widget.show_web_version %}
                                     <p class="text-center" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">email preferences</a>,
                                         <a
                                         class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;"> view in browser</a>.</p>
+                                    {% else %}
+                                    <p class="text-center" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">email preferences</a> or
+                                        <a
+                                        class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe="true" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">unsubscribe</a>
+                                    </p>
+                                    {% endif %}
+
                                     <p class="text-center" style="Margin: 0; color: #909295; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 12px !important; font-weight: 300; line-height: 20px; margin: 0; padding: 0; text-align: center;">© 2016 Liferay, Inc. All Rights Reserved.
                                         <br>
                                         <b>{{ site_settings.company_name }}</b>, {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip

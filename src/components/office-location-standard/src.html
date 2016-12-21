@@ -74,7 +74,13 @@
 							<p class="text-center">
 								{{ widget.subscription_reason }}
 							</p>
-							<p class="text-center">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a>, <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}"> view in browser</a>.</p>
+
+							{% if widget.show_web_version %}
+								<p class="text-center">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a>, <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}"> view in browser</a>.</p>
+							{% else %}
+								<p class="text-center">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a> or <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a></p>
+							{% endif %}
+
 							<p class="text-center" > © 2016 Liferay, Inc. All Rights Reserved.<br />
 								<b>{{ site_settings.company_name }}</b>, {{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}, {{ site_settings.company_city }} {{ site_settings.company_state }} {{ site_settings.company_zip }}<br />
 
