@@ -33,6 +33,7 @@
 	table.social-media-links {
 		width: auto;
 	}
+
 </style>
 
 <!-- Component HTML -->
@@ -75,20 +76,20 @@
 										</td>
 									{% endif %}
 
-									<td width=100%>&nbsp;</td>
+									<td width="100%">&nbsp;</td>
 								</row>
 							</td>
 						{% endif %}
 
 						{% if widget.social_media_options == 'none' %}
-							{% set positioning_styles = 'text-align: center; !important' %}
+							{% set positioning_styles = 'text-align: center;' %}
 						{% else %}
-							{% set positioning_styles = 'float: right; !important' %}
+							{% set positioning_styles = 'float: right;' %}
 						{% endif %}
 
-						<td style="height: 100%; padding: 1em; vertical-align: top; {{positioning_styles}}">
+						<td height="50" style="padding: 1em; vertical-align: middle;">
 							<a href="//www.liferay.com" style="{{positioning_styles}}" target="blank">
-								<img class="liferay-logo" src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png" style="max-width: 94px; width: 94px; {{positioning_styles}}">
+								<img src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png" style="max-width: 94px; width: 94px; {{positioning_styles}}">
 							</a>
 						</td>
 					</center>

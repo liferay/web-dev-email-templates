@@ -29,7 +29,7 @@
 <table class="row social-media" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
     <tbody>
         <tr style="padding: 0; text-align: left; vertical-align: top;">
-            <td class="standard-padding">
+            <td class="standard-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 1em; text-align: left; vertical-align: top; word-wrap: break-word;">
                 <table class="row border-top" style="border-collapse: collapse; border-spacing: 0; border-top: 1px solid #909295; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
                     <tbody>
                         <tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -83,16 +83,17 @@
                                                 </td>
                                                 {% endif %}
 
-                                                <td width="100%">&nbsp;</td>
+                                                <td width="100%" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">&nbsp;</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </td>
-                                {% endif %} {% if widget.social_media_options == 'none' %} {% set positioning_styles = 'text-align: center; !important' %} {% else %} {% set positioning_styles = 'float: right; !important' %} {% endif %}
+                                {% endif %} {% if widget.social_media_options == 'none' %} {% set positioning_styles = 'text-align: center;' %} {% else %} {% set positioning_styles = 'float: right;' %} {% endif %}
 
-                                <td style="height: 100%; padding: 1em; vertical-align: top; {{positioning_styles}}" align="center" class="float-center">
+                                <td height="50" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0 auto; border-collapse: collapse !important; color: #474a4b; float: none; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0 auto; padding: 1em; text-align: center; vertical-align: middle; word-wrap: break-word;"
+                                align="center" class="float-center">
                                     <a href="//www.liferay.com" style="{{positioning_styles}}" target="blank">
-                                        <img class="liferay-logo" src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png" style="max-width: 94px; width: 94px; {{positioning_styles}}">
+                                        <img src="https://discover.liferay.com/hubfs/Custom_Module_Files/liferay-grey2x.png" style="max-width: 94px; width: 94px; {{positioning_styles}}">
                                     </a>
                                 </td>
                             </center>
