@@ -7,7 +7,7 @@
 </style>
 
 {% macro print_article_info(article_title, article_blurb, article_url) %} {% if article_title %}
-<table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+<table class="row article" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
     <tbody>
         <tr style="padding: 0; text-align: left; vertical-align: top;">
             <td style="padding-bottom: .5em; padding-top: .5em;">
@@ -16,7 +16,7 @@
                         <tr style="padding: 0; text-align: left; vertical-align: top;">
                             <td>
                                 {% if article_url %}
-                                <a href="{{ article_url }}" style="Margin: 0; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">
+                                <a href="{{ article_url }}" style="Margin: 0; color: #474a4b; display: block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; text-decoration: none;">
                                     <h2 class="no-margin-vertical no-padding subheading" style="Margin: 0; color: #6a708b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 200; line-height: 24px; margin: 0; margin-bottom: 0; margin-top: 0; padding: 0; text-align: left; word-wrap: normal;">{{ article_title }}</h2>
                                 </a>
                                 {% else %}

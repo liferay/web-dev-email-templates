@@ -2,3 +2,11 @@
 center {
 	min-width: 0;
 }
+
+.article a {
+	display: block;
+}
+
+h2.subheading {
+	color: #6a708b;
+}
