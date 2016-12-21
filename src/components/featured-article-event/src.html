@@ -10,19 +10,29 @@
 
 <!-- Component HTML -->
 
-{% set hex_color = widget.audience %}
-
 <style>
-	table.featured-article-event a {
-		color: << hex_color >> !important;
-	}
-
 	table.featured-article-event h1 {
 		text-align: << widget.alignment >> !important;
 	}
 
-	table.featured-article-event .button a td {
-		background-color: << hex_color >> !important;
+	table.featured-article-event table.button {
+		background-color: << widget.audience >>;
+		background: << widget.audience >>;
+	}
+
+	table.featured-article-event table.button table td {
+		background-color: << widget.audience >>;
+		background: << widget.audience >>;
+	}
+
+	table.featured-article-event table.button table a {
+		border: 0 solid << widget.audience >>;
+	}
+
+	@media only screen and (max-width: 596px) {
+		table.button {
+			text-align: center !important;
+		}
 	}
 </style>
 
@@ -48,10 +58,10 @@
 						<td class="featured-image">
 							{% if widget.button_href %}
 								<a href="{{ widget.button_href }}">
-									<img alt="{{ widget.full_width_image.alt }}" height="auto" src="{{ widget.full_width_image.src }}" style="width: 100%">
+									<img class="full-width-image" alt="{{ widget.full_width_image.alt }} height="" src="{{ widget.full_width_image.src }}" width="580">
 								</a>
 							{% else %}
-								<img alt="{{ widget.full_width_image.alt }}" height="auto" src="{{ widget.full_width_image.src }}" style="width: 100%">
+								<img class="full-width-image" alt="{{ widget.full_width_image.alt }} height="" src="{{ widget.full_width_image.src }}" width="580">
 							{% endif %}
 						</td>
 					</row>
@@ -99,20 +109,24 @@
 							{% if widget.alignment != 'left' %}
 								<center>
 									<button class="radius medium" href="{{ widget.button_href }}">
-										<row>
-											<td>
-												{{ widget.button_text }}
-											</td>
-										</row>
+										<table>
+											<tr>
+												<td>
+													{{ widget.button_text }}
+												</td>
+											</tr>
+										</table>
 									</button>
 								</center>
 							{% else %}
 								<button class="radius medium" href="{{ widget.button_href }}">
-									<row>
-										<td>
-											{{ widget.button_text }}
-										</td>
-									</row>
+									<table>
+											<tr>
+												<td>
+													{{ widget.button_text }}
+												</td>
+											</tr>
+										</table>
 								</button>
 							{% endif %}
 						</td>

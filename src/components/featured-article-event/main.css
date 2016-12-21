@@ -10,3 +10,7 @@ table.featured-article-event .blurb {
 table.featured-article-event .featured-image {
 	padding-bottom: 2em;
 }
+
+table.featured-article-event table.button a {
+	display: block;
+}
