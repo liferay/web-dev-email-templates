@@ -11,32 +11,37 @@
 <!-- Component HTML -->
 {% set hex_color = widget.button_color %}
 
+<style>
+	table.button {
+		background-color: << widget.button_color >>;
+		background: << widget.button_color >>;
+	}
+
+	table.button table td {
+		background-color: << widget.button_color >>;
+		background: << widget.button_color >>;
+	}
+
+	table.button table a {
+		border: 0 solid << widget.button_color >>;
+	}
+
+	@media only screen and (max-width: 596px) {
+		table.button {
+			text-align: center !important;
+		}
+	}
+</style>
+
 {% if widget.button_href and widget.button_text %}
 	{% if widget.alignment == 'left' %}
-		<style>
-			table.cta-button table.button a td {
-				background-color: << hex_color >> !important;
-			}
-
-			@media only screen and (max-width: 596px) {
-				table.cta-button table.button table td a {
-					text-align: center !important;
-				}
-			}
-		</style>
 
 		<table class="cta-button">
 			<tbody>
 				<tr>
 					<td class="standard-padding">
 						<button class="radius medium left-aligned" href="{{ widget.button_href }}">
-							<table>
-								<tr>
-									<td>
-										{{ widget.button_text }}
-									</td>
-								</tr>
-							</table>
+							{{ widget.button_text }}
 						</button>
 					</td>
 				</tr>
@@ -49,13 +54,7 @@
 					<td class="standard-padding">
 						<center>
 							<button class="radius medium" href="{{ widget.button_href }}">
-								<table>
-									<tr>
-										<td>
-											{{ widget.button_text }}
-										</td>
-									</tr>
-								</table>
+								{{ widget.button_text }}
 							</button>
 						</center>
 					</td>

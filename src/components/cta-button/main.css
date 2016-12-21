@@ -9,7 +9,7 @@ table.cta-button td {
 
 table.cta-button table.button a td {
 	color: #FFF;
-	Margin-bottom: 0;
+	margin-bottom: 0;
 	margin-bottom: 0;
 }
 
@@ -20,6 +20,7 @@ table.button tr td {
 table.button tr a {
 	border-radius: 1px;
 	color: #FFF;
+	display: block !important;
 	font-weight: lighter;
 }
 

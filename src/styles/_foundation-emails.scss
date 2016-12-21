@@ -1145,7 +1145,6 @@ table.button {
 table.button table td {
     text-align: left;
     color: $offWhite;
-    background: $customerColor;
     border: 2px solid $customerColor;
 }
 
@@ -1155,7 +1154,6 @@ table.button table td a {
     font-weight: bold;
     color: $offWhite;
     text-decoration: none;
-    border: 0 solid $customerColor;
     border-radius: 3px;
 }
 
