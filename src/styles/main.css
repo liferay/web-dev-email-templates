@@ -1379,15 +1379,10 @@ p.quote {
 .font-weight-bold {
   font-weight: 600; }
 
-.full-width-image {
-  width: 100%;
-  height: auto; }
-
-@media only screen and (max-width: 500px) {
-  .emailImage {
-    height: auto !important;
-    max-width: 600px !important;
-    width: 100% !important; } }
+img.full-width {
+  height: auto;
+  max-width: 580px;
+  width: 100%; }
 
 .no-margin-horizontal {
   margin-left: 0;

@@ -18,19 +18,11 @@
 	font-weight: 600;
 }
 
-// https://templates.mailchimp.com/development/responsive-email/fluid-images/
-.full-width-image {
-	width: 100%;
+img.full-width {
 	height: auto;
+	max-width: 580px;
+	width: 100%;
 }
-
-@media only screen and (max-width: 500px){
-        .emailImage{
-            height:auto !important;
-            max-width:600px !important;
-            width: 100% !important;
-        }
-    }
 
 .no-margin-horizontal {
 	margin-left: 0;
