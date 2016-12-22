@@ -13,11 +13,13 @@
 	<tbody>
 		<tr>
 			<td class="standard-padding">
-				{% if widget.full_width_image.src %}
-					<a href="{{ widget.href }}">
-						<img src="{{ widget.full_width_image.src }}" alt="{{ widget.full_width_image.alt }}">
-					</a>
-				{% endif %}
+				<row>
+					{% if widget.full_width_image.src %}
+						<td>
+							<img alt="{{ widget.full_width_image.alt }}" class="full-width" height="" src="{{ widget.full_width_image.src }}" width="580">
+						</td>
+					{% endif %}
+				</row>
 			</td>
 		</tr>
 	</tbody>
