@@ -1,1 +1,5 @@
 /* Enter Component Styles Here */
+
+table.paragraph td {
+	padding-bottom: 2em;
+}
