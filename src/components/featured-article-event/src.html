@@ -108,25 +108,13 @@
 						<td class="standard-padding-vertical">
 							{% if widget.alignment != 'left' %}
 								<center>
-									<button class="radius medium" href="{{ widget.button_href }}">
-										<table>
-											<tr>
-												<td>
-													{{ widget.button_text }}
-												</td>
-											</tr>
-										</table>
+									<button class="radius large" href="{{ widget.button_href }}">
+										{{ widget.button_text }}
 									</button>
 								</center>
 							{% else %}
-								<button class="radius medium" href="{{ widget.button_href }}">
-									<table>
-											<tr>
-												<td>
-													{{ widget.button_text }}
-												</td>
-											</tr>
-										</table>
+								<button class="radius large" href="{{ widget.button_href }}">
+									{{ widget.button_text }}
 								</button>
 							{% endif %}
 						</td>
