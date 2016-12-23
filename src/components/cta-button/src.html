@@ -9,8 +9,6 @@
 -->
 
 <!-- Component HTML -->
-{% set hex_color = widget.button_color %}
-
 <style>
 	table.button {
 		background-color: << widget.button_color >>;
@@ -40,14 +38,8 @@
 			<tbody>
 				<tr>
 					<td class="standard-padding">
-						<button class="radius medium left-aligned" href="{{ widget.button_href }}">
-							<table>
-								<tr>
-									<td>
-										{{ widget.button_text }}
-									</td>
-								</tr>
-							</table>
+						<button class="large left-aligned radius" href="{{ widget.button_href }}">
+							{{ widget.button_text }}
 						</button>
 					</td>
 				</tr>
@@ -59,14 +51,8 @@
 				<tr>
 					<td class="standard-padding">
 						<center>
-							<button class="radius medium" href="{{ widget.button_href }}">
-								<table>
-									<tr>
-										<td>
-											{{ widget.button_text }}
-										</td>
-									</tr>
-								</table>
+							<button class="large radius" href="{{ widget.button_href }}">
+								{{ widget.button_text }}
 							</button>
 						</center>
 					</td>

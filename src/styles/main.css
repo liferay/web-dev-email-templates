@@ -968,7 +968,8 @@ table.button {
 table.button table td {
   text-align: left;
   color: #FEFEFE;
-  border: 2px solid #33B88B; }
+  border: 2px solid #33B88B;
+  background: #33B88B; }
 
 table.button table td a {
   font-family: Helvetica, Arial, sans-serif;
@@ -976,7 +977,8 @@ table.button table td a {
   font-weight: bold;
   color: #FEFEFE;
   text-decoration: none;
-  border-radius: 3px; }
+  border-radius: 3px;
+  border: 0 solid #33B88B; }
 
 table.button a table td {
   padding: 12px 24px; }
@@ -1472,3 +1474,13 @@ img.full-width {
 
 .text-right {
   text-align: right; }
+
+table.button tr td a {
+  border-radius: 1px;
+  color: #FFF;
+  font-weight: lighter;
+  line-height: 2em;
+  padding: 1em; }
+
+table.button.left-aligned {
+  display: block; }

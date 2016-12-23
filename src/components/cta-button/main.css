@@ -6,24 +6,3 @@ table.cta-button {
 table.cta-button td {
 	color: #FFF;
 }
-
-table.cta-button table.button a td {
-	color: #FFF;
-	margin-bottom: 0;
-	margin-bottom: 0;
-}
-
-table.button tr td {
-	border-radius: 1px;
-}
-
-table.button tr a {
-	border-radius: 1px;
-	color: #FFF;
-	display: block;
-	font-weight: lighter;
-}
-
-table.button.left-aligned {
-	display: block;
-}
