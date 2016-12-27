@@ -13,16 +13,21 @@
 
 <style>
 	table.text-promotion table.button table tr td {
-		color: << hex_color >>;
+		color: #FFF;
 	}
 
-	table.text-promotion table.button a table tr {
-		border: 1px solid << hex_color >>;
+	table.button {
+		background-color: << hex_color >>;
+		background: << hex_color >>;
 	}
 
-	table.text-promotion table.button a td {
-		border: 0px solid << hex_color >>;
-		color: << hex_color >>;
+	table.button table td {
+		background-color: << hex_color >>;
+		background: << hex_color >>;
+	}
+
+	table.button table a {
+		border: 0 solid << hex_color >>;
 	}
 
 	@media only screen and (max-width: 596px) {
@@ -58,13 +63,7 @@
 							<row>
 								<td class="standard-padding-vertical">
 									<button class="radius medium" href="{{ widget.button_href }}">
-										<table>
-											<tr>
-												<td>
-													{{ widget.button_text }}
-												</td>
-											</tr>
-										</table>
+										{{ widget.button_text }}
 									</button>
 								</td>
 							</row>
