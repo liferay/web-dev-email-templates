@@ -1,5 +1,6 @@
 /* ---------- Borders ---------- */
 /* ---------- Colors ---------- */
+/* ---------- Font Stack ---------- */
 /* ---------- Spacing ---------- */
 .wrapper {
   width: 100%; }
@@ -1478,6 +1479,7 @@ img.full-width {
 table.button tr td a {
   border-radius: 1px;
   color: #FFF;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: lighter;
   line-height: 2em;
   padding: 1em; }
