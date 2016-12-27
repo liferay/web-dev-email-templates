@@ -7,6 +7,10 @@ center {
 	width: 100%;
 }
 
+.liferay-logo {
+	max-width: 150px;
+}
+
 td.border-bottom {
 	border-bottom: 1px solid #E3E4E5;
 }
