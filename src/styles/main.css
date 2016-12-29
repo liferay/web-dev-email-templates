@@ -1476,6 +1476,24 @@ img.full-width {
 .text-right {
   text-align: right; }
 
+.w25 {
+  width: 25%; }
+
+.w33 {
+  width: 33.3333%; }
+
+.w50 {
+  width: 50%; }
+
+.w66 {
+  width: 66.6666%; }
+
+.w75 {
+  width: 75%; }
+
+.w100 {
+  width: 100%; }
+
 table.button tr td a {
   border-radius: 1px;
   color: #FFF;
