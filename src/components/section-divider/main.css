@@ -3,16 +3,6 @@ center {
 	min-width: 0;
 }
 
-table.border-top {
+.border-top {
 	border-top: 1px solid #E3E4E5;
-	width: 75%;
-}
-
-table.horizontal-rule td {
-	font-size: 1px;
-	height: 0;
-	margin: 0;
-	max-height: 0;
-	vertical-align: middle;
-	width: 100%;
 }
