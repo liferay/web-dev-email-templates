@@ -18,9 +18,3 @@ table.button table a {
 	border: 0 solid << widget.button_color >>;
 	color: #FFF;
 }
-
-@media only screen and (max-width: 596px) {
-	table.button {
-		text-align: center !important;
-	}
-}
