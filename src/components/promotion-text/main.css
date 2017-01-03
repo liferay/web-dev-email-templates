@@ -1,20 +1,44 @@
 /* Enter Component Styles Here */
-table.button a {
-	border-radius: 3px;
-}
-
-table.button a td, table.button table tr td {
-	background-color: transparent;
-}
-
-td.content {
-	background-color: #EFEFEF;
-}
-
 table.text-promotion {
 	width: 100%;
 }
 
 table.text-promotion th {
 	padding-bottom: 0;
+}
+
+td.content {
+	background-color: #EFEFEF;
+}
+
+table.button tr td a {
+	border: 0 solid << widget.button_audience >>;
+	color: << widget.button_audience >>;
+}
+
+table.button {
+	background-color: transparent;
+	background: transparent;
+	border: 1px solid << widget.button_audience >>;
+}
+
+table.button a {
+	border-radius: 3px;
+}
+
+table.button table td {
+	background-color: transparent;
+	background: transparent;
+	color: << widget.button_audience >>;
+}
+
+table.button tr td a {
+	border: 0 solid << widget.button_audience >>;
+	color: << widget.button_audience >>;
+}
+
+@media only screen and (max-width: 596px) {
+	table.text-promotion table.button table td a {
+		text-align: center !important;
+	}
 }
