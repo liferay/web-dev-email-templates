@@ -9,28 +9,6 @@
 -->
 
 <!-- Component HTML -->
-<style>
-	table.button {
-		background-color: << widget.button_color >>;
-		background: << widget.button_color >>;
-	}
-
-	table.button table td {
-		background-color: << widget.button_color >>;
-		background: << widget.button_color >>;
-	}
-
-	table.button table a {
-		border: 0 solid << widget.button_color >>;
-	}
-
-	@media only screen and (max-width: 596px) {
-		table.button {
-			text-align: center !important;
-		}
-	}
-</style>
-
 {% if widget.button_href and widget.button_text %}
 	{% if widget.alignment == 'left' %}
 

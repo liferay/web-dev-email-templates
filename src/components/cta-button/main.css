@@ -3,6 +3,24 @@ table.cta-button {
 	width: 100%;
 }
 
-table.cta-button td {
+table.button {
+	background-color: << widget.button_color >>;
+	background: << widget.button_color >>;
+	border-width: 0;
+}
+
+table.button table td {
+	background-color: << widget.button_color >>;
+	background: << widget.button_color >>;
+}
+
+table.button table a {
+	border: 0 solid << widget.button_color >>;
 	color: #FFF;
+}
+
+@media only screen and (max-width: 596px) {
+	table.button {
+		text-align: center !important;
+	}
 }
