@@ -1497,9 +1497,10 @@ img.full-width {
 table.button tr td a {
   border-radius: 1px;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-weight: lighter;
-  line-height: 2em;
-  padding: 1em; }
+  line-height: 3em;
+  padding: 2em; }
 
 table.button.left-aligned {
   display: block; }
