@@ -1,8 +1,14 @@
 /* Enter Component Styles Here */
-#footer, a, p {
-	color: #909295;
+
+table.office-location-super-simple td,
+table.office-location-super-simple a, {
+	color: #474a4b;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
 }
 
-#footer a.link-text {
-	font-style: italic;
+table.office-location-super-simple a.link-text {
+	text-decoration: underline;
+	color: #909295;
 }

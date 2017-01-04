@@ -59,39 +59,37 @@
 	{% set var_registration_number = "60989327" %}
 {% endif %}
 
-<table class="office-location-simple row">
-	<row >
-		<center>
-			<td class="small-padding">
-				<div class="widget-span widget-type-email_can_spam text-center" data-widget-type="email_can_spam">
-					<row>
-						<td id="footer" class="small-padding text-center">
-							<a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >Unsubscribe</a>
-						</td>
-					</row>
+<table class="office-location-super-simple row">
+	<row>
+		<td>
+			<div class="widget-span widget-type-email_can_spam" data-widget-type="email_can_spam">
+				<row>
+					<td id="footer">
+						<a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >Unsubscribe</a>
+					</td>
+				</row>
 
-					<row>
-						<td class="small-padding">
-							<p class="text-center">{{ site_settings.company_name }}<br />
-								{{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}<br />
-								{{ site_settings.company_city }} {{ site_settings.company_state }} <br />
+				<row>
+					<td>
+						<p">{{ site_settings.company_name }}<br />
+							{{ site_settings.company_street_address_1 }} {{ site_settings.company_street_address_2 }}<br />
+							{{ site_settings.company_city }} {{ site_settings.company_state }} <br />
 
-								{% if bool_registration_location == True %}
-									{{ var_registration_location }}: {{ var_registration_number }}<br />
-								{% endif %}
+							{% if bool_registration_location == True %}
+								{{ var_registration_location }}: {{ var_registration_number }}<br />
+							{% endif %}
 
-								{% if bool_managing_director == True %}
-									{{ var_managing_director }}<br />
-								{% endif %}
+							{% if bool_managing_director == True %}
+								{{ var_managing_director }}<br />
+							{% endif %}
 
-								{% if bool_email == True %}
-									<a href="mailto:{{ var_email }}">{{ var_email }}</a><br />
-								{% endif %}
-							</p>
-						</td>
-					</row>
-				</div><!--end widget-span -->
-			</td>
-		</center>
+							{% if bool_email == True %}
+								<a href="mailto:{{ var_email }}">{{ var_email }}</a><br />
+							{% endif %}
+						</p>
+					</td>
+				</row>
+			</div><!--end widget-span -->
+		</td>
 	</row><!--end footer wrapper -->
 </table>
