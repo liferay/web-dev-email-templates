@@ -1,0 +1,51 @@
+/* Enter Component Styles Here */
+.blank, .calendar-icon {
+	height: 32px;
+	width: 32px;
+}
+
+.calendar {
+	padding-top: 14px;
+	width: 50px;
+}
+
+.calendar-events {
+	width: 100%;
+}
+
+.calendar-icon {
+	border: 1px solid #4C4C4C;
+}
+
+.calendar-icon .day {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 18px;
+}
+
+.calendar-icon .month {
+	background-color: #4C4C4C;
+	color: #FFF;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 15px;
+}
+
+.calendar-icon .day, .calendar-icon .month {
+	text-align: center;
+}
+
+.event-column {
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+
+.event-details a {
+	color: #909295;
+	line-height: 24px;
+}
+
+.event-title {
+	line-height: 24px;
+}

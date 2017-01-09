@@ -1,0 +1,65 @@
+<table class="block-quote" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+    <tbody>
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+            <td class="standard-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 1em; text-align: left; vertical-align: top; word-wrap: break-word;">
+                <table class="row quote-mark-wrapper" style="Margin: 0 0 -3em 0; border-collapse: collapse; border-spacing: 0; margin-bottom: -3em; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                <div class="quote-mark" style="color: #E3E4E5; font-size: 4em; text-align: center;">&#8220;</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <center data-parsed="" style="min-width: 0; width: 100%;">
+                    <table align="center" class="row quote-text-wrapper float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; margin: 0 auto; max-width: 480px; min-width: 200px; padding: 0; position: relative; text-align: center; vertical-align: top; width: 100%;">
+                        <tbody>
+                            <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                <td class="standard-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 1em; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                    <p class="quote-text" style="Margin: 0; color: #6A708B; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 1.5em; font-weight: 300; line-height: 1.2; margin: 0; padding: 0; text-align: center;">{{ widget.quote_text }}</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+
+                {% if widget.headshot.src %}
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td class="headshot small-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0.5em; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                <center data-parsed="" style="min-width: 0; width: 100%;">
+                                    <table align="center" class="float-center" style="Margin: 0 auto; border-collapse: collapse; border-spacing: 0; float: none; height: 60px; margin: 0 auto; padding: 0; text-align: center; vertical-align: top; width: 60px;">
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                            <td valign="top" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                <img src="{{ widget.headshot.src }}" width="{{ widget.headshot.width }}" height="{{ widget.headshot.height }}" style="-ms-interpolation-mode: bicubic; clear: both; display: block; height: 60px; max-width: 100%; outline: none; text-decoration: none; width: 60px;">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </center>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% endif %} {%if widget.author_company || widget.author_name || widget.author_title %}
+                <table class="row author-info" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; padding-bottom: 1em; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                <div class="author-name" style="font-style: italic; font-weight: normal; text-align: center;">
+                                    {{ widget.author_name }}
+                                </div>
+
+                                <div class="author-title" style="font-style: italic; font-weight: lighter; text-align: center;">
+                                    {{ widget.author_title }}{%if widget.author_company && widget.author_title %}, {% endif %}{{ widget.author_company }}
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% endif %}
+            </td>
+        </tr>
+    </tbody>
+</table>

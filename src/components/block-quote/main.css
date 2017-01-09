@@ -1,0 +1,61 @@
+/* Enter Component Styles Here */
+
+center {
+	min-width: 0;
+}
+
+.author-info td {
+	padding-bottom: 1em;
+}
+
+.author-name, .author-title {
+	font-style: italic;
+}
+
+.author-name, .author-title, .quote-mark, .quote-text {
+	text-align: center;
+}
+
+.author-name {
+	font-weight: normal;
+}
+
+.author-title {
+	font-weight: lighter;
+}
+
+.block-quote {
+	width: 100%;
+}
+
+.headshot img, .headshot table {
+	width: 60px;
+	height: 60px;
+}
+
+.quote-mark {
+	color: #E3E4E5;
+	font-size: 4em;
+}
+
+.quote-mark-wrapper {
+	Margin: 0 0 -3em 0;
+	margin-bottom: -3em;
+}
+
+.quote-text {
+	color: #6A708B;
+	font-size: 1.5em;
+	line-height: 1.2;
+}
+
+.quote-text-wrapper {
+	margin: 0 auto;
+	max-width: 480px;
+	min-width: 200px;
+	width: 80%;
+}
+
+.row {
+	width: 100%;
+}

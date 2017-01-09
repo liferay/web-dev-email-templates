@@ -1,0 +1,79 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+<style>
+	@media only screen and (max-width: 500px) {
+		.speaker-headshot, .speaker-headshot img {
+			height: 60px !important;
+			width: 60px !important;
+		}
+	}
+</style>
+
+<!--[if gte mso 9]>
+	<style type="text/css">
+		.speaker-headshot, .speaker-headshot img {
+			height: 150px;
+			width: 150px;
+		}
+
+		@media only screen and (max-width: 596px) {
+			.speaker-headshot, .speaker-headshot img {
+				height: 60px !important;
+				width: 60px !important;
+			}
+		}
+	</style>
+<![endif]-->
+
+<table class="speaker-info">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				<row>
+					{% if widget.speaker_headshot.src %}
+						<td class="speaker-headshot">
+							<table>
+								<tr>
+									<td valign="top">
+										<img src="{{ widget.speaker_headshot.src }}" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					{% endif %}
+
+					<td class="medium-padding-horizontal speaker-details">
+						<row>
+							<td>
+								<h2 class="speaker-name">
+									{{ widget.speaker_name }}
+								</h2>
+
+								<div class="speaker-title">
+									{{ widget.speaker_title }}{% if widget.speaker_company && widget.speaker_title %}, {% endif %}{{ widget.speaker_company }}
+								</div>
+							</td>
+						</row>
+
+						<row>
+							<td class="standard-padding-vertical">
+								<div class="speaker-bio">
+									{{ widget.speaker_bio }}
+								</div>
+							</td>
+						</row>
+					</td>
+				</row>
+			</td>
+		</tr>
+	</tbody>
+</table>

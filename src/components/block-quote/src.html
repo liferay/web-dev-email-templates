@@ -1,0 +1,63 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+
+<table class="block-quote">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				<row class="quote-mark-wrapper">
+					<td>
+						<div class="quote-mark">&#8220;</div>
+					</td>
+				</row>
+
+				<center>
+					<row class="quote-text-wrapper">
+						<td class="standard-padding">
+							<p class="quote-text">{{ widget.quote_text }}</p>
+						</td>
+					</row>
+				</center>
+
+				{% if widget.headshot.src %}
+					<row>
+						<td class="headshot small-padding">
+							<center>
+								<table>
+									<tr>
+										<td valign="top">
+											<img src="{{ widget.headshot.src }}" width="{{ widget.headshot.width }}" height="{{ widget.headshot.height }}">
+										</td>
+									</tr>
+								</table>
+							</center>
+						</td>
+					</row>
+				{% endif %}
+
+				{%if widget.author_company || widget.author_name || widget.author_title %}
+					<row class="author-info">
+						<td>
+							<div class="author-name">
+								{{ widget.author_name }}
+							</div>
+
+							<div class="author-title">
+								{{ widget.author_title }}{%if widget.author_company && widget.author_title %}, {% endif %}{{ widget.author_company }}
+							</div>
+						</td>
+					</row>
+				{% endif %}
+			</td>
+		</tr>
+	</tbody>
+</table>

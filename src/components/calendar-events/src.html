@@ -1,0 +1,139 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+
+<style type="text/css">
+	@media only screen and (max-width: 500px) {
+		.event {
+			max-width: 100% !important;
+		}
+
+		.event-column {
+			max-width: 100% !important;
+			width: 100% !important;
+		}
+
+		.hide-on-wrap {
+			display: none;
+		}
+	}
+</style>
+
+{% set event_display_dates = widget.display_dates|split(':;:') %}
+{% set event_end_dates = widget.end_dates|split(':;:') %}
+{% set event_locations = widget.locations|split(':;:') %}
+{% set event_start_dates = widget.start_dates|split(':;:') %}
+{% set event_start_months = widget.start_months|split(':;:') %}
+{% set event_titles = widget.titles|split(':;:') %}
+{% set event_urls = widget.urls|split(':;:') %}
+
+{% macro print_event_info(event_title, event_start_date, event_end_date, event_start_month, event_display_date, event_location, event_url, show_calendar, css_class) %}
+	<row>
+		{% if show_calendar %}
+			<td class="calendar small-padding">
+				<table class="calendar-icon {{ css_class }}">
+					<tbody>
+						<td>
+							<div class="month">
+								{{ event_start_month|upper }}
+							</div>
+
+							<div class="day">
+								{{ event_start_date|split('-')|first }}
+							</div>
+						</td>
+					</tbody>
+				</table>
+			</td>
+		{% else %}
+			<td class="calendar small-padding">
+				<div class="blank">&nbsp;</div>
+			</td>
+		{% endif %}
+
+		<td class="event small-padding">
+			<div class="event-title">
+				<a href="{{ event_url }}">{{ event_title }}</a>
+			</div>
+
+			<div class="event-details">
+				<a href="{{ event_url }}">{{ event_display_date }} &#8212; {{ event_location }}</a>
+			</div>
+		</td>
+	</row>
+{% endmacro %}
+
+{% macro process_event(event_title, loop_obj, first_item) %}
+	{% set i = loop_obj.index0 %}
+
+	{% if i > 0 %}
+		{% set prev_index = i - 1 %}
+	{% endif %}
+
+	{% set show_calendar_icon = True %}
+	{% set hide_on_wrap = '' %}
+
+	{% if event_start_dates[i] == event_start_dates[prev_index] %}
+		{% if !first_item %}
+			{% set show_calendar_icon = False %}
+		{% endif %}
+
+		{% if first_item && i > 0 %}
+			{% set hide_on_wrap = 'hide-on-wrap' %}
+		{% endif %}
+	{% endif %}
+
+	{{ print_event_info(event_title, event_start_dates[i], event_end_dates[i], event_start_months[i], event_display_dates[i], event_locations[i], event_urls[i], show_calendar_icon, hide_on_wrap) }}
+{% endmacro %}
+
+<table class="calendar-events">
+	<tbody>
+		<tr>
+			<td class="standard-padding small-padding-horizontal">
+				<span class="event-column">
+					{% for event in event_titles %}
+						{% set total_events = loop.length %}
+
+						{% set half_events = (total_events / 2) + 0.5 %}
+
+						{% if total_events|divisible(2) %}
+							{% set half_event = total_events / 2 %}
+						{% endif %}
+
+						{% if half_events >= loop.index %}
+							{{ process_event(event, loop, loop.first) }}
+						{% endif %}
+					{% endfor %}
+				</span>
+
+				<span class="event-column">
+					{% set first_item_in_column = True %}
+
+					{% for event in event_titles %}
+						{% set total_events = loop.length %}
+
+						{% set half_events = (total_events / 2) + 0.5 %}
+
+						{% if total_events|divisible(2) %}
+							{% set half_event = total_events / 2 %}
+						{% endif %}
+
+						{% if loop.index > half_events %}
+							{{ process_event(event, loop, first_item_in_column) }}
+
+							{% set first_item_in_column = False %}
+						{% endif %}
+					{% endfor %}
+				</span>
+			</td>
+		</tr>
+	</tbody>
+</table>

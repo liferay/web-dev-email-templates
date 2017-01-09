@@ -1,0 +1,39 @@
+/* Enter Component Styles Here */
+.session-summary {
+	font-weight: lighter;
+}
+
+.session-details {
+	padding-right: 0;
+	min-width: 250px;
+}
+
+.session-info {
+	width: 100%;
+}
+
+.session-speaker-headshot {
+	max-width: 150px;
+	min-width: 60px;
+}
+
+.session-speaker-headshot img {
+	height: auto;
+	max-width: 150px;
+	min-width: 60px;
+}
+
+.session-title {
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+	text-transform: none;
+}
+
+.session-speaker-info {
+	font-style: italic;
+	font-weight: lighter;
+}
+
+.session-when-where {
+	padding-bottom: 1em;
+}

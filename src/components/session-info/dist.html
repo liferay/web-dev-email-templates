@@ -1,0 +1,84 @@
+<style>
+    @media only screen and (max-width: 500px) {
+    		.session-speaker-headshot, .session-speaker-headshot img {
+    			height: 60px;
+    			width: 60px;
+    		}
+    
+    		.session-speaker-headshot, .session-speaker-headshot img {
+    			height: 60px !important;
+    			width: 60px !important;
+    		}
+    	}
+</style>
+
+<table class="session-info" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+    <tbody>
+        <tr style="padding: 0; text-align: left; vertical-align: top;">
+            <td class="standard-padding" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 1em; text-align: left; vertical-align: top; word-wrap: break-word;">
+                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tbody>
+                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            {% if widget.speaker_headshot.src %}
+                            <td class="session-speaker-headshot" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; max-width: 150px; min-width: 60px; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                <table style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
+                                    <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                        <td valign="top" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                            <img src="{{ widget.speaker_headshot.src }}" style="-ms-interpolation-mode: bicubic; clear: both; display: block; height: auto; max-width: 150px; min-width: 60px; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            {% endif %}
+
+                            <td class="medium-padding-horizontal session-details" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; min-width: 250px; padding: 0; padding-left: 2em; padding-right: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                                    <tbody>
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                <div class="session-when-where" style="padding-bottom: 1em;">
+                                                    {% if widget.session_date %} {{ widget.session_date }}
+                                                    <br>{% endif %} {% if widget.session_time %} {{ widget.session_time }}
+                                                    <br>{% endif %} {% if widget.session_venue %} {{ widget.session_venue }}
+                                                    <br>{% endif %}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                                    <tbody>
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                            <td style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                <h3 class="session-title" style="Margin: 0; color: #474A4B; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.4px; line-height: 20px; margin: 0; margin-bottom: 0 !important; margin-top: 0 !important; padding: 0.3em 0; text-align: left; text-transform: none; word-wrap: normal;">
+									{{ widget.session_title }}
+								</h3>
+
+                                                <div class="session-speaker-info" style="font-style: italic; font-weight: lighter;">
+                                                    {{ widget.speaker_name }}{% if widget.speaker_name && widget.speaker_title %}, {% endif %}{{ widget.speaker_title }}{% if (widget.speaker_name || widget.speaker_title) && widget.speaker_company %}, {% endif %}{{ widget.speaker_company }}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="row" style="border-collapse: collapse; border-spacing: 0; padding: 0; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                                    <tbody>
+                                        <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                            <td class="standard-padding-vertical" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; box-sizing: border-box; color: #474a4b; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 0; padding-bottom: 1em; padding-top: 1em; text-align: left; vertical-align: top; word-wrap: break-word;">
+                                                <div class="session-summary" style="font-weight: lighter;">
+                                                    {{ widget.session_summary }}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>

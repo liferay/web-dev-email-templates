@@ -1,0 +1,87 @@
+<!-- Don't Touch Me -->
+<link rel="stylesheet" href="../../styles/main.css">
+<link rel="stylesheet" href="main.css">
+
+<!-- Hubspot Variables
+	To insert hubspot variables, they have a general syntax of {{ widget.FIELDNAME }}. Please copy and paste from Hubspot's Custom Module builder or view their docs.
+
+	For docs see: http://designers.hubspot.com/docs/cos/custom-modules
+-->
+
+<!-- Component HTML -->
+<style>
+	@media only screen and (max-width: 500px) {
+		.session-speaker-headshot, .session-speaker-headshot img {
+			height: 60px;
+			width: 60px;
+		}
+
+		.session-speaker-headshot, .session-speaker-headshot img {
+			height: 60px !important;
+			width: 60px !important;
+		}
+	}
+</style>
+
+<table class="session-info">
+	<tbody>
+		<tr>
+			<td class="standard-padding">
+				<row>
+					{% if widget.speaker_headshot.src %}
+						<td class="session-speaker-headshot">
+							<table>
+								<tr>
+									<td valign="top">
+										<img src="{{ widget.speaker_headshot.src }}" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					{% endif %}
+
+					<td class="medium-padding-horizontal session-details">
+						<row>
+							<td>
+								<div class="session-when-where">
+									{% if widget.session_date %}
+										{{ widget.session_date }}
+										<br />
+									{% endif %}
+									{% if widget.session_time %}
+										{{ widget.session_time }}
+										<br />
+									{% endif %}
+									{% if widget.session_venue %}
+										{{ widget.session_venue }}
+										<br />
+									{% endif %}
+								</div>
+							</td>
+						</row>
+
+						<row>
+							<td>
+								<h3 class="session-title">
+									{{ widget.session_title }}
+								</h3>
+
+								<div class="session-speaker-info">
+									{{ widget.speaker_name }}{% if widget.speaker_name && widget.speaker_title %}, {% endif %}{{ widget.speaker_title }}{% if (widget.speaker_name || widget.speaker_title) && widget.speaker_company %}, {% endif %}{{ widget.speaker_company }}
+								</div>
+							</td>
+						</row>
+
+						<row>
+							<td class="standard-padding-vertical">
+								<div class="session-summary">
+									{{ widget.session_summary }}
+								</div>
+							</td>
+						</row>
+					</td>
+				</row>
+			</td>
+		</tr>
+	</tbody>
+</table>
