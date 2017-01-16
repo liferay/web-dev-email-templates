@@ -10,46 +10,48 @@
 
 <!-- Component HTML -->
 
-<table class="signature">
-	<tbody>
-		<tr>
-			<td class="standard-padding medium-padding-vertical">
-				<row>
-					{% if widget.headshot.src %}
-						<td class="headshot">
-							<table>
-								<tr>
-									<td valign="top">
-										<img src="{{ widget.headshot.src }}" width="{{ widget.headshot.width }}" height="{{ widget.headshot.height }}">
-									</td>
-								</tr>
-							</table>
-						</td>
-					{% endif %}
+{% if widget.signee_name %}
+	<table class="signature">
+		<tbody>
+			<tr>
+				<td class="standard-padding medium-padding-vertical">
+					<row>
+						{% if widget.headshot.src %}
+							<td class="headshot">
+								<table>
+									<tr>
+										<td valign="top">
+											<img src="{{ widget.headshot.src }}" width="{{ widget.headshot.width }}" height="{{ widget.headshot.height }}">
+										</td>
+									</tr>
+								</table>
+							</td>
+						{% endif %}
 
-					{% if widget.signature_image.src or widget.signee_name or widget.signee_title %}
-						<td class="signee">
-							<table>
-								<tr>
-									<td class="standard-padding-horizontal">
-										{% if widget.signature_image.src %}
-											<img src="{{ widget.signature_image.src }}" width="{{ widget.signature_image.width }}" height="{{ widget.signature_image.height }}">
-										{% endif %}
+						{% if widget.signature_image.src or widget.signee_name or widget.signee_title %}
+							<td class="signee">
+								<table>
+									<tr>
+										<td class="standard-padding-horizontal">
+											{% if widget.signature_image.src %}
+												<img src="{{ widget.signature_image.src }}" width="{{ widget.signature_image.width }}" height="{{ widget.signature_image.height }}">
+											{% endif %}
 
-										{% if widget.signee_name %}
-											<div class="signee-name">{{ widget.signee_name }}</div>
-										{% endif %}
+											{% if widget.signee_name %}
+												<div class="signee-name">{{ widget.signee_name }}</div>
+											{% endif %}
 
-										{% if widget.signee_title %}
-											<div class="signee-title">{{ widget.signee_title }}</div>
-										{% endif %}
-									</td>
-								</tr>
-							</table>
-						</td>
-					{% endif %}
-				</row>
-			</td>
-		</tr>
-	</tbody>
-</table>
+											{% if widget.signee_title %}
+												<div class="signee-title">{{ widget.signee_title }}</div>
+											{% endif %}
+										</td>
+									</tr>
+								</table>
+							</td>
+						{% endif %}
+					</row>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+{% endif %}

@@ -10,47 +10,50 @@
 
 <!-- Component HTML -->
 
-<style>
-	@media only screen and (max-width: 596px) {
-		table.text-promotion table.button table td a {
-			text-align: center !important;
+{% if widget.body_text %}
+	<style>
+		@media only screen and (max-width: 596px) {
+			table.text-promotion table.button table td a {
+				text-align: center !important;
+			}
 		}
-	}
-</style>
-<table class="text-promotion">
-	<tbody>
-		<tr>
-			<td class="standard-padding">
-				<row>
-					<td class="content medium-padding">
-						{% if widget.header %}
+	</style>
+
+	<table class="text-promotion">
+		<tbody>
+			<tr>
+				<td class="standard-padding">
+					<row>
+						<td class="content medium-padding">
+							{% if widget.header %}
+								<row>
+									<td>
+										<h3>{{ widget.header }}</h3>
+									</td>
+								</row>
+							{% endif %}
+
+							{% if widget.body_text %}
 							<row>
 								<td>
-									<h3>{{ widget.header }}</h3>
+									<p>{{ widget.body_text }}</p>
 								</td>
 							</row>
-						{% endif %}
+							{% endif %}
 
-						{% if widget.body_text %}
-						<row>
-							<td>
-								<p>{{ widget.body_text }}</p>
-							</td>
-						</row>
-						{% endif %}
-
-						{% if widget.button_href and widget.button_text %}
-							<row>
-								<td class="standard-padding-vertical">
-									<button class="radius" href="{{ widget.button_href }}">
-										{{ widget.button_text }}
-									</button>
-								</td>
-							</row>
-						{% endif %}
-					</td>
-				</row>
-			</td>
-		</tr>
-	</tbody>
-</table>
+							{% if widget.button_href and widget.button_text %}
+								<row>
+									<td class="standard-padding-vertical">
+										<button class="radius" href="{{ widget.button_href }}">
+											{{ widget.button_text }}
+										</button>
+									</td>
+								</row>
+							{% endif %}
+						</td>
+					</row>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+{% endif %}

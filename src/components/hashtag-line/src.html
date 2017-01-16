@@ -12,24 +12,22 @@
 
 {% set hex_color = widget.audience %}
 
-<style>
-	td.hash-phrase, .hash-phrase a, td.hash-phrase p {
-		color: << hex_color >> !important;
-	}
-</style>
-
-<center>
-	<table class="medium">
-		<tr>
-			<td>
-				<table>
-					<tr>
-						<td class="hash-phrase medium-padding">
-							<p>{{ widget.hash_phrase|replace(widget.hash_link_phrase, var) }}</p>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-</center>
+{% if widget.hash_phrase %}
+	<center>
+		<table class="hashtag-line">
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td class="hash-phrase medium-padding">
+								<p>
+									<a href="{{widget.hash_link}}">{{widget.hash_phrase}}</a>
+								</p>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</center>
+{% endif %}

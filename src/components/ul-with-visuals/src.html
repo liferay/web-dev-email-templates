@@ -28,25 +28,27 @@
 	}
 </style>
 
-<table class="list-item">
-	<tbody>
-		<tr>
-			{% if widget.list_item_visual.src %}
-				<td class="list-item-image standard-padding" valign="top">
-					<center>
-						<img src="{{ widget.list_item_visual.src }}" width="{{ widget.list_item_visual.width }}" height="{{ widget.list_item_visual.height }}" alt="{{ widget.list_item_visual.alt }}">
-					</center>
-				</td>
-			{% endif %}
-			<td class="list-item-description standard-padding">
-				{% if widget.list_item_header %}
-					<strong style="line-height: 30px !important;">{{ widget.list_item_header }}</strong>
+{% if widget.list_item_text %}
+	<table class="list-item">
+		<tbody>
+			<tr>
+				{% if widget.list_item_visual.src %}
+					<td class="list-item-image standard-padding" valign="top">
+						<center>
+							<img src="{{ widget.list_item_visual.src }}" width="{{ widget.list_item_visual.width }}" height="{{ widget.list_item_visual.height }}" alt="{{ widget.list_item_visual.alt }}">
+						</center>
+					</td>
 				{% endif %}
+				<td class="list-item-description standard-padding">
+					{% if widget.list_item_header %}
+						<strong style="line-height: 30px !important;">{{ widget.list_item_header }}</strong>
+					{% endif %}
 
-				{% if widget.list_item_text %}
-					<p>{{ widget.list_item_text }}</p>
-				{% endif %}
-			</td>
-		</tr>
-	</tbody>
-</table>
+					{% if widget.list_item_text %}
+						<p>{{ widget.list_item_text }}</p>
+					{% endif %}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+{% endif %}

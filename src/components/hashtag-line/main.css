@@ -1,6 +1,5 @@
 /* Enter Component Styles Here */
-td.hash-phrase a {
-	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-	font-weight: bold;
+table.hashtag-line a {
+	color: << hex_color >>;
 	text-decoration: none;
 }
