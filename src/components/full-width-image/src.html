@@ -16,7 +16,9 @@
 				<row>
 					{% if widget.full_width_image.src %}
 						<td>
+							{% if widget.href %}<a href="{{ widget.href }}">{% endif %}
 							<img alt="{{ widget.full_width_image.alt }}" class="full-width" height="" src="{{ widget.full_width_image.src }}" width="580">
+							{% if widget.href %}</a>{% endif %}
 						</td>
 					{% endif %}
 				</row>
