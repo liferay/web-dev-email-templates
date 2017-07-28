@@ -2,13 +2,7 @@
 
 table.office-location-super-simple td,
 table.office-location-super-simple a, {
-	color: #474a4b;
-	font-family: Arial, sans-serif;
-	font-size: 12px;
-	font-weight: normal;
-}
-
-table.office-location-super-simple a.link-text {
-	text-decoration: underline;
-	color: #909295;
+	color: #4C4C4C;
+	font-family: "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
+	font-size: 14px;
 }

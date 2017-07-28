@@ -1,7 +1,4 @@
 /* Enter Component Styles Here */
-.session-summary {
-	font-weight: lighter;
-}
 
 .session-details {
 	padding-right: 0;
@@ -31,7 +28,6 @@
 
 .session-speaker-info {
 	font-style: italic;
-	font-weight: lighter;
 }
 
 .session-when-where {
