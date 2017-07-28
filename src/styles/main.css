@@ -83,7 +83,7 @@ table.body {
   width: 100%; }
 
 table.container {
-  background: #FEFEFE;
+  background: #FAFBFC;
   width: 580px;
   margin: 0 auto;
   Margin: 0 auto;
@@ -826,7 +826,7 @@ p,
 td,
 th,
 a {
-  color: #4C4C4E;
+  color: #4C4C4C;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: normal;
   padding: 0;
@@ -880,11 +880,11 @@ p.lead {
 p.subheader {
   font-weight: normal;
   line-height: 1.4;
-  color: #4C4C4E; }
+  color: #4C4C4C; }
 
 small {
   font-size: 80%;
-  color: #4C4C4E; }
+  color: #4C4C4C; }
 
 a {
   color: #1C75B9;
@@ -919,10 +919,10 @@ pre {
   Margin: 30px 0; }
 
 pre code {
-  color: #4C4C4E; }
+  color: #4C4C4C; }
 
 pre code span.callout {
-  color: #4C4C4E;
+  color: #4C4C4C;
   font-weight: bold; }
 
 pre code span.callout-strong {
@@ -937,7 +937,7 @@ table.hr th {
   max-width: 580px;
   border-top: 0;
   border-right: 0;
-  border-bottom: 1px solid #4C4C4E;
+  border-bottom: 1px solid #4C4C4C;
   border-left: 0;
   margin: 20px auto;
   Margin: 20px auto;
@@ -968,7 +968,7 @@ table.button {
 
 table.button table td {
   text-align: left;
-  color: #FEFEFE;
+  color: #FAFBFC;
   border: 2px solid #33B88B;
   background: #33B88B; }
 
@@ -976,7 +976,7 @@ table.button table td a {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: #FEFEFE;
+  color: #FAFBFC;
   text-decoration: none;
   border-radius: 3px;
   border: 0 solid #33B88B; }
@@ -1000,7 +1000,7 @@ table.button.small table tr td a:visited,
 table.button.large:hover table tr td a,
 table.button.large:active table tr td a,
 table.button.large table tr td a:visited {
-  color: #FEFEFE; }
+  color: #FAFBFC; }
 
 table.button.tiny table td,
 table.button.tiny table a {
@@ -1042,7 +1042,7 @@ table.button:hover table td,
 table.button:visited table td,
 table.button:active table td {
   background: #005B96;
-  color: #FEFEFE; }
+  color: #FAFBFC; }
 
 table.button:hover table a,
 table.button:visited table a,
@@ -1051,31 +1051,31 @@ table.button:active table a {
 
 table.button.secondary table td {
   background: #909295;
-  color: #FEFEFE;
+  color: #FAFBFC;
   border: 0px solid #909295; }
 
 table.button.secondary table a {
-  color: #FEFEFE;
+  color: #FAFBFC;
   border: 0 solid #909295; }
 
 table.button.secondary:hover table td {
   background: #909295;
-  color: #FEFEFE; }
+  color: #FAFBFC; }
 
 table.button.secondary:hover table a {
   border: 0 solid #909295; }
 
 table.button.secondary:hover table td a {
-  color: #FEFEFE; }
+  color: #FAFBFC; }
 
 table.button.secondary:active table td a {
-  color: #FEFEFE; }
+  color: #FAFBFC; }
 
 table.button.secondary table td a:visited {
-  color: #FEFEFE; }
+  color: #FAFBFC; }
 
 .thumbnail {
-  border: solid 4px #FEFEFE;
+  border: solid 4px #FAFBFC;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
   display: inline-block;
   line-height: 0;
@@ -1319,53 +1319,47 @@ p,
 td,
 th,
 a {
-  color: #474a4b;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  color: #4C4C4C;
+  font-family: "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
   font-weight: normal; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #6a708b; }
+h1 a,
+h2 a,
+h3 a {
+  text-decoration: none; }
 
 h1 {
-  font-size: 32px;
-  font-weight: 200;
-  line-height: 38px; }
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 44px; }
 
-h2 {
+h2, p.quote, p.subheading {
   font-size: 24px;
-  font-weight: 200;
-  line-height: 28.8px; }
+  line-height: 30px; }
 
-h2.subheading {
-  font-size: 20px;
-  line-height: 24px; }
+h2 a, h3 {
+  font-weight: 600; }
 
 h3 {
-  color: #474A4B;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  line-height: 20px;
-  text-transform: uppercase; }
+  font-size: 22px;
+  line-height: 30px; }
 
 h3.small-caps {
+  color: #909295;
   font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase; }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 20px; }
+  line-height: 26px; }
 
 p.quote {
-  color: #708D9C;
-  font-size: 20px;
-  line-height: 24px; }
+  color: #909295; }
+
+p.subheading a {
+  font-weight: 400; }
 
 .first {
   padding-left: 16px; }
@@ -1495,10 +1489,10 @@ img.full-width {
   width: 100%; }
 
 table.button tr td a {
-  border-radius: 1px;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: lighter;
+  border-radius: 4px;
+  font-family: "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 3em;
   padding: 2em; }
 

@@ -1,7 +1,4 @@
 /* Enter Component Styles Here */
-.speaker-bio {
-	font-weight: lighter;
-}
 
 .speaker-details {
 	padding-right: 0;
@@ -30,5 +27,4 @@
 
 .speaker-title {
 	font-style: italic;
-	font-weight: lighter;
 }
