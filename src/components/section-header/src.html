@@ -9,8 +9,8 @@
 <!-- Component HTML -->
 
 <style>
-	h2.heading,
-	p.subtitle {
+	h2,
+	p.subheading {
 		text-align: << widget.alignment >> !important;
 	}
 </style>
@@ -18,13 +18,13 @@
 <row>
 	<td class="first last section-header">
 		{% if widget.section_title %}
-			<h2 class="heading">
+			<h2>
 				{{ widget.section_title}}
 			</h2>
 		{% endif %}
 
 		{% if widget.section_subtitle %}
-			<p class="subtitle">{{ widget.section_subtitle }}</p>
+			<p class="subheading">{{ widget.section_subtitle }}</p>
 		{% endif %}
 		&nbsp;
 	</td>

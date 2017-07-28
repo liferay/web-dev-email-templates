@@ -35,59 +35,55 @@ p,
 td,
 th,
 a {
-    color: #474a4b;
+    color: $fontColor;
     font-family: $fontStack;
     font-weight: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #6a708b;
+h1 a,
+h2 a,
+h3 a,
+{
+    text-decoration: none;
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: 200;
-    line-height: 38px;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 44px;
 }
 
-h2 {
+h2, p.quote, p.subheading {
     font-size: 24px;
-    font-weight: 200;
-    line-height: 28.8px;
+    line-height: 30px;
 }
 
-h2.subheading {
-    font-size: 20px;
-    line-height: 24px;
+h2 a, h3 {
+    font-weight: 600;
 }
 
 h3 {
-    color: #474A4B;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    line-height: 20px;
-    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 30px;
 }
 
 h3.small-caps {
+    color: $altFontColor;
     font-size: 14px;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 20px;
+    line-height: 26px;
 }
 
 p.quote {
-    color: #708D9C;
-    font-size: 20px;
-    line-height: 24px;
+    color: $altFontColor;
+}
+
+p.subheading a {
+    font-weight: 400;
 }
