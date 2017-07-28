@@ -13,11 +13,10 @@ a.liferay-logo img {
 }
 
 div.email-label {
-	color: #a6aaba;
-	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+	color: #909295;
+	font-family: "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
 	font-size: 14px;
-	font-weight: lighter;
-	letter-spacing: 0.7px;
+	letter-spacing: 1px;
 	padding-top: 8px;
 	text-transform: uppercase;
 }
