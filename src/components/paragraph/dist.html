@@ -1,9 +1,10 @@
 <style>
     table.paragraph td, table.paragraph td p {
-    		text-align: {{ widget.alignment }};
-    	}
+        text-align: {{ widget.alignment }};
+    }
 </style>
 
+{% if widget.paragraph %}
 <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; padding: 0; text-align: left; vertical-align: top;">
     <tbody>
         <tr style="padding: 0; text-align: left; vertical-align: top;">
@@ -15,3 +16,4 @@
         </tr>
     </tbody>
 </table>
+{% endif %}
