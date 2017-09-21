@@ -26,9 +26,9 @@
 				<row>
 					<td>
 						{% if article_url %}
-							<a href="{{ article_url }}">
-								<h2 class="no-margin-vertical no-padding">{{ article_title }}</h2>
-							</a>
+							<h2 class="no-margin-vertical no-padding">
+								<a href="{{ article_url }}">{{ article_title }}</a>
+							</h2>
 						{% else %}
 							<h2 class="no-margin-vertical no-padding">{{ article_title }}</h2>
 						{% endif %}
