@@ -64,71 +64,39 @@ event_end_dates[i], event_start_months[i], event_display_dates[i], event_locatio
         <tr style="padding: 0; text-align: left; vertical-align: top;">
             <td class="standard-padding small-padding-horizontal" style="-moz-hyphens: auto; -webkit-hyphens: auto; Margin: 0; border-collapse: collapse !important; box-sizing: border-box; color: #4C4C4C; font-family: 'Source Sans Pro', Tahoma, 'Trebuchet MS', sans-serif; font-size: 18px; font-weight: normal; hyphens: auto; line-height: 1.3; margin: 0; padding: 1em; padding-left: 0.5em; padding-right: 0.5em; text-align: left; vertical-align: top; word-wrap: break-word;">
                 <span class="event-column" style="display: inline-block; vertical-align: top; width: 49%;">
-
 					{% for event in event_titles %}
-
 						{% set total_events = loop.length %}
-
-
 
 						{% set half_events = (total_events / 2) + 0.5 %}
 
-
-
 						{% if total_events|divisible(2) %}
-
 							{% set half_event = total_events / 2 %}
-
 						{% endif %}
-
-
 
 						{% if half_events >= loop.index %}
-
 							{{ process_event(event, loop, loop.first) }}
-
 						{% endif %}
-
 					{% endfor %}
-
 				</span>
 
                 <span class="event-column" style="display: inline-block; vertical-align: top; width: 49%;">
-
 					{% set first_item_in_column = True %}
 
-
-
 					{% for event in event_titles %}
-
 						{% set total_events = loop.length %}
-
-
 
 						{% set half_events = (total_events / 2) + 0.5 %}
 
-
-
 						{% if total_events|divisible(2) %}
-
 							{% set half_event = total_events / 2 %}
-
 						{% endif %}
-
-
 
 						{% if loop.index > half_events %}
-
 							{{ process_event(event, loop, first_item_in_column) }}
 
-
-
 							{% set first_item_in_column = False %}
-
 						{% endif %}
-
 					{% endfor %}
-
 				</span>
             </td>
         </tr>
