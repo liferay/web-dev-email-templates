@@ -12,7 +12,12 @@ table.featured-article-event .featured-image {
 }
 
 table.featured-article-event h1 {
+	font-size: 36px;
 	text-align: << widget.alignment >> !important;
+}
+
+table.featured-article-event h2 {
+	font-size: 20px;
 }
 
 table.featured-article-event table.button {
