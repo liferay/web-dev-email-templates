@@ -1,6 +1,6 @@
 /* Enter Component Styles Here */
 table.cta-button {
-	width: 100%;
+	width: auto;
 }
 
 table.button {
@@ -17,4 +17,8 @@ table.button table td {
 table.button table a {
 	border: 0 solid << widget.button_color >>;
 	color: #FFF;
+
+	mso-border-alt: solid;
+	mso-border-color-alt: << widget.button_color >>;
+	mso-border-width-alt: 0;
 }
