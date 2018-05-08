@@ -20,6 +20,7 @@
 	{% set bool_registration_number = True %}
 	{% set bool_managing_director = True %}
 	{% set bool_email = True %}
+	{% set bool_manage_preferences = True %} 
 
 	{% set var_registration_location = "Amtsgericht Frankfurt am Main" %}
 	{% set var_registration_number = "HRB 93411" %}
@@ -28,6 +29,7 @@
 {% elif site_settings.office_location_name == 'Liferay Spain' %}
 	{% set bool_registration_location = True %}
 	{% set bool_registration_number = True %}
+	{% set bool_manage_preferences = True %} 
 
 	{% set var_registration_location = "España" %}
 	{% set var_registration_number = "B-85341162" %}
@@ -35,6 +37,7 @@
 	{% set bool_registration_location = True %}
 	{% set bool_registration_number = True %}
 	{% set bool_managing_director = True %}
+	{% set bool_manage_preferences = True %} 
 
 	{% set var_managing_director = "Ross A. Kennedy" %}
 	{% set var_registration_location = "Ireland" %}
@@ -43,6 +46,7 @@
 	{% set bool_registration_location = True %}
 	{% set bool_registration_number = True %}
 	{% set bool_managing_director = True %}
+	{% set bool_manage_preferences = True %} 
 
 	{% set var_managing_director = "Ross A. Kennedy" %}
 	{% set var_registration_location = "Ireland" %}
@@ -52,11 +56,24 @@
 	{% set bool_registration_number = True %}
 	{% set bool_managing_director = True %}
 	{% set bool_email = True %}
+	{% set bool_manage_preferences = True %} 
 
 	{% set var_email = "info-benelux@liferay.com" %}
 	{% set var_managing_director = "Ruud Kluivers" %}
 	{% set var_registration_location = "The Netherlands" %}
 	{% set var_registration_number = "60989327" %}
+{% elif site_settings.office_location_name == 'Liferay Italy' %}
+	{% set bool_manage_preferences = True %} 
+{% elif site_settings.office_location_name == 'Liferay France SAS' %}
+	{% set bool_manage_preferences = True %}
+{% elif site_settings.office_location_name == 'Liferay Hungary' %}
+	{% set bool_manage_preferences = True %}
+{% endif %}
+
+{% if bool_manage_preferences == True %} 
+	{% set preferences_link = 'https://www.liferay.com/press-releases/newsletter-signup' %}
+{% else %}
+	{% set preferences_link = unsubscribe_link %}
 {% endif %}
 
 <!-- Begin Template Footer -->
@@ -76,9 +93,9 @@
 							</p>
 
 							{% if widget.show_web_version %}
-								<p class="text-center">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a>, <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}"> view in browser</a>.</p>
+								<p class="text-center">Manage <a class="link-text" href="{{preferences_link}}" target="_blank" data-unsubscribe='true' >email preferences</a>, <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a>&nbsp;or <a data-viewaswebpage="true" href="{{ view_as_page_url }}"> view in browser</a>.</p>
 							{% else %}
-								<p class="text-center">Manage <a class="link-text" href="{{unsubscribe_link}}" target="_blank" data-unsubscribe='true' >email preferences</a> or <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a></p>
+								<p class="text-center">Manage <a class="link-text" href="{{preferences_link}}" target="_blank" data-unsubscribe='true' >email preferences</a> or <a class="link-text" href="{{ unsubscribe_link_all }}" target="_blank" data-unsubscribe='true' >unsubscribe</a></p>
 							{% endif %}
 
 							<p class="text-center" > © {{ year }} Liferay, Inc. All Rights Reserved.<br />
