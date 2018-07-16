@@ -21,15 +21,15 @@ table.featured-article-event h2 {
 }
 
 table.featured-article-event table.button {
-	background-color: << widget.audience >>;
-	background: << widget.audience >>;
+	background-color: #0B5FFF;
+	background: #0B5FFF;
 }
 
 table.featured-article-event table.button table td {
-	background-color: << widget.audience >>;
-	background: << widget.audience >>;
+	background-color: #0B5FFF;
+	background: #0B5FFF;
 }
 
 table.featured-article-event table.button table a {
-	border: 0 solid << widget.audience >>;
+	border: 0 solid #0B5FFF;
 }
