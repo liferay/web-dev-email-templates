@@ -15,8 +15,16 @@
 
 <style>
 	table.newsletter-section a {
-		color: << hex_color >> !important;
+		color: #0B5FFF !important;
 	}
+
+  	table.newsletter-section a:hover {
+		color: #0053F0 !important;
+	}
+
+    table.newsletter-section a:active {
+		color: #004AD7 !important;
+ 	}
 </style>
 
 {% macro print_article_info(article_title, article_blurb, article_url) %}
@@ -98,4 +106,3 @@
 		</tr>
 	</tbody>
 </table>
-
