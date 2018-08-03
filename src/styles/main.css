@@ -985,7 +985,7 @@ table.button a table td {
   padding: 12px 24px; }
 
 table.button.radius table td {
-  border-radius: 3px;
+  border-radius: 4px;
   border: none; }
 
 table.button:hover table tr td a,
@@ -1427,6 +1427,9 @@ img.full-width {
   box-sizing: border-box;
   padding-bottom: 2em;
   padding-top: 2em; }
+
+table.button.radius {
+  border-radius: 4px; }
 
 .section-padding {
   box-sizing: border-box;

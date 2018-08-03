@@ -5,6 +5,7 @@ center {
 
 table.featured-article-event .blurb {
 	color: #4C4C4C;
+	font-weight: 300;
 }
 
 table.featured-article-event .featured-image {
@@ -13,6 +14,7 @@ table.featured-article-event .featured-image {
 
 table.featured-article-event h1 {
 	font-size: 36px;
+	font-weight: 300;
 	text-align: << widget.alignment >> !important;
 }
 
